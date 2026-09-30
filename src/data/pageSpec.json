@@ -10,8 +10,8 @@
     "rounded": "lg"
   },
   "seo": {
-    "title": "PriceM8 – Pricing & quoting software for UK trades",
-    "description": "PriceM8 helps tradies price jobs properly with trade packs, up-to-date material prices and instant PDF quotes. Built by a tradie with 20 years on the tools."
+    "title": "PriceM8 – Pricing & quoting software for Landscapers & Garden Room Builders",
+    "description": "PriceM8 helps landscapers and garden room builders price jobs properly with dedicated packs, up-to-date material prices and instant PDF quotes. Built by a landscaper with 20 years on the tools."
   },
   "sections": [
     {
@@ -60,9 +60,9 @@
       "id": "hero",
       "type": "hero",
       "layout": "two-column",
-      "eyebrow": "Pricing & quoting software for UK trades",
+      "eyebrow": "Pricing & quoting software for Landscaping & Garden Rooms",
       "title": "PriceM8",
-      "subtitle": "Price jobs properly - without losing your evenings. Trade packs, live material prices and instant professional PDFs. No more guessing, spreadsheets or late-night estimating.",
+      "subtitle": "Price jobs properly - without losing your evenings. Dedicated Landscaping and Garden Room packs, live material prices and instant professional PDFs. No more guessing, spreadsheets or late-night estimating.",
       "primaryCta": {
         "label": "Start free trial",
         "href": "https://app.pricem8.uk/signup"
@@ -85,23 +85,11 @@
     {
       "id": "pain-promise",
       "type": "trade-icons",
-      "title": "Start with one trade - expand into more when you're ready.",
+      "title": "Two product lines. One professional pricing system.",
       "items": [
-        {
-          "icon": "wrench",
-          "label": "Plumbing"
-        },
-        {
-          "icon": "bolt",
-          "label": "Electrical"
-        },
         {
           "icon": "tree",
           "label": "Landscaping"
-        },
-        {
-          "icon": "hammer",
-          "label": "General building"
         },
         {
           "icon": "box",
@@ -161,7 +149,7 @@
         },
         {
           "title": "Trade-Specific Logic",
-          "description": "Pre-built packs for Plumbing, Electrical, Building, Landscaping and more.",
+          "description": "Pre-built packs for Landscaping and Garden Rooms, with all the calculations done for you.",
           "icon": "wrench"
         },
         {
@@ -193,17 +181,17 @@
       "plans": [
         {
           "name": "PriceM8 Core",
-          "description": "The professional foundation for every trade. Unlimited quotes, PDFs, and live pricing for only £19/mo.",
+          "description": "The professional foundation for quotes, jobs and clients. Unlimited quotes, PDFs, and live pricing for only £19/mo.",
           "icon": "Package"
         },
         {
-          "name": "Trade Packs",
-          "description": "Add trade-specific logic for Plastering, Plumbing, Gas, and more. Pay only for what you use from £9/mo.",
+          "name": "Landscaping Pack",
+          "description": "Auto-calculated materials, labour and waste logic for paving, fencing, turf and more.",
           "icon": "Wrench"
         },
         {
-          "name": "All-In Plan",
-          "description": "Unlock everything for one flat rate. Perfect for growing builders and multi-trade teams at £49/mo.",
+          "name": "Garden Rooms Pack",
+          "description": "A complete system for pricing £12k–£60k garden room projects. One-time payment, lifetime access.",
           "icon": "Flame"
         }
       ],
@@ -215,7 +203,7 @@
     {
       "id": "testimonials",
       "type": "testimonials",
-      "title": "Tradies who've had enough of guessing their prices.",
+      "title": "Landscapers and garden room builders who've had enough of guessing their prices.",
       "items": [
         {
           "quote": "I used to spend Sunday evenings on quotes. Now I can price jobs during the week and send professional PDFs in minutes.",
@@ -226,13 +214,13 @@
         {
           "quote": "Knowing materials are kept up to date in the background is huge. I don't have to wonder if my spreadsheet is months out of date.",
           "name": "Amir",
-          "role": "Plumber",
+          "role": "Landscaper",
           "rating": 5
         },
         {
-          "quote": "The trade packs make it really easy to keep our small team quoting in the same way on every job.",
+          "quote": "The Garden Room pack makes it really easy to break a £30k quote down so clients see exactly where the money goes.",
           "name": "Paul",
-          "role": "Building company owner",
+          "role": "Garden room builder",
           "rating": 5
         }
       ]

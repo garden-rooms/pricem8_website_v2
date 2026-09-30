@@ -12,10 +12,7 @@ interface TradeIconsProps {
 
 // Map trade labels to their paths
 const tradePaths: Record<string, string> = {
-  'Plumbing': '/trades/plumbing',
-  'Electrical': '/trades/electrical',
   'Landscaping': '/trades/landscaping',
-  'General building': '/trades/building',
   'Garden rooms': '/trades/garden-rooms',
 }
 

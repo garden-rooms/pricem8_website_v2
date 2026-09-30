@@ -26,14 +26,14 @@ export default function TradePage() {
   const { tradeId } = useParams<{ tradeId: string }>()
   const navigate = useNavigate()
 
-  // Get trade content or redirect to plumbing
+  // Get trade content or redirect to landscaping
   const trade = tradeId && tradeId in tradesContent
     ? tradesContent[tradeId as TradeId]
     : null
 
   useEffect(() => {
     if (!trade) {
-      navigate('/trades/plumbing', { replace: true })
+      navigate('/trades/landscaping', { replace: true })
       return
     }
 
@@ -94,10 +94,7 @@ export default function TradePage() {
 
     // Create comprehensive schema markup for trade pages
     const tradeDescriptions: Record<string, string> = {
-      'plumbing': 'Plumbing estimating and quoting software for UK plumbers. Price bathrooms, boiler swaps and call-outs fast with live material prices and professional PDF quotes.',
-      'electrical': 'Electrical estimating and quoting software for UK electricians. Create professional electrical quotes with live cable prices, pre-built rewire packs and NICEIC-ready details.',
       'landscaping': 'Landscaping estimating and quoting software for UK landscapers. Quote patios, decking, fencing and garden rooms with live aggregate and timber prices.',
-      'building': 'Builder estimating and quoting software designed for extensions, renovations and general building work.',
       'garden-rooms': 'Garden room estimating and quoting software for UK garden room specialists. Price garden offices, studios and gyms accurately with live timber and cladding prices.'
     }
 

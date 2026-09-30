@@ -197,7 +197,7 @@ export default function ModularPricing({ section }: ModularPricingProps) {
                         <p className="text-xl text-gray-600 dark:text-gray-300 font-medium max-w-2xl mx-auto">{section.packs.subtitle}</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className={section.packs.items.length === 1 ? "grid gap-8 max-w-md mx-auto" : "grid md:grid-cols-2 lg:grid-cols-3 gap-8"}>
                         {section.packs.items.map((pack, i) => (
                             <motion.div
                                 key={i}
@@ -257,41 +257,44 @@ export default function ModularPricing({ section }: ModularPricingProps) {
                     </div>
 
                     {/* Bundles */}
-                    <div className="mt-20 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-[3.5rem] p-1 shadow-2xl shadow-blue-500/20">
-                        <div className="bg-white dark:bg-slate-950 rounded-[calc(3.5rem-4px)] p-8 md:p-16 relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,theme(colors.blue.500/0.1),transparent)]" />
-                            <h4 className="text-3xl font-bold text-center mb-12 relative z-10 flex items-center justify-center gap-3">
-                                <Star className="w-8 h-8 text-yellow-500 fill-yellow-500" />
-                                {section.bundles.title}
-                            </h4>
-                            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto relative z-10">
-                                {section.bundles.items.map((bundle, i) => (
-                                    <motion.div
-                                        key={i}
-                                        whileHover={{ scale: 1.05 }}
-                                        className="bg-blue-50 dark:bg-blue-900/10 rounded-[2.5rem] p-10 border border-blue-200 dark:border-blue-800 flex flex-col items-center group"
-                                    >
-                                        <span className="text-xl font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-tight">{bundle.name}</span>
-                                        <div className="text-5xl font-bold text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform flex items-center gap-2">
-                                            <ArrowRight className="w-8 h-8" />
-                                            <AnimatedPrice
-                                                value={getPrice(bundle.priceMonthly, bundle.priceYearly, bundle.price)}
-                                                isYearly={isYearly}
-                                            />
-                                            <span className="text-2xl text-blue-500/70">/mo</span>
-                                        </div>
-                                        <div className="text-sm font-bold text-blue-500 dark:text-blue-400/60 text-center uppercase tracking-widest bg-blue-100/50 dark:bg-blue-900/30 px-6 py-2 rounded-full">
-                                            {bundle.items.join(' + ')}
-                                        </div>
-                                    </motion.div>
-                                ))}
+                    {section.bundles && (
+                        <div className="mt-20 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-[3.5rem] p-1 shadow-2xl shadow-blue-500/20">
+                            <div className="bg-white dark:bg-slate-950 rounded-[calc(3.5rem-4px)] p-8 md:p-16 relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,theme(colors.blue.500/0.1),transparent)]" />
+                                <h4 className="text-3xl font-bold text-center mb-12 relative z-10 flex items-center justify-center gap-3">
+                                    <Star className="w-8 h-8 text-yellow-500 fill-yellow-500" />
+                                    {section.bundles.title}
+                                </h4>
+                                <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto relative z-10">
+                                    {section.bundles.items.map((bundle, i) => (
+                                        <motion.div
+                                            key={i}
+                                            whileHover={{ scale: 1.05 }}
+                                            className="bg-blue-50 dark:bg-blue-900/10 rounded-[2.5rem] p-10 border border-blue-200 dark:border-blue-800 flex flex-col items-center group"
+                                        >
+                                            <span className="text-xl font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-tight">{bundle.name}</span>
+                                            <div className="text-5xl font-bold text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform flex items-center gap-2">
+                                                <ArrowRight className="w-8 h-8" />
+                                                <AnimatedPrice
+                                                    value={getPrice(bundle.priceMonthly, bundle.priceYearly, bundle.price)}
+                                                    isYearly={isYearly}
+                                                />
+                                                <span className="text-2xl text-blue-500/70">/mo</span>
+                                            </div>
+                                            <div className="text-sm font-bold text-blue-500 dark:text-blue-400/60 text-center uppercase tracking-widest bg-blue-100/50 dark:bg-blue-900/30 px-6 py-2 rounded-full">
+                                                {bundle.items.join(' + ')}
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
                 </div>
             </FadeInSection>
 
             {/* 3. All-in Plan */}
+            {section.allIn && (
             <FadeInSection>
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
@@ -356,13 +359,14 @@ export default function ModularPricing({ section }: ModularPricingProps) {
                     </div>
                 </div>
             </FadeInSection>
+            )}
 
-            {/* 4. Specialist Add-on */}
+            {/* 3. Specialist Add-on */}
             <FadeInSection>
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-400 text-xs font-bold uppercase tracking-widest mb-4">
-                            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-green-500 text-white text-[10px]">4</span>
+                            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-green-500 text-white text-[10px]">3</span>
                             Specialist Add-on
                         </div>
                     </div>

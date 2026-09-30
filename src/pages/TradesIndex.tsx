@@ -25,10 +25,10 @@ export default function TradesIndex() {
   const trades = Object.values(tradesContent)
 
   useEffect(() => {
-    document.title = 'Trades — PriceM8'
+    document.title = 'Product Lines — PriceM8'
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'PriceM8 supports multiple trades including plumbing, electrical, landscaping, building and garden rooms.')
+      metaDescription.setAttribute('content', 'PriceM8 covers two product lines: Landscaping and Garden Rooms, with dedicated packs, calculators and pricing for each.')
     }
     window.scrollTo(0, 0)
   }, [])
@@ -51,13 +51,13 @@ export default function TradesIndex() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in-up-blur [animation-delay:100ms]">
               <div className="inline-flex items-center px-4 py-2 mb-8 bg-teal-50 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300 rounded-full text-sm font-medium border border-teal-100 dark:border-teal-500/20 shadow-sm">
-                Supported Trades
+                Product Lines
               </div>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-8 leading-tight tracking-tight animate-fade-in-up-blur [animation-delay:200ms]">
-                Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400">Every Trade</span>
+                Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400">Landscaping & Garden Rooms</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-blur [animation-delay:300ms]">
-                {formatPriceM8('PriceM8 supports multiple trades with tailored packs and pricing tools designed for the way you work.')}
+                {formatPriceM8('PriceM8 gives you tailored packs and pricing tools for both sides of the business — Landscaping and Garden Rooms.')}
               </p>
             </div>
           </div>

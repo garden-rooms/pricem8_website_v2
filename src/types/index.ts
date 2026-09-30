@@ -366,11 +366,11 @@ export interface ModularPricingSection {
     subtitle?: string
     items: PricingPack[]
   }
-  bundles: {
+  bundles?: {
     title: string
     items: PricingBundle[]
   }
-  allIn: {
+  allIn?: {
     title: string
     price?: string // Legacy support
     priceMonthly?: string

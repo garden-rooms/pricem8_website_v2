@@ -544,23 +544,14 @@ function PricingSection() {
                         Optional Estimating Packs
                     </h4>
                     <div className="divide-y divide-slate-100 text-sm">
-                        {[
-                            { name: "Landscaping", price: "\u00a312" },
-                            { name: "General Building \u2013 1st Fix", price: "\u00a312" },
-                            { name: "General Building \u2013 2nd Fix", price: "\u00a37" },
-                            { name: "Plumbing", price: "\u00a37" },
-                            { name: "Electrical", price: "\u00a37" },
-                        ].map((pack) => (
-                            <div
-                                key={pack.name}
-                                className="flex items-center justify-between py-2.5"
-                            >
-                                <span className="text-slate-700">{pack.name}</span>
-                                <span className="font-medium text-slate-900">
-                                    {pack.price}/mo
-                                </span>
-                            </div>
-                        ))}
+                        <div className="flex items-center justify-between py-2.5">
+                            <span className="text-slate-700">Landscaping</span>
+                            <span className="font-medium text-slate-900">&pound;12/mo</span>
+                        </div>
+                        <div className="flex items-center justify-between py-2.5">
+                            <span className="text-slate-700">Garden Rooms</span>
+                            <span className="font-medium text-slate-900">&pound;99 one-time</span>
+                        </div>
                     </div>
                     <p className="mt-4 text-xs text-slate-400">
                         Add packs anytime from Settings after subscribing to Core.
@@ -576,7 +567,7 @@ function PricingSection() {
 const FAQ_ITEMS = [
     {
         q: "Is it just for landscapers?",
-        a: "PriceM8 works for any trade. Landscaping packs are included out of the box, with more trades coming soon\u2009\u2014\u2009general building, plumbing, and electrical are already available.",
+        a: "PriceM8 covers two product lines: Landscaping and Garden Rooms. The Landscaping pack is included out of the box, and the premium Garden Rooms pack is a one-time add-on for high-value projects.",
     },
     {
         q: "What happens after the trial?",
