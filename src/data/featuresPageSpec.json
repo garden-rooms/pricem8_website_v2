@@ -1,0 +1,245 @@
+{
+  "page": "features",
+  "seo": {
+    "title": "Features - PriceM8",
+    "description": "See all features of PriceM8: weekly price updates, trade packs, fast quote builder, PDF quotes and team access. Built for UK trades."
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "simple-hero",
+      "title": "Everything you need to price jobs fast, accurately and stress-free.",
+      "subtitle": "Built for tradies, designed through 20 years of real construction experience."
+    },
+    {
+      "id": "weekly-pricing",
+      "type": "feature-section",
+      "title": "Weekly Updated Material Prices",
+      "subtitle": "Accurate prices, updated automatically.",
+      "paragraphs": [
+        "Material prices change constantly. PriceM8 keeps your numbers sharp with weekly cost updates sourced from real UK suppliers. You don't need to sync anything — updates happen in the background.",
+        "Users can also add their own materials and update those manually at any time."
+      ],
+      "bullets": [
+        "Weekly admin-managed price updates",
+        "Real UK supplier sources",
+        "Accurate live cost data",
+        "Never quote with outdated prices",
+        "Supports user-added materials"
+      ],
+      "image": "quote-builder-mockup",
+      "icon": "RefreshCw"
+    },
+    {
+      "id": "consistency-check",
+      "type": "feature-split",
+      "title": "Consistency You Can Bank On",
+      "subtitle": "Stop gambling with AI estimates. Get the same price, every time.",
+      "image": "/images/desk.jpeg",
+      "imagePosition": "left",
+      "paragraphs": [
+        "Generic AI apps guess prices based on photos. PriceM8 uses deterministic data to calculate exactly what you need.",
+        "100m² of paving always costs the same. No hallucinations, no random numbers."
+      ],
+      "bullets": [
+        "Deterministic Data accuracy",
+        "Consistent material lists",
+        "No hidden costs",
+        "Built for UK trades"
+      ],
+      "cta": {
+        "label": "See the Math",
+        "href": "/real-data"
+      }
+    },
+    {
+      "id": "trade-packs",
+      "type": "feature-section",
+      "title": "Trade Packs",
+      "subtitle": "Start with a ready-made pack - then customise everything.",
+      "paragraphs": [
+        "Pick your trade pack when you first sign up. Packs include typical tasks, materials and labour items for your trade. You can edit, customise or build new packs from scratch.",
+        "Trade packs save hours on quoting and help keep everything consistent."
+      ],
+      "bullets": [
+        "Starter packs for most trades",
+        "Edit any pack",
+        "Build your own packs",
+        "Unlimited custom packs",
+        "Duplicate and tailor packs"
+      ],
+      "image": "trade-pack-mockup",
+      "icon": "Package"
+    },
+    {
+      "id": "quote-builder",
+      "type": "feature-section",
+      "title": "Quote Builder",
+      "subtitle": "Professional quotes in minutes - not hours.",
+      "paragraphs": [
+        "PriceM8 handles the maths so you can focus on the job. Create unlimited quotes, save clients and projects, and calculate labour, materials, overhead and profit instantly."
+      ],
+      "bullets": [
+        "Unlimited quotes",
+        "Saved clients and projects",
+        "Automatic cost calculations",
+        "Labour, materials, overhead and profit",
+        "VAT handled for you"
+      ],
+      "image": "quote-builder-mockup",
+      "icon": "Calculator"
+    },
+    {
+      "id": "pdf-quotes",
+      "type": "feature-section",
+      "title": "Instant PDF Quotes",
+      "subtitle": "Client-ready, professional documents.",
+      "paragraphs": [
+        "Generate clean, branded PDF quotes with your logo, business details, pricing breakdown and custom terms. Perfect for sending on WhatsApp, email or SMS."
+      ],
+      "bullets": [
+        "Branded PDF quotes",
+        "Line-by-line breakdown",
+        "Custom terms",
+        "Accurate totals and VAT"
+      ],
+      "image": "quote-builder-mockup",
+      "icon": "FileText"
+    },
+    {
+      "id": "team",
+      "type": "feature-section",
+      "title": "Team Access",
+      "subtitle": "Designed for growing businesses.",
+      "paragraphs": [
+        "PriceM8 supports teams with shared access to quotes, packs and materials. Add multiple users, collaborate on pricing and stay consistent across jobs."
+      ],
+      "bullets": [
+        "Multi-user access",
+        "Shared quotes and packs",
+        "Admin control",
+        "Team collaboration"
+      ],
+      "image": "team-access-mockup.jpg",
+      "icon": "Users"
+    },
+    {
+      "id": "skip-optimization",
+      "type": "feature-section",
+      "title": "Smart Waste Management",
+      "subtitle": "Optimized waste disposal that saves hundreds.",
+      "paragraphs": [
+        "Waste disposal is one of the biggest hidden costs in landscaping and building. PriceM8 doesn't just guess - it calculates the exact volume of soil, rubble, or mixed waste based on your job dimensions.",
+        "Our engine applies bulking factors (taking into account how soil expands once dug) and finds the most cost-effective combination of 6yd/8yd skips or grab lorries for your specific project."
+      ],
+      "bullets": [
+        "Bulking factor calculations (soil, rubble, etc.)",
+        "Auto-optimized skip size combinations",
+        "Grab lorry capacity planning",
+        "Manual vs Digger labour adjustments",
+        "Total volume accuracy in m³"
+      ],
+      "image": "quote-builder-mockup",
+      "icon": "Truck"
+    },
+    {
+      "id": "smart-scheduler",
+      "type": "feature-section",
+      "title": "Adaptive Scheduler",
+      "subtitle": "A diary that knows when you're on site.",
+      "paragraphs": [
+        "Most calendars are just static lists. The PriceM8 Adaptive Scheduler tracks your logged hours against the quote. If a job overruns, it doesn't just move everything - it intelligently shifts only the *remaining* work.",
+        "It respects your specific working hours, break times, and blocked holidays, so your projects always land on a working day."
+      ],
+      "bullets": [
+        "Shifts remaining work based on logged hours",
+        "Automated project end-date calculation",
+        "Conflict detection with existing jobs",
+        "Custom working days and break times",
+        "Automatic holiday/blocked-day reshuffling"
+      ],
+      "image": "scheduler-mockup",
+      "icon": "CalendarClock"
+    },
+    {
+      "id": "profit-safeguard",
+      "type": "feature-section",
+      "title": "Profit Safeguard",
+      "subtitle": "Stop working for free.",
+      "paragraphs": [
+        "PriceM8 and its unique risk-scoring engine flags jobs that look risky before you hit send. It analyzes your profit-per-person-day, labour-to-material ratios, and overall margin.",
+        "If a job is likely to lose money due to low margin or unrealistic labour hours, PriceM8 alerts you so you can fix the quote first."
+      ],
+      "bullets": [
+        "Real-time profit-per-person-day tracking",
+        "Margin vs Markup error prevention",
+        "Labour-to-material ratio warnings",
+        "Risk-scoring (Low, Medium, High)",
+        "Automated 'Low Margin' alerts"
+      ],
+      "image": "quote-builder-mockup",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "ai-helper",
+      "type": "feature-section",
+      "title": "AI Task Helper",
+      "subtitle": "Professional descriptions in seconds.",
+      "paragraphs": [
+        "Struggling to describe a complex job? Just type a few keywords and let our AI write a professional, detailed task description for your quote.",
+        "It helps you sound more professional and ensures you don't miss key details."
+      ],
+      "bullets": [
+        "Instant professional descriptions",
+        "Keyword-based generation",
+        "Editable results",
+        "Saves typing time",
+        "Consistent tone"
+      ],
+      "image": "ai-helper-mockup",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "client-portal",
+      "type": "feature-section",
+      "title": "Client Portal",
+      "subtitle": "Look like a pro from day one.",
+      "paragraphs": [
+        "Give your clients a dedicated link to view their quotes, approve work, share documents and message you directly.",
+        "Keep all communication in one place and stop chasing emails and texts."
+      ],
+      "bullets": [
+        "Professional client view",
+        "Digital quote approval",
+        "Direct messaging",
+        "Document sharing",
+        "Mobile friendly for clients"
+      ],
+      "image": "client-portal-mockup",
+      "icon": "Layout"
+    },
+    {
+      "id": "roadmap",
+      "type": "feature-section",
+      "title": "Coming Soon",
+      "subtitle": "The evolution of PriceM8.",
+      "bullets": [
+        "Advanced integrations (coming soon)",
+        "Advanced profit analytics",
+        "More trade-specific packs",
+        "Supplier ordering integration"
+      ],
+      "image": "quote-builder-mockup",
+      "icon": "Rocket"
+    },
+    {
+      "id": "cta",
+      "type": "cta-large",
+      "title": "Spend less time quoting. Spend more time earning.",
+      "primaryCta": {
+        "label": "Start Free Trial",
+        "href": "#waitlist"
+      }
+    }
+  ]
+}

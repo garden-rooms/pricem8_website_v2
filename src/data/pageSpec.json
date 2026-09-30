@@ -1,0 +1,319 @@
+{
+  "page": "home",
+  "brand": {
+    "name": "PriceM8",
+    "primaryColor": "#00B8A9",
+    "primaryColorDark": "#009C8F",
+    "accentColor": "#0E172A",
+    "backgroundLight": "#F8FAFC",
+    "backgroundDark": "#0F172A",
+    "rounded": "lg"
+  },
+  "seo": {
+    "title": "PriceM8 – Pricing & quoting software for UK trades",
+    "description": "PriceM8 helps tradies price jobs properly with trade packs, up-to-date material prices and instant PDF quotes. Built by a tradie with 20 years on the tools."
+  },
+  "sections": [
+    {
+      "id": "navbar",
+      "type": "navbar",
+      "logoText": "PriceM8",
+      "links": [
+        {
+          "label": "Features",
+          "href": "/features"
+        },
+        {
+          "label": "Trades",
+          "href": "/trades"
+        },
+        {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        {
+          "label": "Testimonials",
+          "href": "/testimonials"
+        },
+        {
+          "label": "The Site Office",
+          "href": "/blog"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        }
+      ],
+      "rightButtons": [
+        {
+          "label": "Sign In",
+          "href": "https://app.pricem8.uk/signup"
+        },
+        {
+          "label": "Start Free Trial",
+          "href": "https://app.pricem8.uk/signup",
+          "variant": "solid"
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "type": "hero",
+      "layout": "two-column",
+      "eyebrow": "Pricing & quoting software for UK trades",
+      "title": "PriceM8",
+      "subtitle": "Price jobs properly - without losing your evenings. Trade packs, live material prices and instant professional PDFs. No more guessing, spreadsheets or late-night estimating.",
+      "primaryCta": {
+        "label": "Start free trial",
+        "href": "https://app.pricem8.uk/signup"
+      },
+      "secondaryCta": {
+        "label": "See how it works",
+        "href": "#video-demo",
+        "variant": "outline"
+      },
+      "note": "7-day free trial. No long contracts. Built by a tradie with 20 years on the tools.",
+      "rightImage": "dashboard-hero"
+    },
+    {
+      "id": "video-demo",
+      "type": "video",
+      "title": "See PriceM8 in action",
+      "subtitle": "Watch how easy it is to create accurate quotes in minutes",
+      "videoSrc": "/Video/patio_quote.mp4"
+    },
+    {
+      "id": "pain-promise",
+      "type": "trade-icons",
+      "title": "Start with one trade - expand into more when you're ready.",
+      "items": [
+        {
+          "icon": "wrench",
+          "label": "Plumbing"
+        },
+        {
+          "icon": "bolt",
+          "label": "Electrical"
+        },
+        {
+          "icon": "tree",
+          "label": "Landscaping"
+        },
+        {
+          "icon": "hammer",
+          "label": "General building"
+        },
+        {
+          "icon": "box",
+          "label": "Garden rooms"
+        }
+      ]
+    },
+    {
+      "id": "stats-section",
+      "type": "stats",
+      "title": "Built for real tradies, used on real jobs",
+      "subtitle": "Numbers that matter",
+      "backgroundColor": "gradient",
+      "stats": [
+        {
+          "value": 1000,
+          "label": "UK Tradies",
+          "description": "Using PriceM8 daily",
+          "suffix": "+"
+        },
+        {
+          "value": 25000,
+          "label": "Quotes Created",
+          "description": "And counting",
+          "suffix": "+"
+        },
+        {
+          "value": 1.25,
+          "label": "In Quotes",
+          "description": "Priced accurately",
+          "prefix": "£",
+          "suffix": "M+",
+          "decimals": 2
+        },
+        {
+          "value": 20,
+          "label": "Years Experience",
+          "description": "On the tools"
+        }
+      ]
+    },
+    {
+      "id": "asymmetric-features",
+      "type": "asymmetric-grid",
+      "title": "Everything you need, nothing you don't",
+      "subtitle": "Built for how tradies actually work",
+      "items": [
+        {
+          "title": "Consistency You Can Bank On",
+          "description": "AI apps guess. We calculate. Get the same accurate price for every job, every time.",
+          "image": "/images/desk.jpeg"
+        },
+        {
+          "title": "Live Material Prices",
+          "description": "Connected to real UK merchants. Your quotes stay current automatically.",
+          "icon": "trending-up"
+        },
+        {
+          "title": "Trade-Specific Logic",
+          "description": "Pre-built packs for Plumbing, Electrical, Building, Landscaping and more.",
+          "icon": "wrench"
+        },
+        {
+          "title": "Professional PDFs",
+          "description": "Send branded quotes in one click. Look professional, win more work.",
+          "icon": "file-text"
+        }
+      ]
+    },
+    {
+      "id": "founder-fullwidth",
+      "type": "full-width-image",
+      "title": "Built from 20 years of real site experience",
+      "subtitle": "PriceM8 was created by a tradie who got tired of guessing prices. Now it's used by thousands of UK tradespeople.",
+      "image": "/images/founder-working.jpg",
+      "imageAlt": "Founder working on site",
+      "overlay": true,
+      "contentPosition": "center",
+      "cta": {
+        "label": "Read the full story",
+        "href": "/about"
+      }
+    },
+    {
+      "id": "pricing-teaser",
+      "type": "mini-pricing",
+      "title": "Fair & Modular Pricing",
+      "subtitle": "Start with the core foundation. Add trade packs when you're ready.",
+      "plans": [
+        {
+          "name": "PriceM8 Core",
+          "description": "The professional foundation for every trade. Unlimited quotes, PDFs, and live pricing for only £19/mo.",
+          "icon": "Package"
+        },
+        {
+          "name": "Trade Packs",
+          "description": "Add trade-specific logic for Plastering, Plumbing, Gas, and more. Pay only for what you use from £9/mo.",
+          "icon": "Wrench"
+        },
+        {
+          "name": "All-In Plan",
+          "description": "Unlock everything for one flat rate. Perfect for growing builders and multi-trade teams at £49/mo.",
+          "icon": "Flame"
+        }
+      ],
+      "cta": {
+        "label": "Build your plan",
+        "href": "/pricing"
+      }
+    },
+    {
+      "id": "testimonials",
+      "type": "testimonials",
+      "title": "Tradies who've had enough of guessing their prices.",
+      "items": [
+        {
+          "quote": "I used to spend Sunday evenings on quotes. Now I can price jobs during the week and send professional PDFs in minutes.",
+          "name": "Jason",
+          "role": "Landscaper",
+          "rating": 5
+        },
+        {
+          "quote": "Knowing materials are kept up to date in the background is huge. I don't have to wonder if my spreadsheet is months out of date.",
+          "name": "Amir",
+          "role": "Plumber",
+          "rating": 5
+        },
+        {
+          "quote": "The trade packs make it really easy to keep our small team quoting in the same way on every job.",
+          "name": "Paul",
+          "role": "Building company owner",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "title": "Common questions from tradies",
+      "items": [
+        {
+          "question": "Do I need to be good with computers?",
+          "answer": "Not at all. If you can send a text or use Facebook, you can use PriceM8. We built it to be dead simple."
+        },
+        {
+          "question": "Can I use it on my phone?",
+          "answer": "Yes, PriceM8 works on your phone, tablet and laptop. You can start a quote in the van and finish it at home."
+        },
+        {
+          "question": "How accurate are the material prices?",
+          "answer": "We check prices weekly from major UK suppliers. You can also adjust them yourself if you have better local rates."
+        },
+        {
+          "question": "Is there a contract?",
+          "answer": "No. You can cancel anytime. We don't believe in locking people in."
+        }
+      ]
+    },
+    {
+      "id": "cta-final",
+      "type": "cta-large",
+      "title": "Stop guessing. Start pricing with confidence.",
+      "subtitle": "Stop guessing. Start profiting. The only quoting app built on 20 years of real UK trade data.",
+      "primaryCta": {
+        "label": "Start Free Trial",
+        "href": "https://app.pricem8.uk/signup"
+      },
+      "secondaryCta": {
+        "label": "Stop Gambling",
+        "href": "/real-data"
+      },
+      "image": "/hero-dashboard-preview.png"
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "brandText": "Smart pricing and estimating platform built by tradies, for tradies.",
+      "columns": {
+        "Product": [
+          "Features",
+          "Pricing",
+          "Privacy Policy"
+        ],
+        "Company": [
+          "About Us",
+          "Careers",
+          "Blog",
+          "Contact"
+        ],
+        "Support": [
+          "Help Center",
+          "Documentation",
+          "Terms of Service",
+          "Privacy Policy"
+        ]
+      },
+      "social": [
+        {
+          "platform": "facebook",
+          "url": "https://facebook.com/pricem8"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/pricem8_uk"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@user74412094352130"
+        }
+      ],
+      "copyright": "© 2024 PriceM8. All rights reserved.",
+      "tagline": "Made with ❤️ for tradies"
+    }
+  ]
+}

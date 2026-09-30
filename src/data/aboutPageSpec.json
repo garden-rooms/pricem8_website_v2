@@ -1,0 +1,85 @@
+{
+  "page": "about",
+  "seo": {
+    "title": "About PriceM8 - Built by a Tradie, For Tradies",
+    "description": "Learn the story behind PriceM8, created by Michal after 20 years in construction and landscaping. Built to help tradies quote faster, stay profitable, and avoid costly mistakes."
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "simple-hero",
+      "title": "Built by a tradie - for tradies.",
+      "subtitle": "PriceM8 was born from 20 years of real construction experience - not Silicon Valley.",
+      "image": "founder-working"
+    },
+    {
+      "id": "story",
+      "type": "text-block",
+      "title": "20 years on the tools - and the same quoting problems",
+      "paragraphs": [
+        "I'm Michal, the founder of PriceM8. For the last 20 years I've worked across domestic construction: full house builds, landscaping, garden rooms, timber structures, drainage, kitchens, bathrooms, and more.",
+        "And in all those years, one thing never got easier: quoting."
+      ]
+    },
+    {
+      "id": "problems",
+      "type": "bulleted-list",
+      "title": "The real quoting problems",
+      "items": [
+        "Material prices constantly changing",
+        "Spending evenings calculating labour and materials",
+        "Redoing quotes multiple times",
+        "Spreadsheet chaos",
+        "Losing money because costs increased",
+        "Clients asking for variations and adjustments",
+        "Stress from juggling multiple projects"
+      ]
+    },
+    {
+      "id": "why",
+      "type": "text-block",
+      "title": "Why I built PriceM8",
+      "paragraphs": [
+        "Originally, I built PriceM8 for my own business. I wanted a way to price jobs quickly, accurately, and consistently. Something simple, reliable, and made for real-world trades.",
+        "When it worked for me, I realised every tradie could benefit from it."
+      ]
+    },
+    {
+      "id": "difference",
+      "type": "text-block",
+      "title": "What makes PriceM8 different?",
+      "paragraphs": [
+        "Most estimating software is built by people who've never lifted a shovel. PriceM8 is different - built from real experience, real mistakes, real price changes, and real late-night quoting sessions."
+      ]
+    },
+    {
+      "id": "mission",
+      "type": "bulleted-list",
+      "title": "The mission",
+      "items": [
+        "Help tradies quote faster",
+        "Improve accuracy and profit",
+        "Reduce quoting stress",
+        "Avoid costly mistakes",
+        "Save evenings and weekends"
+      ]
+    },
+    {
+      "id": "roadmap",
+      "type": "bulleted-list",
+      "title": "What's next",
+      "items": [
+        "AI-generated quote descriptions",
+        "Scheduling & calendar",
+        "More trade-specific packs",
+        "Improved pack templates"
+      ]
+    },
+    {
+      "id": "founder-note",
+      "type": "founder-note",
+      "quote": "If PriceM8 can save you the time and frustration it saved me - then it's already doing its job.",
+      "author": "Michal, Founder of PriceM8"
+    }
+  ]
+}

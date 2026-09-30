@@ -1,0 +1,367 @@
+{
+  "page": "pricing",
+  "seo": {
+    "title": "Pricing - PriceM8",
+    "description": "Simple pricing for trades. Core platform foundation with modular estimating packs."
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "simple-hero",
+      "title": "🎉 PRE-SEASON OFFER: 30% OFF All Plans",
+      "subtitle": "Lock in early-bird pricing today. All prices shown are already discounted by 30%. Simple pricing built for real trades. Stop guessing prices and quote faster with confidence.",
+      "primaryCta": {
+        "label": "Start free trial",
+        "href": "https://app.pricem8.uk/signup"
+      },
+      "secondaryCta": {
+        "label": "See what's included",
+        "href": "#modular-pricing"
+      },
+      "note": "Limited time offer. Annual billing discount applies when you commit to yearly payment."
+    },
+    {
+      "id": "modular-pricing",
+      "type": "modular-pricing",
+      "core": {
+        "title": "PriceM8 Core",
+        "priceMonthly": "£22.80",
+        "priceYearly": "£228",
+        "description": "The foundation of PriceM8. Manage quotes, jobs and clients professionally.",
+        "features": [
+          "Adaptive Scheduler (shifts remaining work based on logged hours)",
+          "Profit Safeguard (flags low-margin & high-risk jobs)",
+          "Client portal (view, accept & message)",
+          "Quote & invoice designer (fully branded)",
+          "PDF quote & invoice export",
+          "File & photo storage per project",
+          "Project overview & profit checks",
+          "Secure cloud access (desktop & mobile)"
+        ],
+        "cta": {
+          "label": "Start free trial",
+          "href": "https://app.pricem8.uk/signup"
+        },
+        "note": "No contract. Cancel anytime."
+      },
+      "packs": {
+        "title": "Professional Estimating Packs",
+        "subtitle": "Add trade-specific estimating logic when you need it.",
+        "items": [
+          {
+            "name": "General Building – 1st Fix",
+            "priceMonthly": "£14.40",
+            "priceYearly": "£144",
+            "description": "Consistent structural pricing across every job.",
+            "features": [
+              "Structural steel library (20+ RSJ/UC sizes)",
+              "Auto-calculated wall cavities & insulation"
+            ],
+            "highlight": true,
+            "seeMoreLink": "/trades/building"
+          },
+          {
+            "name": "Landscaping Pack",
+            "priceMonthly": "£14.40",
+            "priceYearly": "£144",
+            "description": "Auto-calculated materials & waste — no spreadsheets.",
+            "features": [
+              "Smart Waste Engine (soil bulking & skip optimization)",
+              "5+ Grout types & Artificial Grass logic"
+            ],
+            "highlight": true,
+            "seeMoreLink": "/trades/landscaping"
+          },
+          {
+            "name": "General Building – 2nd Fix",
+            "priceMonthly": "£8.40",
+            "priceYearly": "£84",
+            "description": "Fast fit-out totals for every room.",
+            "features": [
+              "Carpentry: Doors, skirting, architraves",
+              "Joinery: Floor levelling & tiling logic"
+            ],
+            "seeMoreLink": "/trades/building-2nd-fix"
+          },
+          {
+            "name": "Plumbing Pack",
+            "priceMonthly": "£8.40",
+            "priceYearly": "£84",
+            "description": "Price bathrooms and boilers in minutes.",
+            "features": [
+              "Radiator relocation & pipe run logic",
+              "Bath, Sink & WC connection kits"
+            ],
+            "seeMoreLink": "/trades/plumbing"
+          },
+          {
+            "name": "Electrical Pack",
+            "priceMonthly": "£8.40",
+            "priceYearly": "£84",
+            "description": "Rewire and circuit pricing without the manual maths.",
+            "features": [
+              "Finish-aware pricing (White vs Brushed)",
+              "SWA cable runs & Consumer unit kits"
+            ],
+            "seeMoreLink": "/trades/electrical"
+          }
+        ]
+      },
+      "bundles": {
+        "title": "Popular bundles",
+        "items": [
+          {
+            "name": "1st Fix + Landscaping",
+            "priceMonthly": "£19.20",
+            "priceYearly": "£192",
+            "items": [
+              "General Building – 1st Fix",
+              "Landscaping Pack"
+            ]
+          },
+          {
+            "name": "1st Fix + 2nd Fix",
+            "priceMonthly": "£16.80",
+            "priceYearly": "£168",
+            "items": [
+              "Price every structural & finish detail",
+              "Perfect for whole-house extensions"
+            ]
+          }
+        ]
+      },
+      "allIn": {
+        "title": "Builder All-In Plan",
+        "priceMonthly": "£30",
+        "priceYearly": "£300",
+        "description": "Everything PriceM8 offers — at the best value.",
+        "features": [
+          "Price whole-house extensions (1st + 2nd Fix)",
+          "Includes Smart Waste Logic (skip optimization)",
+          "Integrated Plumbing & Electrical Estimators",
+          "Complete PriceM8 Core suite"
+        ],
+        "cta": {
+          "label": "Start free trial",
+          "href": "https://app.pricem8.uk/signup"
+        },
+        "badge": "Best value"
+      },
+      "specialist": {
+        "title": "Garden Rooms Estimator",
+        "price": "£99",
+        "description": "A complete, professional garden room system for <span class='bg-teal-100 dark:bg-teal-500/20 px-2 py-0.5 rounded-lg text-teal-700 dark:text-teal-300'>£12k–£60k</span> projects.",
+        "features": [
+          "Full structural breakdown & skip optimization",
+          "cladding options",
+          "Electrical & internal finishes",
+          "Professional Margin Formula (not simple markup)"
+        ],
+        "note": "One-time payment (PriceM8 Core Required)"
+      }
+    },
+    {
+      "id": "video-demo",
+      "type": "video",
+      "title": "See PriceM8 in action",
+      "subtitle": "Watch how easy it is to create accurate quotes in minutes",
+      "videoSrc": "/Video/patio_quote.mp4"
+    },
+    {
+      "id": "free-addons",
+      "type": "free-addons",
+      "title": "Limited Time: Get These Premium Add-Ons FREE",
+      "subtitle": "For a limited time, we're including these powerful features at no extra cost. Start your trial now to lock them in forever.",
+      "badge": "Limited Time Offer",
+      "addons": [
+        {
+          "name": "Ultimate Profit Protector",
+          "worth": "£29",
+          "problem": "Losing profit on jobs you thought were winners",
+          "solution": "Never quote a losing job again. Instant alerts flag low-margin quotes before you send them, protecting your profit on every job.",
+          "outcome": "Stop working for wages. Start pricing for profit. See exactly which quotes are winners and which will cost you money.",
+          "features": [
+            "Instant profit margin alerts on every quote",
+            "Flags jobs below your minimum margin threshold",
+            "Real-time profit risk scoring",
+            "Protects you from underpricing mistakes"
+          ],
+          "icon": "Shield"
+        },
+        {
+          "name": "Never-Fail Scheduler",
+          "worth": "£12/month",
+          "problem": "Jobs overrunning and throwing your whole schedule off",
+          "solution": "Rapid schedule recovery that automatically shifts remaining work when jobs overrun. Your schedule adapts instantly, so you never miss deadlines.",
+          "outcome": "Never lose a client because of scheduling conflicts. Keep your calendar accurate and your reputation intact, even when jobs take longer than expected.",
+          "features": [
+            "Automatic schedule adjustment when jobs overrun",
+            "Shifts remaining work instantly",
+            "Prevents double-booking disasters",
+            "Keeps your calendar accurate in real-time"
+          ],
+          "icon": "Calendar"
+        },
+        {
+          "name": "Instant Price Sync",
+          "worth": "£10/month",
+          "problem": "Material prices changing weekly and your quotes using outdated costs",
+          "solution": "Live material price updates from UK suppliers. Your quotes always use current prices, so you never lose profit to price increases.",
+          "outcome": "Quote with confidence knowing your prices are always current. Win more jobs with accurate pricing, and protect your margins from material cost spikes.",
+          "features": [
+            "Weekly price updates from real UK suppliers",
+            "Automatic quote price adjustments",
+            "Protects margins from material cost increases",
+            "No manual price checking needed"
+          ],
+          "icon": "RefreshCw"
+        }
+      ],
+      "cta": {
+        "label": "Start Free Trial & Lock In These Add-Ons",
+        "href": "https://app.pricem8.uk/signup",
+        "note": "Available for new users who start their trial now. These add-ons will be included in your subscription at no extra cost."
+      }
+    },
+    {
+      "id": "comparison",
+      "type": "comparison",
+      "title": "Why trades choose PriceM8",
+      "subtitle": "Most estimating software helps you write quotes. PriceM8 helps you price jobs properly.",
+      "table": {
+        "headers": [
+          "Feature",
+          "PriceM8",
+          "Typical Estimating Software"
+        ],
+        "rows": [
+          {
+            "feature": "Ready-made trade packs",
+            "pricem8": true,
+            "typical": false
+          },
+          {
+            "feature": "Smart Skip Optimization",
+            "pricem8": "Built-in",
+            "typical": "Basic / none"
+          },
+          {
+            "feature": "Digger vs Manual Logic",
+            "pricem8": true,
+            "typical": "⚠️ Limited"
+          },
+          {
+            "feature": "Smart job scheduling",
+            "pricem8": true,
+            "typical": false
+          },
+          {
+            "feature": "Client portal",
+            "pricem8": "Included",
+            "typical": "⚠️ Often extra"
+          },
+          {
+            "feature": "Quote & invoice designer",
+            "pricem8": "Included",
+            "typical": "⚠️ Basic"
+          },
+          {
+            "feature": "Profit Risk Scoring",
+            "pricem8": true,
+            "typical": false
+          },
+          {
+            "feature": "Built by a trade business",
+            "pricem8": true,
+            "typical": false
+          }
+        ]
+      },
+      "explainers": [
+        {
+          "title": "Built by trades, not accountants",
+          "description": "PriceM8 is designed around how real jobs are priced — materials, labour, access, waste and margin — not just line items on a page."
+        },
+        {
+          "title": "Less thinking. Fewer mistakes.",
+          "description": "Trade packs mean you don’t start from scratch every time. You price faster, more consistently, and with confidence."
+        },
+        {
+          "title": "Quote faster. Win more work.",
+          "description": "Clear breakdowns, professional PDFs and a client portal help you stand out — without overselling or discounting."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "title": "Pricing FAQs",
+      "items": [
+        {
+          "question": "Do I need PriceM8 Core to use estimating packs?",
+          "answer": "Yes.\nPriceM8 Core is the foundation of the platform and is required for all estimating packs.\nCore includes scheduling, client portal, file storage, and branded PDF quotes & invoices. Estimating packs add trade-specific tasks, materials and calculation logic on top of this foundation."
+        },
+        {
+          "question": "What do estimating packs actually unlock?",
+          "answer": "Estimating packs unlock:\n- ready-made trade tasks\n- built-in labour roles & logic\n- material quantity calculations\n- consistent pricing structures\nInstead of building everything manually, you start with proven setups designed for real jobs."
+        },
+        {
+          "question": "Can I use PriceM8 without any estimating packs?",
+          "answer": "Yes.\nYou can use PriceM8 Core on its own to:\n- create and send professional quotes & invoices\n- manage jobs and schedules\n- communicate with clients via the portal\n- store files and photos per project\nEstimating packs are optional, but they’re where PriceM8 really saves time and prevents underpricing."
+        },
+        {
+          "question": "What’s included in the Builder All-In Plan?",
+          "answer": "The Builder All-In Plan includes:\n- PriceM8 Core\n- General Building – 1st Fix\n- Landscaping Pack\n- General Building – 2nd Fix\n- Plumbing Estimator\n- Electrical Estimator\nIt’s the best value option if you regularly quote across multiple trades."
+        },
+        {
+          "question": "Why are some packs more expensive than others?",
+          "answer": "Pricing reflects scope and complexity.\nFor example:\n- 1st Fix and Landscaping packs include complex material and labour logic\n- Plumbing and Electrical packs are narrower but still highly useful\nYou only pay for what you actually need."
+        },
+        {
+          "question": "Is the Garden Rooms pack really a one-time purchase?",
+          "answer": "Yes.\nThe Garden Rooms pack is a specialist estimator and is charged once.\nThere’s no ongoing subscription for it.\nIt’s designed for high-value projects and replaces spreadsheets or manual calculations entirely."
+        },
+        {
+          "question": "Is this pricing permanent?",
+          "answer": "No.\nThese are introductory launch prices for early PriceM8 users.\nAs new trades, features and automations are added, prices will increase.\nEarly users will always get the best value."
+        },
+        {
+          "question": "Can I change or cancel my plan later?",
+          "answer": "Yes.\nYou can:\n- add or remove estimating packs at any time\n- upgrade to bundles when it makes sense\n- cancel your subscription with no long-term contract\nNo lock-ins, no awkward calls."
+        },
+        {
+          "question": "How does this compare to tools like Tradify or PriceBuilder?",
+          "answer": "Most estimating tools give you a blank system and expect you to build everything yourself.\nPriceM8 is different:\n- ready-made trade packs\n- built-in material logic\n- labour-aware calculations\n- smart scheduling linked to estimates\nYou spend less time setting things up and more time pricing jobs properly."
+        },
+        {
+          "question": "Is there a free trial?",
+          "answer": "Yes.\nYou can start a free trial and explore PriceM8 before committing.\nNo pressure — see how it fits your workflow first."
+        },
+        {
+          "question": "Who is PriceM8 best suited for?",
+          "answer": "PriceM8 is built for:\n- builders\n- landscapers\n- garden room installers\n- multi-trade contractors\nIf you price jobs regularly and want consistency, speed and confidence — this is for you."
+        }
+      ],
+      "footer": "Still unsure?\nStart a free trial and build one real quote.\nYou’ll know very quickly if PriceM8 is worth it."
+    },
+    {
+      "id": "final-cta",
+      "type": "cta-large",
+      "title": "Ready to price jobs with confidence?",
+      "subtitle": "Start your free trial and see how much time PriceM8 saves on your next quote.",
+      "primaryCta": {
+        "label": "Start free trial — set up your first quote in minutes",
+        "href": "https://app.pricem8.uk/signup"
+      },
+      "secondaryCta": {
+        "label": "View pricing",
+        "href": "#modular-pricing"
+      },
+      "benefits": [
+        "Built by a UK trade business",
+        "Used on real jobs daily",
+        "Cancel anytime"
+      ]
+    }
+  ]
+}

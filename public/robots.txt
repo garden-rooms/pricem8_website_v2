@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pricem8.uk/sitemap.xml
