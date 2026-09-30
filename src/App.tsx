@@ -1,11 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
-import Features from './pages/Features'
 import Pricing from './pages/Pricing'
-import TradePage from './pages/TradePage'
-import TradesIndex from './pages/TradesIndex'
-import Testimonials from './pages/Testimonials'
 import BlogIndex from './pages/BlogIndex'
 import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
@@ -31,12 +26,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/real-data" element={<RealDataPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/features" element={<Features />} />
+          {/* About, Features, Trades and Testimonials are now sections on the homepage */}
+          <Route path="/about" element={<Navigate to="/#story" replace />} />
+          <Route path="/features" element={<Navigate to="/#landscaping" replace />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/trades" element={<TradesIndex />} />
-          <Route path="/trades/:tradeId" element={<TradePage />} />
-          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/trades" element={<Navigate to="/#landscaping" replace />} />
+          <Route path="/trades/:tradeId" element={<Navigate to="/" replace />} />
+          <Route path="/testimonials" element={<Navigate to="/#quote" replace />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/how-much-to-charge" element={<HowToCharge />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
