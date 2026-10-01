@@ -65,7 +65,7 @@ export default function Home() {
                       <path className="draw" style={{ '--len': 314 } as React.CSSProperties} d="M3 12 H317" />
                       <path d="M0 9 L8 15" strokeWidth={1.2} /><path d="M312 9 L320 15" strokeWidth={1.2} />
                     </g>
-                    <text x={160} y={28} textAnchor="middle">One garden · built and priced by the same pair of hands</text>
+                    <text x={160} y={28} textAnchor="middle">Built and priced by the same pair of hands</text>
                   </svg>
                   <figcaption>
                     <span className="mono">Plate 01 — Michal, on his own patio</span>
