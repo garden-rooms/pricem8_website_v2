@@ -78,7 +78,7 @@ export default function Home() {
             <div className="specstrip">
               <ul>
                 <li><b>MOT Type 1</b><span className="mono">By the tonne, at your depth</span></li>
-                <li><b>Cuts &amp; waste</b><span className="mono">Real %, not a flat 5</span></li>
+                <li><b>Cuts &amp; waste</b><span className="mono">A set allowance, not a guess</span></li>
                 <li><b>Labour</b><span className="mono">Day rate that covers the van</span></li>
                 <li><b>VAT</b><span className="mono">20% · shown, not buried</span></li>
               </ul>
