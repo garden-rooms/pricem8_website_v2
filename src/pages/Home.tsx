@@ -105,10 +105,10 @@ export default function Home() {
                   Guess low and you've eaten the margin before the first slab goes down.</p>
               </article>
               <article>
-                <span className="fig">12%</span>
-                <h3 className="sub">Waste on a cut-heavy layout</h3>
-                <p>A square patio wastes about 5%. A circle, a curved edge or a 45° bond wastes
-                  two or three times that. One number for both is a slow leak.</p>
+                <span className="fig">20%</span>
+                <h3 className="sub">Soil that won't fit back in the hole</h3>
+                <p>Dig out a cubic metre and it doesn't compact back to a cubic metre — excavated
+                  soil bulks by around 20%. Guess the raw volume and you'll under-order the skip.</p>
               </article>
               <article>
                 <span className="fig">£41/hr</span>
@@ -177,14 +177,14 @@ export default function Home() {
                   <span className="mono n">Patios · drives · fencing · turf</span>
                 </div>
                 <p>Drop in the dimensions and the build-up. It takes off the sub-base by tonne at
-                  your compacted depth, the bedding, the slabs plus a waste figure that changes with
-                  the layout, the jointing, the edgings, the muck away — and the hours.</p>
+                  your compacted depth, the bedding, the slabs plus a waste allowance,
+                  the jointing, the edgings, the muck away — and the hours.</p>
 
                 <ul className="takeoff">
-                  <li><span>Paving — bond, cuts, waste by layout</span><span>m²</span></li>
+                  <li><span>Paving — slabs, bond pattern, waste allowance</span><span>m²</span></li>
                   <li><span>Sub-base at your compacted depth</span><span>tonnes</span></li>
                   <li><span>Edgings, kerbs, haunching</span><span>lin m</span></li>
-                  <li><span>Turf, topsoil, planting, membrane</span><span>m²</span></li>
+                  <li><span>Turf, topsoil, membrane</span><span>m²</span></li>
                   <li><span>Fencing, decking, sleeper walls</span><span>lin m</span></li>
                   <li><span>Muck away — skip or grab</span><span>loads</span></li>
                 </ul>
@@ -233,14 +233,14 @@ export default function Home() {
                   <span className="mono n">Offices · studios · gyms · annexes</span>
                 </div>
                 <p>A £28,000 build has three hundred things in it and any one of them can be the
-                  one you forgot. It generates the timber list at your stud centres, the insulation
+                  one you forgot. It generates the timber list at 400mm stud centres, the insulation
                   and membranes, the cladding with a real waste allowance, the roof and the first fix.</p>
 
                 <ul className="takeoff">
                   <li><span>Base — pads, screw piles or raft</span><span>each / m³</span></li>
-                  <li><span>Frame at 400 or 600 centres</span><span>timber list</span></li>
+                  <li><span>Frame at 400mm centres</span><span>timber list</span></li>
                   <li><span>Insulation, VCL, breather membrane</span><span>m²</span></li>
-                  <li><span>Cladding — cedar, larch or composite</span><span>m² + waste</span></li>
+                  <li><span>Cladding — cedar, larch, composite or metal, front and sides set separately</span><span>m² + waste</span></li>
                   <li><span>EPDM or fibreglass roof, trims, outlet</span><span>m²</span></li>
                   <li><span>First fix, flooring, internal linings</span><span>m² / points</span></li>
                 </ul>
