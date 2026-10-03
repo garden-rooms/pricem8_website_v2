@@ -19,11 +19,11 @@
             },
             {
                 "type": "paragraph",
-                "text": "Alternatively, if you're a plumber, maybe you look at a bathroom rip-out and think: 'Two days labour, £800 for the suite, another £300 for pipes and fittings. Call it £1,800.'"
+                "text": "Or maybe it's a garden room: 'Six by four, timber frame, cedar cladding. Say £18,000 and we're both happy.'"
             },
             {
                 "type": "paragraph",
-                "text": "You win the job. Great. Then you start buying materials. 'Oh, forgot the waste disposal.' 'Need another bulk bag of sharp sand.' 'Copper pipe went up 15% since last month? Serious?'"
+                "text": "You win the job. Great. Then you start buying materials. 'Oh, forgot the waste disposal.' 'Need another bulk bag of sharp sand.' 'Cedar cladding went up since last month? Serious?'"
             },
             {
                 "type": "paragraph",
@@ -35,33 +35,33 @@
             },
             {
                 "type": "paragraph",
-                "text": "We built PriceM8 because we were sick of this cycle. Whether you are a landscaper, a builder, or a sparky, the maths of business is the same. The feature you need to know about is called **Smart Assemblies**."
+                "text": "We built PriceM8 because we were sick of this cycle. Whether you're pricing a patio or a garden room, the maths of business is the same. The feature you need to know about is called **Smart Assemblies**."
             },
             {
                 "type": "paragraph",
-                "text": "Instead of listing out 'Sand, Cement, Slabs, Labour' or 'Pipe, Elbows, Solder, Flux' separately every time, you just select the job. You type in the quantity. Bang. The system calculates exactly what you need."
+                "text": "Instead of listing out 'Sand, Cement, Slabs, Labour' separately every time, you just select the job. You type in the dimensions. Bang. The system calculates exactly what you need."
             },
             {
                 "type": "heading",
-                "text": "Real World Scenario: The Bathroom Renovation"
+                "text": "Real World Scenario: The Patio Job"
             },
             {
                 "type": "paragraph",
-                "text": "Let's look at a plumber pricing a bathroom. He needs to run 15m of new pipework. In his head, he thinks '15m of pipe'. But PriceM8 knows that 15m of pipework actually involves:"
+                "text": "Let's look at a landscaper pricing a patio. He measures up 40m². In his head, he thinks '40 square metres of paving'. But PriceM8 knows that 40m² of patio actually involves:"
             },
             {
                 "type": "list",
                 "items": [
-                    "5 lengths of 3m Copper Pipe (at today's high prices).",
-                    "Approx 10 Elbows and 4 Tees (based on industry averages).",
-                    "Flux, Solder, and Gas (the 'invisible' costs).",
-                    "Pipe clips every 500mm.",
-                    "Labour time for 'First Fix' based on 2m per hour."
+                    "6 tonnes of MOT Type 1 sub-base (at 150mm compacted depth).",
+                    "Sharp sand and cement for the bedding layer.",
+                    "A waste allowance for cuts around the edges.",
+                    "Jointing compound for the gaps between slabs.",
+                    "Labour time based on the actual area, not a guess."
                 ]
             },
             {
                 "type": "paragraph",
-                "text": "It implies the small stuff. And it uses **Live Trade Pack Prices** that update automatically. So if copper spikes again, your quote goes up automatically. You don't have to follow the commodities market; we do it for you."
+                "text": "It implies the small stuff. And it uses up-to-date material prices, kept current by hand so you're not quoting off a price list from six months ago. You don't have to chase the merchant for a quote; we do it for you."
             },
             {
                 "type": "heading",
@@ -123,15 +123,14 @@
                 "type": "list",
                 "items": [
                     "Select Client.",
-                    "Select 'Electrical Pack'.",
-                    "Add 'Consumer Unit Change (10 Way)' -> Qty 1.",
-                    "Add 'Full Test & Inspection' -> Qty 1.",
+                    "Add 'Porcelain Paving' -> Enter 40m².",
+                    "Add 'Panel Fencing' -> Enter 12 linear metres.",
                     "Click 'Generate Quote'."
                 ]
             },
             {
                 "type": "paragraph",
-                "text": "PriceM8 pulls all the materials: the board, the RCBOs, the meter tails, the earth bonding. It adds your labour rate for a board change. It adds the testing time."
+                "text": "PriceM8 pulls all the materials: the sub-base, the bedding, the slabs, the jointing, the waste. It adds your labour rate for the area. It adds the muck away."
             },
             {
                 "type": "paragraph",
@@ -227,7 +226,7 @@
             },
             {
                 "type": "paragraph",
-                "text": "Here's a secret weapon: **The Client Portal**. Instead of sending a static email, you send a link. The client opens it, sees the quote, photos of materials, and a big green 'APPROVE' button. They click it. You get notified. You book the work."
+                "text": "Here's a secret weapon: **a properly broken-down PDF**. Instead of one vague total, the customer sees every line—materials, labour, waste—laid out clearly, with your logo on it. A quote they can actually read is a quote they can say yes to."
             },
             {
                 "type": "paragraph",

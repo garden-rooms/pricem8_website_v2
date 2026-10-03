@@ -177,21 +177,16 @@
       "id": "pricing-teaser",
       "type": "mini-pricing",
       "title": "Fair & Modular Pricing",
-      "subtitle": "Start with the core foundation. Add trade packs when you're ready.",
+      "subtitle": "One Landscaping subscription. Garden Rooms if and when you need it.",
       "plans": [
         {
-          "name": "PriceM8 Core",
-          "description": "The professional foundation for quotes, jobs and clients. Unlimited quotes, PDFs, and live pricing for only £19/mo.",
+          "name": "Landscaping",
+          "description": "Unlimited quotes, PDFs, and auto-calculated materials, labour and waste for paving, fencing, turf and more. £25/mo, 14-day free trial.",
           "icon": "Package"
         },
         {
-          "name": "Landscaping Pack",
-          "description": "Auto-calculated materials, labour and waste logic for paving, fencing, turf and more.",
-          "icon": "Wrench"
-        },
-        {
-          "name": "Garden Rooms Pack",
-          "description": "A complete system for pricing £12k–£60k garden room projects. One-time payment, lifetime access.",
+          "name": "Garden Rooms",
+          "description": "A complete system for pricing £12k–£60k garden room projects. £99 one-off add-on once you're subscribed.",
           "icon": "Flame"
         }
       ],
@@ -218,7 +213,7 @@
           "rating": 5
         },
         {
-          "quote": "The Garden Room pack makes it really easy to break a £30k quote down so clients see exactly where the money goes.",
+          "quote": "Garden Rooms makes it really easy to break a £30k quote down so clients see exactly where the money goes.",
           "name": "Paul",
           "role": "Garden room builder",
           "rating": 5

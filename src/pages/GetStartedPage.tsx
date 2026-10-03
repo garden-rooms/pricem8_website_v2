@@ -76,7 +76,7 @@ function HeroSection() {
                     </a>
                 </div>
                 <p className="mt-4 text-sm text-slate-500">
-                    No credit card required &middot; Full access for 14&nbsp;days
+                    Card required to start &middot; not charged until the trial ends &middot; full access for 14&nbsp;days
                 </p>
             </div>
         </section>
@@ -203,7 +203,7 @@ function RealCostSection() {
                         Get Your Evenings Back &mdash; Start Free Trial
                     </a>
                     <p className="mt-3 text-xs text-slate-500">
-                        No credit card &middot; Takes 2 minutes to set up
+                        Card required, not charged until day 14 &middot; takes 2 minutes to set up
                     </p>
                 </div>
             </div>
@@ -316,9 +316,9 @@ const FEATURES = [
     },
     {
         icon: Package,
-        title: "Built-In Trade Packs",
+        title: "Built-In Landscaping Calculations",
         description:
-            "Landscaping pack included: block paving, artificial grass, porcelain paving, fencing, turfing and more. Just select the task, enter the measurements, and let PriceM8 do the maths.",
+            "Block paving, artificial grass, porcelain paving, fencing, turfing and more. Just select the task, enter the measurements, and let PriceM8 do the maths.",
     },
     {
         icon: PoundSterling,
@@ -453,13 +453,13 @@ const FREEBIES = [
     },
     {
         icon: Gift,
-        title: "Client portal included",
-        text: "Customers view, approve, and message you. No more chasing by text.",
+        title: "Every client in one place",
+        text: "A proper client list attached to every quote. No more scrolling a separate spreadsheet.",
     },
     {
         icon: CheckCircle2,
-        title: "Job scheduling",
-        text: "Drag-and-drop calendar. See what\u2019s booked, what\u2019s quoted, what\u2019s next.",
+        title: "Your own material prices",
+        text: "Sensible starting prices, editable down to what your actual merchant charges you.",
     },
 ];
 
@@ -506,24 +506,24 @@ function PricingSection() {
                     Simple, Transparent Pricing
                 </h2>
                 <p className="text-slate-500 mb-12 max-w-xl mx-auto">
-                    Start with Core. Add trade packs when you need them.
+                    One Landscaping subscription. Garden Rooms if and when you need it.
                 </p>
 
-                {/* Core Plan */}
+                {/* Landscaping subscription */}
                 <div className="bg-white rounded-2xl border-2 border-emerald-500 shadow-xl p-8 max-w-md mx-auto mb-8">
                     <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
                         Start here
                     </span>
                     <h3 className="text-2xl font-bold text-slate-900 mb-1">
-                        PriceM8 Core
+                        Landscaping
                     </h3>
                     <p className="text-slate-500 text-sm mb-6">
-                        Scheduling, client portal, file storage, branded PDF quotes &amp;
-                        invoices
+                        Unlimited quotes &amp; invoices, client list, branded PDFs, editable
+                        material prices
                     </p>
                     <div className="mb-6">
                         <span className="text-4xl font-extrabold text-slate-900">
-                            &pound;19
+                            &pound;25
                         </span>
                         <span className="text-slate-500">/month</span>
                     </div>
@@ -534,27 +534,24 @@ function PricingSection() {
                         Start Your Free 14-Day Trial
                     </a>
                     <p className="mt-3 text-xs text-slate-400">
-                        No credit card required
+                        A card is required to start &mdash; you&rsquo;re not charged until the trial ends
                     </p>
                 </div>
 
-                {/* Add-on Packs */}
+                {/* Garden Rooms add-on */}
                 <div className="bg-white rounded-xl border border-slate-200 p-6 max-w-md mx-auto">
                     <h4 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4">
-                        Optional Estimating Packs
+                        Optional add-on
                     </h4>
                     <div className="divide-y divide-slate-100 text-sm">
                         <div className="flex items-center justify-between py-2.5">
-                            <span className="text-slate-700">Landscaping</span>
-                            <span className="font-medium text-slate-900">&pound;12/mo</span>
-                        </div>
-                        <div className="flex items-center justify-between py-2.5">
                             <span className="text-slate-700">Garden Rooms</span>
-                            <span className="font-medium text-slate-900">&pound;99 one-time</span>
+                            <span className="font-medium text-slate-900">&pound;99 one-off</span>
                         </div>
                     </div>
                     <p className="mt-4 text-xs text-slate-400">
-                        Add packs anytime from Settings after subscribing to Core.
+                        A one-time purchase once you&rsquo;re subscribed &mdash; try it first with 2 free
+                        Garden Room quotes.
                     </p>
                 </div>
             </div>
@@ -567,11 +564,11 @@ function PricingSection() {
 const FAQ_ITEMS = [
     {
         q: "Is it just for landscapers?",
-        a: "PriceM8 covers two product lines: Landscaping and Garden Rooms. The Landscaping pack is included out of the box, and the premium Garden Rooms pack is a one-time add-on for high-value projects.",
+        a: "PriceM8 covers two product lines: Landscaping and Garden Rooms. Landscaping is the subscription itself, and Garden Rooms is a one-off \u00a399 add-on for high-value projects once you're subscribed.",
     },
     {
         q: "What happens after the trial?",
-        a: "You choose which plan suits you. No pressure, no automatic billing. If you don\u2019t subscribe, your data stays safe\u2009\u2014\u2009you just can\u2019t create new quotes.",
+        a: "Your card is charged \u00a325 automatically once the 14-day trial ends, unless you've cancelled before then. You can cancel any time, no contract.",
     },
     {
         q: "Can I use my own material prices?",
@@ -582,12 +579,12 @@ const FAQ_ITEMS = [
         a: "If you can use a smartphone, you can use PriceM8. It\u2019s designed to be simple and fast for tradespeople, not IT professionals.",
     },
     {
-        q: "What tasks are included in the Landscaping pack?",
+        q: "What tasks does Landscaping cover?",
         a: "Block paving, artificial grass, porcelain paving, fencing, turfing, concrete bases, and more. Each task auto-calculates every material you need.",
     },
     {
         q: "Can I try it before paying?",
-        a: "Absolutely. The 14-day trial gives you full access to everything\u2009\u2014\u2009no credit card, no restrictions, no catches.",
+        a: "Yes\u2009\u2014\u2009the 14-day trial gives you full access to everything. A card is required to start it, but you won't be charged a penny until the trial ends, and you can cancel any time before then.",
     },
 ];
 
@@ -651,7 +648,7 @@ function FinalCTA() {
                     Start Your Free Trial Now
                 </a>
                 <p className="mt-4 text-sm text-emerald-200">
-                    No credit card required &middot; Cancel anytime
+                    Card required to start, not charged until day 14 &middot; cancel anytime
                 </p>
             </div>
         </section>

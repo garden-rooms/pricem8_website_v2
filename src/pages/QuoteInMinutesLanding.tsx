@@ -19,49 +19,23 @@ const tradeVariants: Record<string, any> = {
     },
     tradeName: "Landscapers",
     exampleLanguage: {
-      step1: "Pick the Landscaping pack",
+      step1: "Start a Landscaping quote",
       step2: "Enter patio dimensions or decking area",
       example: "paving estimate",
       material: "MOT Type 1, sharp sand, and cement"
     }
   },
-  building: {
+  "garden-rooms": {
     hero: {
-      headline: "Extension quotes without guesswork.",
+      headline: "Garden room quotes without guesswork.",
       subheadline: "Build one real quote today using live merchant prices — and see your profit before you send it."
     },
-    tradeName: "Builders",
+    tradeName: "Garden Room Builders",
     exampleLanguage: {
-      step1: "Pick the Building pack",
-      step2: "Enter wall lengths or room dimensions",
-      example: "extension quote",
-      material: "blocks, insulation, and timber"
-    }
-  },
-  plumbing: {
-    hero: {
-      headline: "Bathroom quotes in minutes — not hours.",
-      subheadline: "Build one real quote today using live merchant prices — and see your profit before you send it."
-    },
-    tradeName: "Plumbers",
-    exampleLanguage: {
-      step1: "Pick the Plumbing pack",
-      step2: "Enter bathroom layout or boiler specs",
-      example: "bathroom quote",
-      material: "copper, fittings, and fixtures"
-    }
-  },
-  electrical: {
-    hero: {
-      headline: "Rewire quotes in minutes — not hours.",
-      subheadline: "Build one real quote today using live merchant prices — and see your profit before you send it."
-    },
-    tradeName: "Electricians",
-    exampleLanguage: {
-      step1: "Pick the Electrical pack",
-      step2: "Enter circuit counts or room layouts",
-      example: "rewire quote",
-      material: "cable, consumer units, and accessories"
+      step1: "Start a Garden Room quote",
+      step2: "Enter the build dimensions and cladding choice",
+      example: "garden room estimate",
+      material: "timber, insulation, and cladding"
     }
   }
 }
@@ -103,9 +77,9 @@ const copy = {
     headline: "How PriceM8 works",
     steps: [
       {
-        title: "Pick your trade pack",
+        title: "Choose your job",
         time: "30 seconds",
-        description: "Choose a pre-built pack for your trade instead of starting from a blank page."
+        description: "Pick a landscaping task, or start a Garden Room quote, instead of a blank page."
       },
       {
         title: "Enter measurements",
@@ -115,7 +89,7 @@ const copy = {
       {
         title: "Check profit & send",
         time: "1 click",
-        description: "See margin instantly, then send a branded PDF and client link in one click."
+        description: "See margin instantly, then send a branded PDF in one click."
       }
     ]
   },
@@ -131,8 +105,8 @@ const copy = {
   },
   trades: {
     headline: "Built for real UK trades",
-    items: ["Plumbers", "Electricians", "Landscapers", "Builders"],
-    subtext: "Each pack reflects how the work is actually done on site — not generic software assumptions."
+    items: ["Landscapers", "Garden Room Builders"],
+    subtext: "Each one reflects how the work is actually done on site — not generic software assumptions."
   },
   bonuses: {
     headline: "Limited Time: Get These Premium Add-Ons FREE",
@@ -140,8 +114,8 @@ const copy = {
     valueAnchor: "You're not just getting software — you're getting a complete pricing system.",
     items: [
       {
-        title: "Ultimate Profit Protector",
-        description: "Stops you underpricing jobs before you send the quote.",
+        title: "Automatic Margin Protection",
+        description: "Set your margin once in Settings — every quote applies it to materials and labour automatically.",
         worth: "£29",
         highlight: true,
         killsExcuse: "Included free for early users"
@@ -159,10 +133,10 @@ const copy = {
         killsExcuse: "Included free for early users"
       },
       {
-        title: "Scale-Up Job Pack Templates",
-        description: "When you start winning more work, quote faster using saved job structures.",
-        worth: "£39",
-        killsExcuse: "Included free for early users"
+        title: "Garden Rooms, Free To Try",
+        description: "2 free Garden Room quotes come with your subscription, so you can test the premium estimator on a real job first.",
+        worth: "£99",
+        killsExcuse: "Included free for every subscriber"
       }
     ],
     valueLine: "Total value £100+ — included free for early users.",

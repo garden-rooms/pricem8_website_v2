@@ -208,11 +208,11 @@ export default function RealDataPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="https://app.pricem8.uk/signup" className="bg-white text-teal-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-teal-50 transition shadow-xl">
-                            Start Free Trial (No Credit Card)
+                            Start Free Trial
                         </a>
                     </div>
                     <p className="mt-6 text-sm text-teal-200/80">
-                        Join 1,000+ UK Tradespeople trusting PriceM8 today.
+                        Card required to start &middot; not charged until the 14-day trial ends.
                     </p>
                 </div>
             </div>

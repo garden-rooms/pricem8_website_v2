@@ -110,7 +110,7 @@ export default function AdLandingPage() {
                             </FadeInSection>
                             <FadeInSection delay={0.3}>
                                 <p className="mt-6 text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-                                    Don't just write quotes—calculate them. PriceM8 connects to live merchant prices so you can build accurate estimates for Heating, Electrical, Building & Landscaping in minutes.
+                                    Don't just write quotes—calculate them. PriceM8 connects to live merchant prices so you can build accurate estimates for landscaping and garden room jobs in minutes.
                                 </p>
                             </FadeInSection>
 
@@ -126,7 +126,7 @@ export default function AdLandingPage() {
                                         Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
                                     </motion.a>
                                     <div className="flex items-center justify-center px-6 py-4 text-slate-500 dark:text-slate-400 text-sm font-medium">
-                                        <ShieldCheck className="w-5 h-5 mr-2 text-teal-500" /> No credit card required
+                                        <ShieldCheck className="w-5 h-5 mr-2 text-teal-500" /> Not charged until day 14
                                     </div>
                                 </div>
                             </FadeInSection>
@@ -245,7 +245,7 @@ export default function AdLandingPage() {
                                 { feature: "Automatic VAT & Profit", old: "Manual Formulas", new: true },
                                 { feature: "Professional PDF Export", old: false, new: true },
                                 { feature: "Mobile Friendly", old: false, new: true },
-                                { feature: "Client Portal", old: false, new: true },
+                                { feature: "Client List Built In", old: false, new: true },
                             ].map((row, i) => (
                                 <motion.div
                                     key={i}
@@ -299,30 +299,30 @@ export default function AdLandingPage() {
                         {[
                             {
                                 icon: Shield,
-                                name: "Ultimate Profit Protector",
+                                name: "Automatic Margin Protection",
                                 worth: "£29",
-                                problem: "Losing profit on jobs you thought were winners",
-                                solution: "Never quote a losing job again. Instant alerts flag low-margin quotes before you send them, protecting your profit on every job.",
-                                outcome: "Stop working for wages. Start pricing for profit. See exactly which quotes are winners and which will cost you money.",
+                                problem: "Forgetting to add your markup and pricing a job for free",
+                                solution: "Set your margin once in Settings. Every quote applies it to materials and labour automatically, so it's never missing by accident.",
+                                outcome: "Stop re-checking your own maths. Every quote already has your margin built in before you send it.",
                                 features: [
-                                    "Instant profit margin alerts on every quote",
-                                    "Flags jobs below your minimum margin threshold",
-                                    "Real-time profit risk scoring",
-                                    "Protects you from underpricing mistakes"
+                                    "Margin set once, applied to every quote",
+                                    "Separate material and labour margins",
+                                    "No manual mark-up maths per job",
+                                    "Edit it any time from Settings"
                                 ]
                             },
                             {
                                 icon: Calendar,
-                                name: "Never-Fail Scheduler",
-                                worth: "£12/month",
-                                problem: "Jobs overrunning and throwing your whole schedule off",
-                                solution: "Rapid schedule recovery that automatically shifts remaining work when jobs overrun. Your schedule adapts instantly, so you never miss deadlines.",
-                                outcome: "Never lose a client because of scheduling conflicts. Keep your calendar accurate and your reputation intact, even when jobs take longer than expected.",
+                                name: "Garden Rooms, Free To Try",
+                                worth: "£99",
+                                problem: "£99 is a lot to risk on an estimator you've never used",
+                                solution: "Your Landscaping subscription includes 2 free Garden Room quotes, so you can run a real job through it before deciding to buy.",
+                                outcome: "See the full structural breakdown on an actual project first. Buy it once you know it's worth it, not before.",
                                 features: [
-                                    "Automatic schedule adjustment when jobs overrun",
-                                    "Shifts remaining work instantly",
-                                    "Prevents double-booking disasters",
-                                    "Keeps your calendar accurate in real-time"
+                                    "2 free Garden Room quotes included",
+                                    "Full foundation, cladding and roofing logic",
+                                    "No obligation to buy afterwards",
+                                    "£99 one-off whenever you're ready"
                                 ]
                             },
                             {
@@ -438,7 +438,7 @@ export default function AdLandingPage() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { icon: Wrench, title: "1. Select Trade Pack", desc: "Choose from pre-loaded packs for Plumbing, Electrical, Building, or Landscaping." },
+                            { icon: Wrench, title: "1. Choose Your Job", desc: "Pick a landscaping task, or start a Garden Room quote." },
                             { icon: FileText, title: "2. Enter Dimensions", desc: "Input lengths or quantities. We calculate the materials, waste, and labour for you." },
                             { icon: Smartphone, title: "3. Send Quote", desc: "Review the profit margin and send a branded PDF directly to your client." }
                         ].map((step, i) => (
@@ -512,7 +512,7 @@ export default function AdLandingPage() {
                                 {[
                                     'Live connection to major UK merchants',
                                     'Automatic waste & sundries calculation',
-                                    'Pre-built packs for Plumbing, Electrical, Building & more',
+                                    'Pre-built logic for paving, fencing, turf & garden rooms',
                                     'Send quotes via email, WhatsApp or PDF'
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-start">
@@ -542,50 +542,49 @@ export default function AdLandingPage() {
                         <FadeInSection delay={0.1}>
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-full text-sm font-bold mb-6 shadow-lg shadow-teal-500/30">
                                 <Sparkles className="w-4 h-4" />
-                                PRE-SEASON OFFER
+                                SIMPLE PRICING
                             </div>
                         </FadeInSection>
                         <FadeInSection delay={0.2}>
                             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                                Get 30% OFF
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600"> All Plans</span>
+                                One price
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600"> No surprises</span>
                             </h2>
                         </FadeInSection>
                         <FadeInSection delay={0.3}>
                             <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-                                Lock in early-bird pricing. All prices shown are already discounted by 30%.
+                                A Landscaping subscription runs the business. Garden Rooms is there if and when you need it.
                             </p>
                         </FadeInSection>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                        {/* Core */}
+                    <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
+                        {/* Landscaping */}
                         <FadeInSection delay={0.2}>
                             <motion.div
                                 whileHover={{ y: -8 }}
                                 className="relative h-full rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-xl border border-slate-200 dark:border-slate-700 hover:border-teal-400 dark:hover:border-teal-500 transition-all"
                             >
-                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">PriceM8 Core</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Landscaping</h3>
                                 <div className="mb-6 pb-6 border-b border-slate-200 dark:border-slate-700">
-                                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">30% OFF</p>
                                     <div className="flex items-baseline gap-2">
-                                        <span className="text-5xl font-bold text-teal-600 dark:text-teal-400">£19</span>
+                                        <span className="text-5xl font-bold text-teal-600 dark:text-teal-400">£25</span>
                                         <span className="text-slate-600 dark:text-slate-400 font-semibold">/month</span>
                                     </div>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">£228/year</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">14-day free trial, card required</p>
                                 </div>
                                 <ul className="space-y-3">
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                                        <span>Quote & job management</span>
+                                        <span>Unlimited quotes & invoices</span>
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                                        <span>Smart scheduling</span>
+                                        <span>Client list built in</span>
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                                        <span>Client portal</span>
+                                        <span>Editable material prices</span>
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
@@ -595,101 +594,41 @@ export default function AdLandingPage() {
                             </motion.div>
                         </FadeInSection>
 
-                        {/* Estimating Packs */}
+                        {/* Garden Rooms */}
                         <FadeInSection delay={0.3}>
                             <motion.div
                                 whileHover={{ y: -8 }}
                                 className="relative h-full rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-xl border border-slate-200 dark:border-slate-700 hover:border-teal-400 dark:hover:border-teal-500 transition-all"
                             >
-                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Estimating Packs</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Garden Rooms</h3>
                                 <div className="mb-6 pb-6 border-b border-slate-200 dark:border-slate-700">
-                                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">30% OFF</p>
                                     <div className="flex items-baseline gap-2">
-                                        <span className="text-5xl font-bold text-teal-600 dark:text-teal-400">£7–£12</span>
-                                        <span className="text-slate-600 dark:text-slate-400 font-semibold">/month</span>
+                                        <span className="text-5xl font-bold text-teal-600 dark:text-teal-400">£99</span>
+                                        <span className="text-slate-600 dark:text-slate-400 font-semibold">one-off</span>
                                     </div>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">£84–£144/year each</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Add-on once you're subscribed</p>
                                 </div>
                                 <ul className="space-y-3">
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                                        <span>Building (1st & 2nd Fix)</span>
+                                        <span>£12k–£60k project estimating</span>
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                                        <span>Plumbing</span>
+                                        <span>Full foundation, cladding & roofing logic</span>
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                                        <span>Electrical</span>
+                                        <span>2 free quotes to try it first</span>
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                                         <Check className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                                        <span>Landscaping</span>
-                                    </li>
-                                </ul>
-                            </motion.div>
-                        </FadeInSection>
-
-                        {/* All-In Plan */}
-                        <FadeInSection delay={0.4}>
-                            <motion.div
-                                whileHover={{ y: -8, scale: 1.02 }}
-                                className="relative h-full rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 shadow-2xl border-2 border-teal-500/50 hover:border-teal-400 transition-all ring-1 ring-teal-500/30 dark:from-slate-800 dark:to-slate-900"
-                            >
-                                <div className="absolute top-6 right-6">
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-full text-xs font-bold shadow-lg">
-                                        Best Value
-                                    </div>
-                                </div>
-                                <h3 className="text-2xl font-bold text-white mb-2">Builder All-In</h3>
-                                <div className="mb-6 pb-6 border-b border-slate-700">
-                                    <p className="text-xs font-semibold text-teal-300 uppercase tracking-wide mb-2">30% OFF</p>
-                                    <div className="flex items-baseline gap-2">
-                                        <span className="text-5xl font-bold text-teal-400">£25</span>
-                                        <span className="text-teal-200 font-semibold">/month</span>
-                                    </div>
-                                    <p className="text-sm text-teal-100/80 mt-2">£300/year</p>
-                                </div>
-                                <ul className="space-y-3">
-                                    <li className="flex items-start gap-3 text-sm text-teal-100">
-                                        <Check className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
-                                        <span>Core + All Packs</span>
-                                    </li>
-                                    <li className="flex items-start gap-3 text-sm text-teal-100">
-                                        <Check className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
-                                        <span>1st + 2nd Fix</span>
-                                    </li>
-                                    <li className="flex items-start gap-3 text-sm text-teal-100">
-                                        <Check className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
-                                        <span>Plumbing & Electrical</span>
-                                    </li>
-                                    <li className="flex items-start gap-3 text-sm text-teal-100">
-                                        <Check className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
-                                        <span>Landscaping included</span>
+                                        <span>Pay once, use on every job after</span>
                                     </li>
                                 </ul>
                             </motion.div>
                         </FadeInSection>
                     </div>
-
-                    {/* Specialist Add-on */}
-                    <FadeInSection delay={0.5}>
-                        <div className="max-w-2xl mx-auto mb-12">
-                            <motion.div
-                                whileHover={{ y: -8 }}
-                                className="rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-xl border border-slate-200 dark:border-slate-700 text-center"
-                            >
-                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Garden Rooms Estimator</h3>
-                                <div className="mb-6 pb-6 border-b border-slate-200 dark:border-slate-700">
-                                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">30% OFF</p>
-                                    <div className="text-5xl font-bold text-teal-600 dark:text-teal-400 mb-2">£99</div>
-                                    <p className="text-slate-600 dark:text-slate-400 font-semibold text-sm">One-time payment</p>
-                                </div>
-                                <p className="text-slate-700 dark:text-slate-300">Professional garden room system for £12k–£60k projects</p>
-                            </motion.div>
-                        </div>
-                    </FadeInSection>
 
                     {/* CTA */}
                     <FadeInSection delay={0.6}>
@@ -699,11 +638,11 @@ export default function AdLandingPage() {
                                 onClick={trackFreeTrialConversion}
                                 className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-full font-bold text-lg shadow-xl shadow-teal-500/30 hover:shadow-2xl hover:shadow-teal-500/40 transition-all duration-200"
                             >
-                                Claim 30% Discount Now
+                                Start Your Free Trial
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <p className="mt-6 text-sm text-slate-600 dark:text-slate-400">
-                                ⏰ Limited time offer – Annual plans locked in at 30% discount
+                                Card required to start · not charged until the 14-day trial ends
                             </p>
                         </div>
                     </FadeInSection>
@@ -814,7 +753,7 @@ export default function AdLandingPage() {
                             Start Free Trial Now
                         </a>
                     </div>
-                    <p className="mt-4 text-sm text-slate-500">No credit card required • Cancel anytime</p>
+                    <p className="mt-4 text-sm text-slate-500">Card required, not charged until day 14 • Cancel anytime</p>
                 </div>
             </div>
 

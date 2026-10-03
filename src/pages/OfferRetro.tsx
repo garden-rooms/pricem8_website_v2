@@ -138,7 +138,7 @@ export default function OfferRetro() {
                                         Start Free Trial <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                                     </motion.a>
                                     <div className="flex items-center justify-center px-6 py-4 text-stone-600 font-bold border-2 border-stone-200 bg-white shadow-[4px_4px_0px_0px_rgba(200,200,200,0.5)]">
-                                        <ShieldCheck className="w-5 h-5 mr-2 text-stone-900" /> No credit card required
+                                        <ShieldCheck className="w-5 h-5 mr-2 text-stone-900" /> Not charged until day 14
                                     </div>
                                 </div>
                             </FadeInSection>
@@ -299,17 +299,17 @@ export default function OfferRetro() {
                         {[
                             {
                                 icon: Shield,
-                                name: "Profit Protector",
+                                name: "Margin Protection",
                                 worth: "£29",
-                                problem: "Losing profit on winners",
-                                solution: "Instant alerts flag low-margin quotes before you send them.",
+                                problem: "Forgetting to add your markup",
+                                solution: "Set your margin once. Every quote applies it to materials and labour automatically.",
                             },
                             {
                                 icon: Calendar,
-                                name: "Fail-Safe Scheduler",
-                                worth: "£12/mo",
-                                problem: "Jobs overrunning",
-                                solution: "Automatically shifts remaining work when jobs overrun.",
+                                name: "Garden Rooms, Free To Try",
+                                worth: "£99",
+                                problem: "£99 is a lot to risk untested",
+                                solution: "2 free Garden Room quotes come with your subscription, so you try it on a real job first.",
                             },
                             {
                                 icon: RefreshCw,
@@ -380,7 +380,7 @@ export default function OfferRetro() {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { icon: Wrench, title: "1. Select Trade Pack", desc: "Choose from pre-loaded packs for Plumbing, Electrical, Building, or Landscaping." },
+                            { icon: Wrench, title: "1. Choose Your Job", desc: "Pick a landscaping task, or start a Garden Room quote." },
                             { icon: FileText, title: "2. Enter Dimensions", desc: "Input lengths or quantities. We calculate the materials, waste, and labour for you." },
                             { icon: Smartphone, title: "3. Send Quote", desc: "Review the profit margin and send a branded PDF directly to your client." }
                         ].map((step, i) => (
@@ -405,55 +405,43 @@ export default function OfferRetro() {
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center gap-2 px-5 py-2 bg-yellow-400 text-stone-900 border-2 border-stone-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-sm font-black uppercase tracking-widest mb-8">
                                 <Sparkles className="w-4 h-4" />
-                                PRE-SEASON OFFER
+                                SIMPLE PRICING
                             </div>
                             <h2 className="text-5xl md:text-7xl font-black mb-6 font-retro text-stone-900">
-                                30% OFF
+                                One Price
                                 <br />
-                                All Plans
+                                No Surprises
                             </h2>
                             <p className="text-xl text-stone-700 mb-4 font-medium max-w-2xl mx-auto">
-                                Introductory pricing for early users. All prices shown are already discounted.
+                                A Landscaping subscription runs the business. Garden Rooms is there if and when you need it.
                             </p>
                         </div>
                     </FadeInSection>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                        {/* Core */}
+                    <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-3xl mx-auto">
+                        {/* Landscaping */}
                         <FadeInSection delay={0.2}>
                             <div className="bg-white border-4 border-stone-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
-                                <h3 className="text-2xl font-black text-stone-900 mb-2 font-retro">PriceM8 Core</h3>
+                                <h3 className="text-2xl font-black text-stone-900 mb-2 font-retro">Landscaping</h3>
                                 <div className="mb-6 pb-6 border-b-2 border-stone-200">
-                                    <div className="space-y-3">
-                                        <div>
-                                            <p className="text-xs text-stone-500 uppercase font-bold tracking-wider mb-1">Annual billing (30% off)</p>
-                                            <div className="flex items-baseline gap-2">
-                                                <span className="text-4xl font-black text-stone-900">£19</span>
-                                                <span className="text-stone-600 font-bold">/month</span>
-                                            </div>
-                                            <p className="text-xs text-stone-500 mt-1">£228/year</p>
-                                        </div>
-                                        <div className="pt-2 border-t border-stone-200">
-                                            <p className="text-xs text-stone-500 uppercase font-bold tracking-wider mb-1">Monthly billing</p>
-                                            <div className="flex items-baseline gap-2">
-                                                <span className="text-3xl font-black text-stone-900">£22.80</span>
-                                                <span className="text-stone-600 font-bold">/month</span>
-                                            </div>
-                                        </div>
+                                    <div className="flex items-baseline gap-2">
+                                        <span className="text-4xl font-black text-stone-900">£25</span>
+                                        <span className="text-stone-600 font-bold">/month</span>
                                     </div>
+                                    <p className="text-xs text-stone-500 mt-1">14-day free trial, card required</p>
                                 </div>
                                 <ul className="space-y-3 text-sm text-stone-700 font-medium">
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Quote & job management</span>
+                                        <span>Unlimited quotes & invoices</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Smart scheduling</span>
+                                        <span>Client list built in</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Client portal</span>
+                                        <span>Editable material prices</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
@@ -463,135 +451,51 @@ export default function OfferRetro() {
                             </div>
                         </FadeInSection>
 
-                        {/* Estimating Packs */}
+                        {/* Garden Rooms */}
                         <FadeInSection delay={0.3}>
-                            <div className="bg-white border-4 border-stone-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
-                                <h3 className="text-2xl font-black text-stone-900 mb-2 font-retro">Estimating Packs</h3>
-                                <div className="mb-6 pb-6 border-b-2 border-stone-200">
-                                    <div className="space-y-3">
-                                        <div>
-                                            <p className="text-xs text-stone-500 uppercase font-bold tracking-wider mb-1">Annual billing (30% off)</p>
-                                            <div className="flex items-baseline gap-2">
-                                                <span className="text-4xl font-black text-stone-900">£7–£12</span>
-                                                <span className="text-stone-600 font-bold">/month</span>
-                                            </div>
-                                            <p className="text-xs text-stone-500 mt-1">£84–£144/year</p>
-                                        </div>
-                                        <div className="pt-2 border-t border-stone-200">
-                                            <p className="text-xs text-stone-500 uppercase font-bold tracking-wider mb-1">Monthly billing</p>
-                                            <div className="flex items-baseline gap-2">
-                                                <span className="text-3xl font-black text-stone-900">£8.40–£14.40</span>
-                                                <span className="text-stone-600 font-bold">/month</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul className="space-y-3 text-sm text-stone-700 font-medium">
-                                    <li className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Building (1st & 2nd Fix)</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Plumbing</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Electrical</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-stone-900 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Landscaping</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </FadeInSection>
-
-                        {/* All-In Plan */}
-                        <FadeInSection delay={0.4}>
                             <div className="bg-stone-900 border-4 border-stone-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 text-white hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all ring-4 ring-yellow-400 ring-offset-4">
-                                <div className="mb-4 pb-4 border-b-2 border-yellow-400">
-                                    <div className="inline-block bg-yellow-400 text-stone-900 px-3 py-1 text-xs font-black uppercase tracking-wider rounded-none border-2 border-stone-900 mb-4">
-                                        Best Value
-                                    </div>
-                                </div>
-                                <h3 className="text-2xl font-black text-yellow-400 mb-2 font-retro">Builder All-In</h3>
+                                <h3 className="text-2xl font-black text-yellow-400 mb-2 font-retro">Garden Rooms</h3>
                                 <div className="mb-6 pb-6 border-b-2 border-stone-700">
-                                    <div className="space-y-3">
-                                        <div>
-                                            <p className="text-xs text-yellow-300 uppercase font-bold tracking-wider mb-1">Annual billing (30% off)</p>
-                                            <div className="flex items-baseline gap-2">
-                                                <span className="text-4xl font-black text-white">£25</span>
-                                                <span className="text-yellow-200 font-bold">/month</span>
-                                            </div>
-                                            <p className="text-xs text-yellow-100 mt-1">£300/year</p>
-                                        </div>
-                                        <div className="pt-2 border-t border-stone-600">
-                                            <p className="text-xs text-yellow-300 uppercase font-bold tracking-wider mb-1">Monthly billing</p>
-                                            <div className="flex items-baseline gap-2">
-                                                <span className="text-3xl font-black text-white">£30</span>
-                                                <span className="text-yellow-200 font-bold">/month</span>
-                                            </div>
-                                        </div>
+                                    <div className="flex items-baseline gap-2">
+                                        <span className="text-4xl font-black text-white">£99</span>
+                                        <span className="text-yellow-200 font-bold">one-off</span>
                                     </div>
+                                    <p className="text-xs text-yellow-100 mt-1">Add-on once you're subscribed</p>
                                 </div>
                                 <ul className="space-y-3 text-sm text-white font-medium">
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Core + All Packs</span>
+                                        <span>£12k–£60k project estimating</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>1st + 2nd Fix</span>
+                                        <span>Foundation, cladding & roofing logic</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Plumbing & Electrical</span>
+                                        <span>2 free quotes to try it first</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5 stroke-[3]" />
-                                        <span>Landscaping included</span>
+                                        <span>Pay once, use on every job after</span>
                                     </li>
                                 </ul>
                             </div>
                         </FadeInSection>
                     </div>
 
-                    {/* Specialist Add-on */}
-                    <FadeInSection delay={0.5}>
-                        <div className="max-w-2xl mx-auto">
-                            <div className="bg-white border-4 border-stone-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 text-center">
-                                <h3 className="text-2xl font-black text-stone-900 mb-4 font-retro">Garden Rooms Estimator</h3>
-                                <div className="mb-6 pb-6 border-b-2 border-stone-200">
-                                    <div className="space-y-2">
-                                        <div>
-                                            <p className="text-xs text-stone-500 uppercase font-bold tracking-wider mb-2">Special offer (30% off)</p>
-                                            <div className="flex items-baseline justify-center gap-2">
-                                                <span className="text-5xl font-black text-stone-900">£99</span>
-                                                <span className="text-stone-600 font-bold">one-time</span>
-                                            </div>
-                                        </div>
-                                        <p className="text-xs text-stone-500 text-center italic pt-2">Was £141.43 (before discount)</p>
-                                    </div>
-                                    <p className="text-sm text-stone-600 mt-4">Professional garden room system for £12k–£60k projects</p>
-                                </div>
-                                <p className="text-stone-700 font-medium">Complete structural breakdown, cladding options, electrical & finishes</p>
-                            </div>
-                        </div>
-                    </FadeInSection>
-
                     <FadeInSection delay={0.6}>
                         <div className="mt-12 text-center">
-                            <p className="text-stone-700 font-medium mb-4">
-                                ⏰ <span className="font-black">Limited time offer</span> – Lock in 30% discount on your annual plan
-                            </p>
                             <a
                                 href="https://app.pricem8.uk/signup"
                                 className="inline-flex items-center gap-3 px-10 py-5 bg-teal-600 text-white border-4 border-stone-900 font-black text-lg shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all uppercase tracking-wide group"
                             >
-                                Claim Your Discount Now
+                                Start Your Free Trial
                                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                             </a>
+                            <p className="text-stone-700 font-medium mt-4">
+                                Card required to start · not charged until the 14-day trial ends
+                            </p>
                         </div>
                     </FadeInSection>
                 </div>
@@ -755,7 +659,7 @@ export default function OfferRetro() {
                             Start Free Trial Now
                         </a>
                     </div>
-                    <p className="mt-8 text-sm font-mono text-stone-900 font-bold uppercase tracking-widest">No credit card required • Cancel anytime</p>
+                    <p className="mt-8 text-sm font-mono text-stone-900 font-bold uppercase tracking-widest">Card required, not charged until day 14 • Cancel anytime</p>
                 </div>
             </div>
 
