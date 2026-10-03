@@ -286,6 +286,24 @@
 }
 .ps-page .doc-foot{margin-top:18px;padding-top:12px;border-top:1px solid var(--rule-soft);color:var(--ink-2);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
+/* ---------- pricing : offers ---------- */
+.ps-page .offer-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(26px,4vw,56px);align-items:start}
+.ps-page .offer{border:1px solid var(--rule);background:var(--plate);padding:clamp(24px,3vw,36px)}
+.ps-page .offer-eyebrow{color:var(--cedar);margin-bottom:14px}
+.ps-page .price-fig{
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 118,'wght' 850;
+  font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;letter-spacing:-.03em;
+  color:var(--ink);font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:10px;
+}
+.ps-page .price-fig .unit{
+  font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.34em;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);
+}
+.ps-page .offer-terms{margin-top:16px;padding-top:16px;border-top:1px solid var(--rule-soft);color:var(--ink-2);font-size:.97rem;line-height:1.55}
+.ps-page .offer-terms strong{color:var(--ink);font-weight:600}
+.ps-page .offer .btn{margin-top:22px}
+.ps-page .offer-note{margin-top:14px;color:var(--ink-2);font-size:.9rem}
+
 /* ---------- story ---------- */
 .ps-page .story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(26px,4vw,60px);align-items:start}
 .ps-page .story .col p+p{margin-top:1.05em}
@@ -323,7 +341,7 @@
 
 /* ---------- narrow ---------- */
 @media (max-width:880px){
-  .ps-page .hero-grid,.ps-page .sec-head,.ps-page .doc-wrap,.ps-page .story{grid-template-columns:minmax(0,1fr)}
+  .ps-page .hero-grid,.ps-page .sec-head,.ps-page .doc-wrap,.ps-page .story,.ps-page .offer-grid{grid-template-columns:minmax(0,1fr)}
   .ps-page .hero-grid{align-items:start}
   .ps-page .specstrip li{border-left:0;padding-left:0;flex-basis:45%}
   .ps-page nav.main{display:none}

@@ -1,120 +1,141 @@
-import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
-import pricingPageSpec from '../data/pricingPageSpec.json'
-import { PricingPageSpec, Section } from '../types'
+import { useEffect } from 'react'
+import SiteSheetHeader from '../components/site-sheet/Header'
+import SiteSheetFooter from '../components/site-sheet/Footer'
+import '../styles/site-sheet.css'
 
-import { motion } from 'framer-motion'
-import Navbar from '../components/Navbar'
-import SimpleHero from '../components/SimpleHero'
-import PricingTable from '../components/PricingTable'
-import FAQ from '../components/FAQ'
-import GridBackground from '../components/GridBackground'
-import LargeCTA from '../components/LargeCTA'
-import Footer from '../components/Footer'
-import FadeInSection from '../components/FadeInSection'
-import BrandedText from '../components/BrandedText'
-import ModularPricing from '../components/ModularPricing'
-import ComparisonSection from '../components/ComparisonSection'
-import FreeAddonsSection from '../components/FreeAddonsSection'
-import VideoSection from '../components/VideoSection'
-
-// Import navbar and footer from home page spec
-import homePageSpec from '../data/pageSpec.json'
+const SEO_TITLE = 'Pricing – PriceM8'
+const SEO_DESCRIPTION =
+  'One Landscaping subscription at £25/month with a 14-day free trial, plus an optional £99 one-off Garden Rooms add-on. No packs, no bundles, no pre-season discount tricks.'
 
 export default function Pricing() {
-  const [spec] = useState<PricingPageSpec>(pricingPageSpec as PricingPageSpec)
-  const location = useLocation()
-
   useEffect(() => {
-    // Update document title and meta description
-    document.title = spec.seo.title
+    document.title = SEO_TITLE
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', spec.seo.description)
+      metaDescription.setAttribute('content', SEO_DESCRIPTION)
     }
-
-    // Scroll to top on route change
     window.scrollTo(0, 0)
-  }, [spec, location])
-
-  const renderSection = (section: Section) => {
-    switch (section.type) {
-      case 'simple-hero':
-        return <SimpleHero key={section.id} section={section} />
-      case 'pricing-table':
-        return <PricingTable key={section.id} section={section} />
-      case 'feature-section':
-        // For "What's included" section, no image needed, center the content
-        return (
-          <section key={section.id} className="relative py-20">
-            <div className="max-w-4xl mx-auto">
-              <FadeInSection>
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    <BrandedText as="span">{section.title}</BrandedText>
-                  </h2>
-                  {section.subtitle && (
-                    <p className="text-xl text-gray-600 dark:text-gray-300">
-                      {section.subtitle}
-                    </p>
-                  )}
-                </div>
-                {section.bullets && section.bullets.length > 0 && (
-                  <ul className="space-y-4">
-                    {section.bullets.map((bullet, index) => (
-                      <FadeInSection key={index} delay={index * 0.05}>
-                        <motion.li
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.05 }}
-                          viewport={{ once: true }}
-                          className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 hover:border-teal-200 dark:hover:border-teal-500/30 hover:shadow-md dark:hover:shadow-teal-500/5 transition-all duration-300"
-                        >
-                          <div className="flex-shrink-0 w-6 h-6 mt-1 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full flex items-center justify-center">
-                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                          <span className="text-lg text-gray-700 dark:text-gray-200 flex-1">{bullet}</span>
-                        </motion.li>
-                      </FadeInSection>
-                    ))}
-                  </ul>
-                )}
-              </FadeInSection>
-            </div>
-          </section>
-        )
-      case 'faq':
-        return <FAQ key={section.id} section={section} />
-      case 'cta-large':
-        return <LargeCTA key={section.id} section={section} />
-      case 'modular-pricing':
-        return <ModularPricing key={section.id} section={section} />
-      case 'comparison':
-        return <ComparisonSection key={section.id} section={section} />
-      case 'free-addons':
-        return <FreeAddonsSection key={section.id} section={section} />
-      case 'video':
-        return <VideoSection key={section.id} section={section} />
-      default:
-        return null
-    }
-  }
-
-  // Get navbar and footer from home page spec
-  const navbarSection = (homePageSpec as any).sections.find((s: any) => s.type === 'navbar')
-  const footerSection = (homePageSpec as any).sections.find((s: any) => s.type === 'footer')
+  }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-dark-bg dark:via-dark-bg dark:to-dark-bg relative overflow-hidden transition-colors duration-300">
-      <GridBackground />
-      {navbarSection && <Navbar section={navbarSection} />}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {spec.sections.map((section) => renderSection(section))}
-      </div>
-      {footerSection && <Footer section={footerSection} />}
+    <div className="ps-page">
+      <SiteSheetHeader />
+
+      <main id="top">
+
+        {/* ============ INTRO ============ */}
+        <section className="hero" style={{ paddingBottom: 0 }}>
+          <div className="wrap">
+            <p className="mono hero-eyebrow">What it costs</p>
+            <h1 className="disp">One price. One add-on. That's the whole price list.</h1>
+            <p className="lede" style={{ marginTop: 22 }}>
+              No Core-plus-packs maths, no bundles, no "30% off, today only." A Landscaping
+              subscription runs the business. Garden Rooms is there if and when you need it.
+            </p>
+          </div>
+        </section>
+
+        {/* ============ THE SUBSCRIPTION ============ */}
+        <section id="subscription">
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">A — The subscription</span><span className="ticks"></span></div>
+
+            <div className="offer-grid" style={{ marginTop: 28 }}>
+              <div className="offer">
+                <p className="mono offer-eyebrow">Landscaping</p>
+                <h2 className="disp" style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>
+                  Everything you need to run landscaping jobs properly.
+                </h2>
+                <div className="price-fig">£25<span className="unit">/ month</span></div>
+                <div className="offer-terms">
+                  <strong>14 days free, then £25/month.</strong> A card is required to start —
+                  you won't be charged until the trial ends, and you can cancel any time before then.
+                </div>
+                <a className="btn" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+                <p className="offer-note mono">Secured by Stripe · cancel anytime · no contract</p>
+              </div>
+
+              <div>
+                <ul className="ledger">
+                  <li><span className="mono k">Quotes</span><span className="v">Unlimited quotes and invoices, branded as your business, sent as a PDF the same day.</span></li>
+                  <li><span className="mono k">Takeoff</span><span className="v">Materials and labour worked out automatically — paving, sub-base, fencing, turf, muck away.</span></li>
+                  <li><span className="mono k">Portal</span><span className="v">Clients view, accept and message you, no login dance required on their end.</span></li>
+                  <li><span className="mono k">Scheduler</span><span className="v">Shifts remaining work automatically when a job overruns, and flags low-margin quotes before you send them.</span></li>
+                  <li><span className="mono k">Storage</span><span className="v">Files and photos kept per project, not scattered across your phone.</span></li>
+                  <li><span className="mono k">Access</span><span className="v">Works on your phone in the van, your tablet on site, your laptop at home.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ GARDEN ROOMS ============ */}
+        <section id="garden-rooms-pricing" style={{ background: 'var(--paper-2)' }}>
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">B — The add-on</span><span className="ticks"></span></div>
+
+            <div className="offer-grid" style={{ marginTop: 28 }}>
+              <div className="offer">
+                <p className="mono offer-eyebrow">Garden rooms</p>
+                <h2 className="disp" style={{ fontSize: 'var(--fs-h3)', marginBottom: 18 }}>
+                  Premium estimating for £12k–£60k builds.
+                </h2>
+                <div className="price-fig">£99<span className="unit">one‑off</span></div>
+                <div className="offer-terms">
+                  A one-time purchase on top of a Landscaping subscription — it isn't sold
+                  on its own. Your subscription includes <strong>2 free Garden Room quotes</strong>,
+                  so you can try it properly before deciding to buy.
+                </div>
+                <a className="btn ghost" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+                <p className="offer-note mono">Bought inside PriceM8, once you're subscribed</p>
+              </div>
+
+              <div>
+                <ul className="ledger">
+                  <li><span className="mono k">Bundle</span><span className="v">One task prices the whole build — foundation, frame, cladding, roof, electrics, internal finishes.</span></li>
+                  <li><span className="mono k">Cladding</span><span className="v">Cedar, larch, composite or metal — set separately for the front and for the sides and back.</span></li>
+                  <li><span className="mono k">Frame</span><span className="v">Studs at a fixed 400mm centres, priced with the rest of the timber list automatically.</span></li>
+                  <li><span className="mono k">Try first</span><span className="v">2 free Garden Room quotes come with your Landscaping subscription, before you need to buy.</span></li>
+                  <li><span className="mono k">One-time</span><span className="v">No separate subscription for this part — pay once, use it on every garden room job after.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ QUESTIONS ============ */}
+        <section id="questions">
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">C — Questions</span><span className="ticks"></span></div>
+
+            <ul className="ledger" style={{ marginTop: 28, maxWidth: '44em' }}>
+              <li><span className="mono k">Card upfront?</span><span className="v">Yes. Stripe needs it to start checkout, but nothing is charged until the 14-day trial ends — cancel any time before then and you pay nothing.</span></li>
+              <li><span className="mono k">Garden Rooms alone?</span><span className="v">No. It's a one-off add-on for subscribers, not sold separately. Try it first with the 2 free quotes that come with your subscription.</span></li>
+              <li><span className="mono k">Contract?</span><span className="v">No. Cancel any time, no minimum term.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* ============ CLOSE ============ */}
+        <section id="trial" className="close">
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">D — Next one</span><span className="ticks"></span></div>
+            <div style={{ marginTop: 38 }}>
+              <h2 className="disp">Price the next one properly.</h2>
+              <p className="lede">Take a job you've already done and put it through. If the number
+                doesn't land within a few percent of what it actually cost you, walk away — that's
+                a fair test and it's the one I'd run.</p>
+              <div className="row">
+                <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+                <span className="mono fine">14 days free · card required · cancel before it ends and pay nothing</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <SiteSheetFooter />
     </div>
   )
 }
-

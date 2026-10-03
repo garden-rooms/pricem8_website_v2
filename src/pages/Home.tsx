@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import founderPhoto from '../founder.jpeg'
+import SiteSheetHeader from '../components/site-sheet/Header'
+import SiteSheetFooter from '../components/site-sheet/Footer'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'PriceM8 – Quoting software for landscapers and garden room builders'
@@ -19,19 +20,7 @@ export default function Home() {
 
   return (
     <div className="ps-page">
-      <header className="site">
-        <div className="wrap bar">
-          <a className="mark" href="#top">PriceM8<i></i></a>
-          <nav className="main">
-            <a href="#landscaping">Landscaping</a>
-            <a href="#garden-rooms">Garden rooms</a>
-            <a href="#quote">The quote</a>
-            <a href="#story">The story</a>
-            <Link to="/pricing">Pricing</Link>
-          </nav>
-          <a className="btn small" href="https://app.pricem8.uk/signup">Start free trial</a>
-        </div>
-      </header>
+      <SiteSheetHeader />
 
       <main id="top">
 
@@ -359,19 +348,7 @@ export default function Home() {
 
       </main>
 
-      <footer className="site">
-        <div className="wrap row">
-          <a className="mark" href="#top">PriceM8<i></i></a>
-          <nav>
-            <a className="mono" href="#landscaping">Landscaping</a>
-            <a className="mono" href="#garden-rooms">Garden rooms</a>
-            <a className="mono" href="#quote">The quote</a>
-            <a className="mono" href="#story">The story</a>
-            <Link className="mono" to="/pricing">Pricing</Link>
-          </nav>
-          <span className="mono">Quoting software for UK landscapers and garden room builders</span>
-        </div>
-      </footer>
+      <SiteSheetFooter />
     </div>
   )
 }

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PriceM8 — Quote document reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E6E3DA; --paper-2:#DCD8CD; --plate:#F2F0E9;
+    --ink:#1A2118; --ink-2:#575F50; --rule:#B6B2A4; --rule-soft:#CCC8BB;
+    --cedar:#96501F; --cedar-soft:#B9764A;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper-2); color:var(--ink);
+    font-family:'Newsreader',Georgia,'Times New Roman',serif;
+    font-size:1.05rem; line-height:1.62; -webkit-font-smoothing:antialiased;
+    padding:48px 20px;
+  }
+  .note{
+    max-width:900px; margin:0 auto 28px; font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2);
+  }
+  .wrap{max-width:900px; margin:0 auto}
+  .mono{
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.69rem;
+    letter-spacing:.15em; text-transform:uppercase; font-weight:500; line-height:1.5;
+  }
+  .doc-wrap{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1fr);gap:40px;align-items:start}
+  .doc{background:var(--plate);border:1px solid var(--rule);padding:28px;font-variant-numeric:tabular-nums}
+  .doc-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:12px}
+  .doc-top .who{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 88,'wght' 900;text-transform:uppercase;letter-spacing:.02em;font-size:1rem}
+  .doc-job{padding-block:14px;border-bottom:1px solid var(--rule-soft)}
+  .doc-job .h{color:var(--ink-2)}
+  .doc-job .v{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 100,'wght' 650;font-size:1.05rem}
+  table.items{width:100%;border-collapse:collapse;font-size:.95rem}
+  table.items th{text-align:left;padding:12px 0 8px;border-bottom:1px solid var(--rule-soft);font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--ink-2)}
+  table.items th:last-child,table.items td:last-child{text-align:right}
+  table.items td{padding:9px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+  table.items td:last-child{white-space:nowrap;padding-left:12px}
+  table.items td .q{display:block;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:2px}
+  .totals{margin-top:14px;margin-left:auto;width:min(100%,280px);font-size:.96rem}
+  .totals div{display:flex;justify-content:space-between;gap:16px;padding:6px 0}
+  .totals .grand{border-top:1.5px solid var(--ink);margin-top:6px;padding-top:10px;font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 100,'wght' 800;font-size:1.22rem}
+  .doc-foot{margin-top:18px;padding-top:12px;border-top:1px solid var(--rule-soft);color:var(--ink-2);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .ledger{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+  .ledger li{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule-soft);align-items:baseline}
+  .ledger li .k{color:var(--cedar);white-space:nowrap}
+  .ledger li .v{font-size:1.02rem}
+  @media (max-width:760px){.doc-wrap{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+  <p class="note">Design reference only — extracted from the PriceM8 homepage (pricem8-website-v2) for use when building real itemised quotes in the app.</p>
+  <div class="wrap">
+    <div class="doc-wrap">
+      <div class="doc">
+        <div class="doc-top">
+          <span class="who">PriceM8 — Quotation</span>
+          <span class="mono">Ref Q‑1042 · 14 Mar</span>
+        </div>
+        <div class="doc-job">
+          <p class="mono h">Job</p>
+          <p class="v">Rear garden patio — 60 m² porcelain, Cheshire</p>
+        </div>
+        <table class="items">
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Excavate and cart away<span class="q">60 m² × 250 mm · 4 grab loads</span></td><td>£1,140.00</td></tr>
+            <tr><td>MOT Type 1 sub-base<span class="q">9.6 t · compacted to 150 mm</span></td><td>£612.00</td></tr>
+            <tr><td>Sharp sand and cement bed<span class="q">40 mm · 2.4 t sand, 12 bags</span></td><td>£288.00</td></tr>
+            <tr><td>Porcelain paving, 900×600<span class="q">60 m² + 8% cuts and waste</span></td><td>£2,916.00</td></tr>
+            <tr><td>Jointing compound<span class="q">6 mm joints · 5 tubs</span></td><td>£245.00</td></tr>
+            <tr><td>Labour<span class="q">2 operatives × 6 days</span></td><td>£2,880.00</td></tr>
+          </tbody>
+        </table>
+        <div class="totals">
+          <div><span>Subtotal</span><span>£8,081.00</span></div>
+          <div><span>VAT at 20%</span><span>£1,616.20</span></div>
+          <div class="grand"><span>Total</span><span>£9,697.20</span></div>
+        </div>
+        <div class="doc-foot">
+          <span class="mono">Prices held 30 days · 25% on commencement</span>
+          <span class="mono">Example quote — figures illustrative</span>
+        </div>
+      </div>
+
+      <div>
+        <ul class="ledger">
+          <li><span class="mono k">Line by line</span><span class="v">The customer sees where the money goes, so the conversation is about the build, not the total.</span></li>
+          <li><span class="mono k">Your logo</span><span class="v">It goes out as your business, on your headed paper. PriceM8 isn't on it anywhere.</span></li>
+          <li><span class="mono k">Same day</span><span class="v">Price it in the van, send the PDF before you've pulled off the drive. First quote in usually wins.</span></li>
+          <li><span class="mono k">Your rates</span><span class="v">Material prices start sensible and you overwrite any of them with what your merchant actually charges you.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
