@@ -59,9 +59,9 @@ export default function Pricing() {
                 <ul className="ledger">
                   <li><span className="mono k">Quotes</span><span className="v">Unlimited quotes and invoices, branded as your business, sent as a PDF the same day.</span></li>
                   <li><span className="mono k">Takeoff</span><span className="v">Materials and labour worked out automatically — paving, sub-base, fencing, turf, muck away.</span></li>
-                  <li><span className="mono k">Portal</span><span className="v">Clients view, accept and message you, no login dance required on their end.</span></li>
-                  <li><span className="mono k">Scheduler</span><span className="v">Shifts remaining work automatically when a job overruns, and flags low-margin quotes before you send them.</span></li>
-                  <li><span className="mono k">Storage</span><span className="v">Files and photos kept per project, not scattered across your phone.</span></li>
+                  <li><span className="mono k">Clients</span><span className="v">A proper client list attached to every quote — no separate spreadsheet of names and numbers.</span></li>
+                  <li><span className="mono k">Materials</span><span className="v">Sensible starting prices you can edit yourself, down to what your actual merchant charges you.</span></li>
+                  <li><span className="mono k">Branding</span><span className="v">Your logo on every quote and invoice. PriceM8 isn't on it anywhere.</span></li>
                   <li><span className="mono k">Access</span><span className="v">Works on your phone in the van, your tablet on site, your laptop at home.</span></li>
                 </ul>
               </div>
