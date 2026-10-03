@@ -1,678 +1,217 @@
-import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
-import founderImage from "../founder.jpeg";
-import {
-    Clock,
-    TrendingDown,
-    FileX,
-    Calculator,
-    FileText,
-    Package,
-    PoundSterling,
-    ChevronDown,
-    ChevronUp,
-    ClipboardList,
-    MousePointerClick,
-    Send,
-    BedDouble,
-    BookOpen,
-    Heart,
-    BanknoteIcon,
-    Gift,
-    CheckCircle2,
-    Zap,
-    ShieldCheck,
-} from "lucide-react";
-import Footer from "../components/Footer";
-import homePageSpec from "../data/pageSpec.json";
+import { useEffect } from 'react'
+import founderPhoto from '../founder.jpeg'
+import SiteSheetLandingHeader from '../components/site-sheet/LandingHeader'
+import '../styles/site-sheet.css'
 
-const footerSection = (homePageSpec as any).sections.find((s: any) => s.id === 'footer' || s.type === 'footer');
+const SEO_TITLE = 'Start free trial – PriceM8'
+const SEO_DESCRIPTION =
+  'Built by a landscaper with 20 years on the tools. Start a free 14-day trial of PriceM8 and price your next landscaping or garden room job properly.'
 
-/* ─────────────────────── Nav ─────────────────────── */
-
-function NavBar() {
-    return (
-        <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-slate-200">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
-                <Link to="/" className="text-xl font-bold text-slate-900">
-                    Price<span className="text-orange-500">M8</span>
-                </Link>
-                <a
-                    href="https://app.pricem8.uk/signup"
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors"
-                >
-                    Start Free Trial
-                </a>
-            </div>
-        </nav>
-    );
-}
-
-/* ─────────────────────── Hero ─────────────────────── */
-
-function HeroSection() {
-    return (
-        <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-slate-50 to-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <p className="inline-block text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full mb-6">
-                    Built by a landscaper with 20&nbsp;years in the trade
-                </p>
-                <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
-                    Stop Underquoting.{" "}
-                    <span className="text-emerald-600">Stop Losing Money</span> on Every
-                    Job.
-                </h1>
-                <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10">
-                    PriceM8 calculates accurate material quantities, labour costs and
-                    margins automatically&nbsp;&mdash; so you quote with confidence in
-                    minutes, not hours.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a
-                        href="https://app.pricem8.uk/signup"
-                        className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg py-4 px-8 rounded-xl transition-colors shadow-lg shadow-emerald-600/20"
-                    >
-                        Start Your Free 14-Day Trial
-                    </a>
-                </div>
-                <p className="mt-4 text-sm text-slate-500">
-                    Card required to start &middot; not charged until the trial ends &middot; full access for 14&nbsp;days
-                </p>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────────── Pain Points ─────────────────────── */
-
-const PAIN_POINTS = [
-    {
-        icon: Clock,
-        title: "Spending hours on quotes?",
-        description:
-            "Measuring, pricing materials, calculating labour\u2026 then doing it all again for the next job. Your evenings disappear into spreadsheets.",
-    },
-    {
-        icon: TrendingDown,
-        title: "Underquoting and losing money?",
-        description:
-            "Forget one material or underestimate the labour and your margin evaporates. You only find out when it\u2019s too late.",
-    },
-    {
-        icon: FileX,
-        title: "Sending unprofessional quotes?",
-        description:
-            "Scribbled prices on the back of a receipt don\u2019t win the big jobs. Customers judge your business before you even start.",
-    },
-];
-
-function PainPointsSection() {
-    return (
-        <section className="py-16 md:py-24 bg-white">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-4">
-                    Does This Sound Familiar?
-                </h2>
-                <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-                    If you&rsquo;re a landscaper quoting jobs by hand, you already know
-                    these problems.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {PAIN_POINTS.map((point) => (
-                        <div
-                            key={point.title}
-                            className="bg-slate-50 rounded-2xl p-8 text-center"
-                        >
-                            <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-5">
-                                <point.icon className="w-7 h-7 text-red-500" />
-                            </div>
-                            <h3 className="text-lg font-bold text-slate-900 mb-3">
-                                {point.title}
-                            </h3>
-                            <p className="text-slate-600 text-sm leading-relaxed">
-                                {point.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Emotional / Real Cost ─────────────────── */
-
-const REAL_COST_ITEMS = [
-    {
-        icon: BedDouble,
-        headline: "Quoting shouldn\u2019t beat bath time.",
-        text: "Your kids are splashing around upstairs and you\u2019re hunched over a laptop trying to work out how many bags of sharp sand you need. Again.",
-    },
-    {
-        icon: BookOpen,
-        headline: "Quoting shouldn\u2019t replace story time.",
-        text: "You promised you\u2019d read them a bedtime story tonight. But there\u2019s two more quotes to finish before tomorrow morning.",
-    },
-    {
-        icon: Heart,
-        headline: "Your partner hates your spreadsheets.",
-        text: "Another evening on the sofa with a calculator while they watch TV alone. They didn\u2019t sign up for this. Neither did you.",
-    },
-    {
-        icon: BanknoteIcon,
-        headline: "One missed material wipes your profit.",
-        text: "\u00a350 of forgotten sharp sand on a \u00a32,000 patio job. Multiply that by 10 jobs a month and you\u2019re losing \u00a3500 a month you didn\u2019t even notice.",
-    },
-];
-
-function RealCostSection() {
-    return (
-        <section className="py-16 md:py-24 bg-slate-900">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-white text-center mb-3">
-                    The Real Cost of Manual Quoting
-                </h2>
-                <p className="text-slate-400 text-center mb-14 max-w-xl mx-auto">
-                    It&rsquo;s not just money you&rsquo;re losing. It&rsquo;s time
-                    with the people who matter most.
-                </p>
-                <div className="space-y-10">
-                    {REAL_COST_ITEMS.map((item) => (
-                        <div key={item.headline} className="flex gap-5 items-start">
-                            <div className="flex-shrink-0 w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mt-1">
-                                <item.icon className="w-6 h-6 text-amber-400" />
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-bold text-white mb-1">
-                                    {item.headline}
-                                </h3>
-                                <p className="text-slate-400 leading-relaxed text-sm">
-                                    {item.text}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Mid-page CTA */}
-                <div className="mt-14 text-center">
-                    <a
-                        href="https://app.pricem8.uk/signup"
-                        className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-xl transition-colors"
-                    >
-                        Get Your Evenings Back &mdash; Start Free Trial
-                    </a>
-                    <p className="mt-3 text-xs text-slate-500">
-                        Card required, not charged until day 14 &middot; takes 2 minutes to set up
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Founder Story ─────────────────── */
-
-function FounderSection() {
-    return (
-        <section className="py-16 md:py-20 bg-emerald-600">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                    <div className="flex-shrink-0">
-                        <img
-                            src={founderImage}
-                            alt="Michal"
-                            className="w-28 h-28 rounded-full object-cover object-top shadow-lg ring-4 ring-emerald-700 scale-125"
-                        />
-                    </div>
-                    <div className="text-center md:text-left">
-                        <p className="text-xl md:text-2xl font-semibold text-white leading-relaxed mb-4">
-                            &ldquo;I spent 20&nbsp;years as a landscaper. I&rsquo;ve quoted thousands of jobs&nbsp;&mdash;
-                            sometimes brilliantly, sometimes at a loss. I built PriceM8 because I was tired of
-                            guessing, tired of spreadsheets, and tired of missing bath time because I had quotes to finish.&rdquo;
-                        </p>
-                        <p className="text-emerald-100 text-sm font-medium">
-                            &mdash; Michal, Founder
-                        </p>
-                        <p className="text-emerald-200 text-xs mt-1">
-                            20&nbsp;years in landscaping. Every calculation in PriceM8 is based on
-                            real-world trade experience, not guesswork.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Video Section ─────────────────── */
-
-function VideoSection() {
-    const videoRef = useRef<HTMLDivElement>(null);
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && !isPlaying) {
-                    setIsPlaying(true);
-                }
-            },
-            { threshold: 0.5 }
-        );
-
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
-
-        return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
-        };
-    }, [isPlaying]);
-
-    return (
-        <section className="py-16 md:py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
-                    See It in Action
-                </h2>
-                <p className="text-slate-500 mb-10 max-w-xl mx-auto">
-                    Watch how PriceM8 turns a blank project into a professional,
-                    accurate quote in under 3&nbsp;minutes.
-                </p>
-                <div
-                    ref={videoRef}
-                    className="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden shadow-xl border border-slate-200"
-                >
-                    <iframe
-                        src={`https://www.youtube.com/embed/0DcouW_XMF4?autoplay=${isPlaying ? 1 : 0}&mute=1`}
-                        title="PriceM8 Demo"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                    />
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Features ─────────────────── */
-
-const FEATURES = [
-    {
-        icon: Calculator,
-        title: "Instant Material Calculations",
-        description:
-            "Enter the area. PriceM8 calculates exactly how many bags of MOT, sharp sand, cement, or slabs you need\u2009\u2014\u2009down to the last unit. No more guessing, no more overordering.",
-    },
-    {
-        icon: FileText,
-        title: "Professional Quotes in Minutes",
-        description:
-            "Beautiful, branded PDF quotes your customers actually want to read. Add your logo, your terms, and customise the design. Look like a big company, even if it\u2019s just you and a van.",
-    },
-    {
-        icon: Package,
-        title: "Built-In Landscaping Calculations",
-        description:
-            "Block paving, artificial grass, porcelain paving, fencing, turfing and more. Just select the task, enter the measurements, and let PriceM8 do the maths.",
-    },
-    {
-        icon: PoundSterling,
-        title: "Your Prices, Your Margins",
-        description:
-            "Set your own material prices or adjust on the fly. Mark up materials with your margin built in automatically. Always know exactly what you\u2019re making on every job.",
-    },
-];
-
-function FeaturesSection() {
-    return (
-        <section className="py-16 md:py-24 bg-slate-50">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-4">
-                    Everything You Need to Quote Accurately
-                </h2>
-                <p className="text-slate-500 text-center mb-16 max-w-2xl mx-auto">
-                    PriceM8 handles the numbers so you can focus on the work.
-                </p>
-                <div className="space-y-16">
-                    {FEATURES.map((feature, i) => (
-                        <div
-                            key={feature.title}
-                            className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-8 md:gap-16`}
-                        >
-                            <div className="flex-shrink-0">
-                                <div className="w-20 h-20 bg-emerald-100 rounded-2xl flex items-center justify-center">
-                                    <feature.icon className="w-10 h-10 text-emerald-600" />
-                                </div>
-                            </div>
-                            <div className="text-center md:text-left">
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                                    {feature.title}
-                                </h3>
-                                <p className="text-slate-600 leading-relaxed max-w-lg">
-                                    {feature.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── How It Works ─────────────────── */
-
-const STEPS = [
-    {
-        step: "1",
-        title: "Create a project",
-        description: "Enter your measurements and select the tasks for the job.",
-        icon: ClipboardList,
-    },
-    {
-        step: "2",
-        title: "Materials calculated automatically",
-        description:
-            "PriceM8 works out every material, quantity, and cost instantly.",
-        icon: MousePointerClick,
-    },
-    {
-        step: "3",
-        title: "Send a professional quote",
-        description:
-            "Generate a branded PDF and share it with your customer in one click.",
-        icon: Send,
-    },
-];
-
-function HowItWorksSection() {
-    return (
-        <section className="py-16 md:py-24 bg-white">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-4">
-                    How It Works
-                </h2>
-                <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-                    From measurements to a professional quote in three simple steps.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {STEPS.map((s) => (
-                        <div key={s.step} className="text-center">
-                            <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-5">
-                                <span className="text-2xl font-bold text-white">{s.step}</span>
-                            </div>
-                            <h3 className="text-lg font-bold text-slate-900 mb-2">
-                                {s.title}
-                            </h3>
-                            <p className="text-slate-600 text-sm">{s.description}</p>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Mid-page CTA */}
-                <div className="mt-14 text-center">
-                    <a
-                        href="https://app.pricem8.uk/signup"
-                        className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-xl transition-colors"
-                    >
-                        Try It Free for 14 Days
-                    </a>
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Freebies / What You Get ─────────────────── */
-
-const FREEBIES = [
-    {
-        icon: Zap,
-        title: "Instant material take-offs",
-        text: "Enter area + task. Get an exact material list with quantities. Done.",
-    },
-    {
-        icon: FileText,
-        title: "Branded PDF quotes",
-        text: "Your logo, your colours, your terms. Sent to clients in one tap.",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Built-in profit margins",
-        text: "Set your mark-up once. Every quote protects your profit automatically.",
-    },
-    {
-        icon: Calculator,
-        title: "Labour cost calculations",
-        text: "Day rates, hourly rates, team size. Labour is costed line by line.",
-    },
-    {
-        icon: Gift,
-        title: "Every client in one place",
-        text: "A proper client list attached to every quote. No more scrolling a separate spreadsheet.",
-    },
-    {
-        icon: CheckCircle2,
-        title: "Your own material prices",
-        text: "Sensible starting prices, editable down to what your actual merchant charges you.",
-    },
-];
-
-function FreebiesSection() {
-    return (
-        <section className="py-16 md:py-24 bg-slate-50">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-3">
-                    What You Get With PriceM8
-                </h2>
-                <p className="text-slate-500 text-center mb-12 max-w-xl mx-auto">
-                    No fluff. Here&rsquo;s exactly what&rsquo;s inside.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {FREEBIES.map((item) => (
-                        <div
-                            key={item.title}
-                            className="bg-white rounded-xl border border-slate-200 p-6"
-                        >
-                            <div className="flex items-center gap-3 mb-3">
-                                <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <item.icon className="w-5 h-5 text-emerald-600" />
-                                </div>
-                                <h3 className="font-bold text-slate-900">{item.title}</h3>
-                            </div>
-                            <p className="text-slate-600 text-sm leading-relaxed">
-                                {item.text}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Pricing ─────────────────── */
-
-function PricingSection() {
-    return (
-        <section className="py-16 md:py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                    Simple, Transparent Pricing
-                </h2>
-                <p className="text-slate-500 mb-12 max-w-xl mx-auto">
-                    One Landscaping subscription. Garden Rooms if and when you need it.
-                </p>
-
-                {/* Landscaping subscription */}
-                <div className="bg-white rounded-2xl border-2 border-emerald-500 shadow-xl p-8 max-w-md mx-auto mb-8">
-                    <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                        Start here
-                    </span>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-1">
-                        Landscaping
-                    </h3>
-                    <p className="text-slate-500 text-sm mb-6">
-                        Unlimited quotes &amp; invoices, client list, branded PDFs, editable
-                        material prices
-                    </p>
-                    <div className="mb-6">
-                        <span className="text-4xl font-extrabold text-slate-900">
-                            &pound;25
-                        </span>
-                        <span className="text-slate-500">/month</span>
-                    </div>
-                    <a
-                        href="https://app.pricem8.uk/signup"
-                        className="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-xl transition-colors"
-                    >
-                        Start Your Free 14-Day Trial
-                    </a>
-                    <p className="mt-3 text-xs text-slate-400">
-                        A card is required to start &mdash; you&rsquo;re not charged until the trial ends
-                    </p>
-                </div>
-
-                {/* Garden Rooms add-on */}
-                <div className="bg-white rounded-xl border border-slate-200 p-6 max-w-md mx-auto">
-                    <h4 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4">
-                        Optional add-on
-                    </h4>
-                    <div className="divide-y divide-slate-100 text-sm">
-                        <div className="flex items-center justify-between py-2.5">
-                            <span className="text-slate-700">Garden Rooms</span>
-                            <span className="font-medium text-slate-900">&pound;99 one-off</span>
-                        </div>
-                    </div>
-                    <p className="mt-4 text-xs text-slate-400">
-                        A one-time purchase once you&rsquo;re subscribed &mdash; try it first with 2 free
-                        Garden Room quotes.
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── FAQ ─────────────────── */
-
-const FAQ_ITEMS = [
-    {
-        q: "Is it just for landscapers?",
-        a: "PriceM8 covers two product lines: Landscaping and Garden Rooms. Landscaping is the subscription itself, and Garden Rooms is a one-off \u00a399 add-on for high-value projects once you're subscribed.",
-    },
-    {
-        q: "What happens after the trial?",
-        a: "Your card is charged \u00a325 automatically once the 14-day trial ends, unless you've cancelled before then. You can cancel any time, no contract.",
-    },
-    {
-        q: "Can I use my own material prices?",
-        a: "Yes. Every material price is fully customisable per workspace. Set your own trade prices and mark-ups.",
-    },
-    {
-        q: "Do I need to be tech-savvy?",
-        a: "If you can use a smartphone, you can use PriceM8. It\u2019s designed to be simple and fast for tradespeople, not IT professionals.",
-    },
-    {
-        q: "What tasks does Landscaping cover?",
-        a: "Block paving, artificial grass, porcelain paving, fencing, turfing, concrete bases, and more. Each task auto-calculates every material you need.",
-    },
-    {
-        q: "Can I try it before paying?",
-        a: "Yes\u2009\u2014\u2009the 14-day trial gives you full access to everything. A card is required to start it, but you won't be charged a penny until the trial ends, and you can cancel any time before then.",
-    },
-];
-
-function FAQSection() {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-    return (
-        <section className="py-16 md:py-24 bg-slate-50">
-            <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-12">
-                    Frequently Asked Questions
-                </h2>
-                <div className="space-y-3">
-                    {FAQ_ITEMS.map((item, i) => (
-                        <div
-                            key={i}
-                            className="bg-white border border-slate-200 rounded-xl overflow-hidden"
-                        >
-                            <button
-                                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-slate-50 transition-colors"
-                            >
-                                <span className="font-semibold text-slate-900">{item.q}</span>
-                                {openIndex === i ? (
-                                    <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0 ml-4" />
-                                ) : (
-                                    <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0 ml-4" />
-                                )}
-                            </button>
-                            {openIndex === i && (
-                                <div className="px-6 pb-4 text-slate-600 text-sm leading-relaxed">
-                                    {item.a}
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Final CTA ─────────────────── */
-
-function FinalCTA() {
-    return (
-        <section className="py-16 md:py-24 bg-emerald-600">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-4">
-                    Ready to Quote With Confidence?
-                </h2>
-                <p className="text-emerald-100 text-lg mb-8 max-w-xl mx-auto">
-                    Stop guessing. Stop losing money. Stop missing bath time.
-                    <br />
-                    Try PriceM8 free for 14&nbsp;days and see the difference.
-                </p>
-                <a
-                    href="https://app.pricem8.uk/signup"
-                    className="inline-block bg-white text-emerald-700 font-bold text-lg py-4 px-10 rounded-xl hover:bg-emerald-50 transition-colors shadow-lg"
-                >
-                    Start Your Free Trial Now
-                </a>
-                <p className="mt-4 text-sm text-emerald-200">
-                    Card required to start, not charged until day 14 &middot; cancel anytime
-                </p>
-            </div>
-        </section>
-    );
-}
-
-/* ─────────────────── Page ─────────────────── */
-
+// The single consolidated landing page for paid traffic — replaces four near-duplicate
+// "start your trial" variants (GetStartedPage, AdLandingPage/offer, OfferRetro/offer-retro,
+// QuoteInMinutesLanding) that had drifted into different visual styles and stale pricing. One
+// focused page, one CTA, same voice and numbers as the real site — see /offer, /offer-retro and
+// /lp/quote-in-minutes, which now redirect here.
 export default function GetStartedPage() {
-    return (
-        <div className="min-h-screen bg-white">
-            <NavBar />
-            <HeroSection />
-            <PainPointsSection />
-            <RealCostSection />
-            <FounderSection />
-            <VideoSection />
-            <FeaturesSection />
-            <HowItWorksSection />
-            <FreebiesSection />
-            <PricingSection />
-            <FAQSection />
-            <FinalCTA />
-            <Footer section={footerSection} />
+  useEffect(() => {
+    document.title = SEO_TITLE
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', SEO_DESCRIPTION)
+    }
+    window.scrollTo(0, 0)
+  }, [])
+
+  return (
+    <div className="ps-page">
+      <SiteSheetLandingHeader />
+
+      <main id="top">
+
+        {/* ============ HERO ============ */}
+        <section className="hero">
+          <div className="wrap">
+            <div className="hero-grid">
+              <div>
+                <p className="mono hero-eyebrow">Twenty years on the tools · then the software</p>
+                <h1 className="disp">I priced jobs badly for years.<br />So I built the thing that <em>doesn't</em>.</h1>
+                <p className="lede" style={{ marginTop: 22 }}>
+                  PriceM8 works out the materials, the labour, the waste and the VAT for
+                  landscaping and garden room jobs — then puts it on a quote the
+                  customer takes seriously. No spreadsheet. No "I'll ring you with a number."
+                </p>
+                <div className="hero-cta">
+                  <a className="btn" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+                </div>
+                <p className="mono hero-note">14 days free · card required · not charged until day 14</p>
+              </div>
+
+              <div className="plate">
+                <figure>
+                  <div className="shot">
+                    <img src={founderPhoto} alt="Michal, founder of PriceM8, standing on a stone patio in a garden he built, wearing a green hoodie and work trousers." />
+                  </div>
+                  <svg className="dimline" viewBox="0 0 320 30" preserveAspectRatio="none" aria-hidden="true">
+                    <g stroke="currentColor" fill="none" strokeWidth={1}>
+                      <path d="M3 6 V18" /><path d="M317 6 V18" />
+                      <path className="draw" style={{ '--len': 314 } as React.CSSProperties} d="M3 12 H317" />
+                      <path d="M0 9 L8 15" strokeWidth={1.2} /><path d="M312 9 L320 15" strokeWidth={1.2} />
+                    </g>
+                    <text x={160} y={28} textAnchor="middle">Built and priced by the same pair of hands</text>
+                  </svg>
+                  <figcaption>
+                    <span className="mono">Plate 01 — Michal, on his own patio</span>
+                    <span className="mono">Est. 2005 on site</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div className="specstrip">
+              <ul>
+                <li><b>MOT Type 1</b><span className="mono">By the tonne, at your depth</span></li>
+                <li><b>Cuts &amp; waste</b><span className="mono">A set allowance, not a guess</span></li>
+                <li><b>Labour</b><span className="mono">Day rate that covers the van</span></li>
+                <li><b>VAT</b><span className="mono">20% · shown, not buried</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ THE MATHS ============ */}
+        <section className="band">
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">A — The sums you're doing in your head</span><span className="ticks"></span></div>
+            <div className="sec-head">
+              <h2 className="disp">Every job you underprice, you find out four days in.</h2>
+              <p className="lede">These are the three that catch people out most. None of them are
+                complicated. All of them are easy to get wrong standing in someone's back
+                garden with a tape measure in one hand.</p>
+            </div>
+
+            <div className="maths">
+              <article>
+                <span className="fig">9.6 t</span>
+                <h3 className="sub">Not six tonnes</h3>
+                <p>A 60 m² patio on 150 mm of compacted MOT Type 1 needs about 9.6 tonnes.
+                  Guess low and you've eaten the margin before the first slab goes down.</p>
+              </article>
+              <article>
+                <span className="fig">20%</span>
+                <h3 className="sub">Soil that won't fit back in the hole</h3>
+                <p>Dig out a cubic metre and it doesn't compact back to a cubic metre — excavated
+                  soil bulks by around 20%. Guess the raw volume and you'll under-order the skip.</p>
+              </article>
+              <article>
+                <span className="fig">£41/hr</span>
+                <h3 className="sub">What an hour actually costs</h3>
+                <p>Your day rate isn't your cost. Van, fuel, insurance, the hour loading up,
+                  the trip to the merchant you didn't plan on. It all lands somewhere.</p>
+              </article>
+            </div>
+
+            <div className="band-foot">
+              <p className="big">PriceM8 does all three before you've got back in the van —
+                and shows you the working, so you can argue with it.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ WHAT IT PRICES ============ */}
+        <section>
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">B — What it prices</span><span className="ticks"></span></div>
+            <div className="sec-head">
+              <h2 className="disp">Two trades. Both done properly.</h2>
+              <p className="lede">Not a general-purpose quoting app with a landscaping label stuck on it.
+                Two build types, taken off the way you'd take them off yourself.</p>
+            </div>
+
+            <div className="lines">
+              <div className="line-block">
+                <div className="line-title">
+                  <h3 className="sub">Landscaping</h3>
+                  <span className="mono n">Patios · drives · fencing · turf</span>
+                </div>
+                <ul className="takeoff">
+                  <li><span>Paving — slabs, bond pattern, waste allowance</span><span>m²</span></li>
+                  <li><span>Sub-base at your compacted depth</span><span>tonnes</span></li>
+                  <li><span>Edgings, kerbs, haunching</span><span>lin m</span></li>
+                  <li><span>Turf, topsoil, membrane</span><span>m²</span></li>
+                  <li><span>Fencing, decking, sleeper walls</span><span>lin m</span></li>
+                  <li><span>Muck away — skip or grab</span><span>loads</span></li>
+                </ul>
+              </div>
+
+              <div className="line-block">
+                <div className="line-title">
+                  <h3 className="sub">Garden rooms</h3>
+                  <span className="mono n">Offices · studios · gyms · annexes</span>
+                </div>
+                <ul className="takeoff">
+                  <li><span>Base — pads, screw piles or raft</span><span>each / m³</span></li>
+                  <li><span>Frame at 400mm centres</span><span>timber list</span></li>
+                  <li><span>Insulation, VCL, breather membrane</span><span>m²</span></li>
+                  <li><span>Cladding — cedar, larch, composite or metal</span><span>m² + waste</span></li>
+                  <li><span>EPDM or fibreglass roof, trims, outlet</span><span>m²</span></li>
+                  <li><span>First fix, flooring, internal linings</span><span>m² / points</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ PRICE ============ */}
+        <section style={{ background: 'var(--paper-2)' }}>
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">C — What it costs</span><span className="ticks"></span></div>
+            <div className="offer-grid" style={{ marginTop: 28 }}>
+              <div className="offer">
+                <p className="mono offer-eyebrow">Landscaping</p>
+                <div className="price-fig">£25<span className="unit">/ month</span></div>
+                <div className="offer-terms">
+                  <strong>14 days free, then £25/month.</strong> A card is required to start —
+                  you won't be charged until the trial ends, and you can cancel any time before then.
+                </div>
+                <a className="btn" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+              </div>
+              <div className="offer">
+                <p className="mono offer-eyebrow">Garden rooms</p>
+                <div className="price-fig">£99<span className="unit">one‑off</span></div>
+                <div className="offer-terms">
+                  A one-time add-on once you're subscribed — not sold on its own.
+                  Your subscription includes <strong>2 free Garden Room quotes</strong> to try it first.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ CLOSE ============ */}
+        <section id="trial" className="close">
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">D — Next one</span><span className="ticks"></span></div>
+            <div style={{ marginTop: 38 }}>
+              <h2 className="disp">Price the next one properly.</h2>
+              <p className="lede">Take a job you've already done and put it through. If the number
+                doesn't land within a few percent of what it actually cost you, walk away — that's
+                a fair test and it's the one I'd run.</p>
+              <div className="row">
+                <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+                <span className="mono fine">14 days free · card required · cancel before it ends and pay nothing</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer className="site">
+        <div className="wrap row">
+          <a className="mark" href="#top">PriceM8<i></i></a>
+          <span className="mono">Quoting software for UK landscapers and garden room builders</span>
         </div>
-    );
+      </footer>
+    </div>
+  )
 }

@@ -12,9 +12,6 @@ import LinkInBio from './pages/LinkInBio'
 import RealDataPage from './pages/RealDataPage'
 import ConstructionEstimatingSoftware from './pages/ConstructionEstimatingSoftware'
 import ConstructionQuotingSoftware from './pages/ConstructionQuotingSoftware'
-import AdLandingPage from './pages/AdLandingPage'
-import QuoteInMinutesLanding from './pages/QuoteInMinutesLanding'
-import OfferRetro from './pages/OfferRetro'
 import GetStartedPage from './pages/GetStartedPage'
 import { WaitingListProvider } from './context/WaitingListContext'
 import WaitingListModal from './components/WaitingListModal'
@@ -43,9 +40,10 @@ function App() {
           <Route path="/links" element={<LinkInBio />} />
           <Route path="/construction-estimating-software" element={<ConstructionEstimatingSoftware />} />
           <Route path="/construction-quoting-software" element={<ConstructionQuotingSoftware />} />
-          <Route path="/offer" element={<AdLandingPage />} />
-          <Route path="/offer-retro" element={<OfferRetro />} />
-          <Route path="/lp/quote-in-minutes" element={<QuoteInMinutesLanding />} />
+          {/* Consolidated into one landing page — see GetStartedPage.tsx */}
+          <Route path="/offer" element={<Navigate to="/get-started" replace />} />
+          <Route path="/offer-retro" element={<Navigate to="/get-started" replace />} />
+          <Route path="/lp/quote-in-minutes" element={<Navigate to="/get-started" replace />} />
           <Route path="/get-started" element={<GetStartedPage />} />
         </Routes>
         <WaitingListModal />
