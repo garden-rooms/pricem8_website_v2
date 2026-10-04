@@ -146,7 +146,7 @@
             },
             {
                 "type": "paragraph",
-                "text": "It's not a computer 'hallucinating' a list of materials; it's a proven recipe for success. You can trust it because it's based on reality, not probability. <a href='/real-data' class='text-teal-600 hover:underline font-bold'>See how our data works.</a>"
+                "text": "It's not a computer 'hallucinating' a list of materials; it's a proven recipe for success. You can trust it because it's based on reality, not probability. <a href=\"/#story\">See how our data works.</a>"
             },
             {
                 "type": "heading",
@@ -1247,6 +1247,113 @@
             {
                 "type": "paragraph",
                 "text": "If you are starting out, day rates are fine to build trust. But if you want to build a business that gives you freedom and wealth, you must move to fixed pricing. Stop selling your time. Start selling your expertise."
+            }
+        ]
+    },
+    {
+        "id": "landscaper-day-rates-uk-2026",
+        "slug": "what-landscapers-actually-charge-2026",
+        "title": "What UK Landscapers Actually Charge in 2026 (Real Numbers, By Region)",
+        "excerpt": "Every cost guide on the internet has a different answer. Here's what landscapers are really charging across the UK in 2026 - and why that number still isn't the one you should quote.",
+        "date": "2026-10-04",
+        "readTime": "6 min read",
+        "image": "day-rate-benchmarks",
+        "category": "Pricing Strategy",
+        "seo": {
+            "title": "UK Landscaper Day Rates 2026: Real Regional Figures - PriceM8",
+            "description": "What landscapers actually charge per day in the UK in 2026, broken down by region and experience - plus why a market average is the wrong number to quote."
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Search 'how much does a landscaper charge' and you'll get a dozen cost-guide sites, each with a slightly different number. None of them know your overheads, your van, or your postcode. But they're not useless either - if you're setting a day rate with no idea what the market is doing, here's where it actually sits in 2026."
+            },
+            {
+                "type": "heading",
+                "text": "The Going Rate, Region by Region"
+            },
+            {
+                "type": "paragraph",
+                "text": "Across the UK, a self-employed landscaper's day rate for project work typically sits between <strong>£150 and £450</strong>, and almost all of that spread is explained by region and experience, not skill alone."
+            },
+            {
+                "type": "chart",
+                "title": "Typical Landscaper Day Rate by Region (2026)",
+                "chartType": "bar",
+                "subtitle": "Midpoint of the going rate for a self-employed landscaper, project work",
+                "data": [
+                    {
+                        "label": "London & South East",
+                        "value": 375,
+                        "color": "bg-teal-600",
+                        "suffix": "£"
+                    },
+                    {
+                        "label": "Kent & South East",
+                        "value": 220,
+                        "color": "bg-blue-400",
+                        "suffix": "£"
+                    },
+                    {
+                        "label": "Midlands",
+                        "value": 200,
+                        "color": "bg-gray-500",
+                        "suffix": "£"
+                    },
+                    {
+                        "label": "North England",
+                        "value": 185,
+                        "color": "bg-gray-400",
+                        "suffix": "£"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "London and the South East run 40-60% above the North, and that gap has been widening, not shrinking. If you're quoting a Home Counties job using a rate you learned up North, you're leaving real money on the table."
+            },
+            {
+                "type": "heading",
+                "text": "Experience Changes the Maths More Than Region Does"
+            },
+            {
+                "type": "list",
+                "items": [
+                    "<strong>Under 3 years self-employed:</strong> £130-£180/day. You're still building a client base and a reputation, and it shows in the rate.",
+                    "<strong>Established, 3+ years:</strong> £180-£280/day. A proven track record, repeat clients, and referrals let you hold a firmer number.",
+                    "<strong>Experienced, strong local market:</strong> £300-£450/day. Usually London/South East, usually a specialism (hard landscaping, design-and-build) clients can't easily get elsewhere."
+                ]
+            },
+            {
+                "type": "heading",
+                "text": "Hard Landscaping vs Soft Landscaping"
+            },
+            {
+                "type": "paragraph",
+                "text": "The two halves of the trade don't command the same rate, even from the same business:"
+            },
+            {
+                "type": "list",
+                "items": [
+                    "<strong>Hard landscaping</strong> (patios, paving, drives, retaining walls): £180-£300/day. Closer to groundworker rates - heavier materials, more skill, more liability if it's done wrong.",
+                    "<strong>Soft landscaping</strong> (turfing, planting, hedging): £150-£250/day. Still skilled work, but lower material risk and a lower barrier to entry pulls the ceiling down."
+                ]
+            },
+            {
+                "type": "heading",
+                "text": "Why Copying This Number Is Still a Mistake"
+            },
+            {
+                "type": "paragraph",
+                "text": "These are averages, pulled from surveys and cost guides, from landscapers you've never met. Some of them are running a ten-year-old van that's paid off. Some of them aren't paying themselves a pension. Some of them are quietly losing money on half their jobs and don't know it yet. A regional average tells you what other people are <em>charging</em>. It tells you nothing about what you need to charge."
+            },
+            {
+                "type": "paragraph",
+                "text": "<strong>The right day rate isn't a market number. It's your number</strong> - built from your actual van, insurance, tools, software, tax, and the holidays and sick days you're entitled to take. We wrote the full breakdown of how to calculate it properly, with a free calculator, in <a href=\"/blog/how-much-to-charge\">How Much Should I Charge? The Truth About Trade Pricing</a>."
+            },
+            {
+                "type": "paragraph",
+                "text": "Use the regional figures above as a sanity check - if your calculated rate comes out wildly above or below what your area is used to, that's worth a second look. But build the number bottom-up, not top-down."
             }
         ]
     }

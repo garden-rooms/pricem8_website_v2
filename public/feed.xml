@@ -5,7 +5,7 @@
     <link>https://pricem8.uk</link>
     <description>Tips, guides, and news for UK tradespeople.</description>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 04 Oct 2026 09:35:46 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 09:49:44 GMT</lastBuildDate>
     <atom:link href="https://pricem8.uk/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -114,6 +114,15 @@
       <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Are you billing for your time or your value? We explore the pros and cons of Day Rate vs Fixed Price and why one is the clear winner for growth.]]></description>
       <content:encoded><![CDATA[Are you billing for your time or your value? We explore the pros and cons of Day Rate vs Fixed Price and why one is the clear winner for growth.]]></content:encoded>
+    </item>
+  
+    <item>
+      <title><![CDATA[What UK Landscapers Actually Charge in 2026 (Real Numbers, By Region)]]></title>
+      <link>https://pricem8.uk/blog/what-landscapers-actually-charge-2026</link>
+      <guid>https://pricem8.uk/blog/what-landscapers-actually-charge-2026</guid>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Every cost guide on the internet has a different answer. Here's what landscapers are really charging across the UK in 2026 - and why that number still isn't the one you should quote.]]></description>
+      <content:encoded><![CDATA[Every cost guide on the internet has a different answer. Here's what landscapers are really charging across the UK in 2026 - and why that number still isn't the one you should quote.]]></content:encoded>
     </item>
   
   </channel>
