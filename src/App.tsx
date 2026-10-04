@@ -12,14 +12,11 @@ import LinkInBio from './pages/LinkInBio'
 import ConstructionEstimatingSoftware from './pages/ConstructionEstimatingSoftware'
 import ConstructionQuotingSoftware from './pages/ConstructionQuotingSoftware'
 import GetStartedPage from './pages/GetStartedPage'
-import { WaitingListProvider } from './context/WaitingListContext'
-import WaitingListModal from './components/WaitingListModal'
 
 function App() {
   return (
-    <WaitingListProvider>
-      <BrowserRouter>
-        <Routes>
+    <BrowserRouter>
+      <Routes>
           <Route path="/" element={<Home />} />
           {/* Home's own story/maths sections now make this page's case */}
           <Route path="/real-data" element={<Navigate to="/#story" replace />} />
@@ -45,10 +42,8 @@ function App() {
           <Route path="/offer-retro" element={<Navigate to="/get-started" replace />} />
           <Route path="/lp/quote-in-minutes" element={<Navigate to="/get-started" replace />} />
           <Route path="/get-started" element={<GetStartedPage />} />
-        </Routes>
-        <WaitingListModal />
-      </BrowserRouter>
-    </WaitingListProvider>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
