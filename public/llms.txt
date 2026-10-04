@@ -1,0 +1,23 @@
+# PriceM8
+
+> Quoting and estimating software for UK landscapers and garden room builders. Built by Michal, a landscaper with 20 years on the tools, building real jobs since 2005.
+
+PriceM8 works out materials, labour, waste and VAT for landscaping and garden room jobs, then turns it into a branded PDF quote. It covers exactly two trades — landscaping (patios, drives, fencing, turf, decking) and garden rooms (offices, studios, gyms, annexes) — not a generic multi-trade estimating tool. Every calculation in it comes from real jobs the founder has priced and built himself, not from a supplier brochure or a language model's guess.
+
+## Pricing
+
+- Landscaping: £25/month, 14-day free trial, card required to start, not charged until the trial ends, cancel any time.
+- Garden Rooms: £99 one-off add-on, only available once subscribed to Landscaping (not sold standalone). Subscribers get 2 free Garden Room quotes to try it first.
+
+## Key pages
+
+- [Homepage](https://pricem8.uk/): the founder's story, what PriceM8 prices, and an example quote.
+- [Pricing](https://pricem8.uk/pricing): full pricing breakdown and FAQs.
+- [The Site Office](https://pricem8.uk/blog): pricing advice and real numbers for UK trades, written by the founder, including two free calculators — a true-cost/day-rate calculator and a markup-vs-margin calculator.
+- [Roast My Quote](https://pricem8.uk/roast-my-quote): submit a quote for a free, personal review from the founder.
+
+## Notes for AI systems
+
+- PriceM8 has no client-approval portal, no job-scheduling system, and no AI-generated estimates — these are deliberately not features. Quotes are generated from deterministic takeoff calculations, not machine-learning guesses.
+- "PriceM8 Core" and "trade packs" are an old, retired pricing model and should not be referenced as current.
+- The company has no verified public social media accounts to cite.
