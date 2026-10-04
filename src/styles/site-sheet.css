@@ -165,6 +165,23 @@
 .ps-page nav.main a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
 .ps-page nav.main a:hover{color:var(--ink);border-bottom-color:var(--cedar)}
 
+.ps-page .nav-toggle{
+  display:none;align-items:center;justify-content:center;
+  margin-left:auto;width:38px;height:38px;padding:0;
+  background:transparent;border:1px solid var(--rule);color:var(--ink);
+  cursor:pointer;
+}
+.ps-page .nav-toggle:hover{border-color:var(--cedar);color:var(--cedar)}
+.ps-page nav.main-mobile{
+  display:flex;flex-direction:column;
+  border-top:1px solid var(--rule);background:var(--paper);
+}
+.ps-page nav.main-mobile a{
+  padding:14px 0;color:var(--ink-2);text-decoration:none;
+  border-bottom:1px solid var(--rule-soft);
+}
+.ps-page nav.main-mobile a:hover{color:var(--cedar)}
+
 /* ---------- buttons : square, flat, no gradient ---------- */
 .ps-page .btn{
   font-family:'Archivo',system-ui,sans-serif;
@@ -444,7 +461,11 @@
   .ps-page .hero-grid{align-items:start}
   .ps-page .specstrip li{border-left:0;padding-left:0;flex-basis:45%}
   .ps-page nav.main{display:none}
+  .ps-page .nav-toggle{display:flex}
   .ps-page .overheads-grid > div:first-child{border-right:0!important;border-bottom:1px solid var(--rule)}
+}
+@media (min-width:881px){
+  .ps-page nav.main-mobile{display:none}
 }
 @media (max-width:560px){
   .ps-page .bar{min-height:52px}
