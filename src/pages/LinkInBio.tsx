@@ -42,9 +42,11 @@ export default function LinkInBio() {
         <div className="ps-page">
             <div className="bio-page">
                 <div style={{ textAlign: 'center', marginBottom: 28 }}>
-                    <a className="mark" href="/" style={{ color: 'var(--band-ink)', justifyContent: 'center', marginBottom: 14 }}>
-                        PriceM8<i></i>
-                    </a>
+                    <h1 style={{ margin: '0 0 14px' }}>
+                        <a className="mark" href="/" style={{ color: 'var(--band-ink)', justifyContent: 'center' }}>
+                            PriceM8<i></i>
+                        </a>
+                    </h1>
                     <p className="mono" style={{ color: 'var(--band-ink-2)', maxWidth: 260, margin: '0 auto' }}>
                         Quoting software for UK landscapers and garden room builders
                     </p>
