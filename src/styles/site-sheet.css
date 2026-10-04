@@ -304,6 +304,21 @@
 .ps-page .offer .btn{margin-top:22px}
 .ps-page .offer-note{margin-top:14px;color:var(--ink-2);font-size:.9rem}
 
+/* ---------- long-form prose (legal pages etc.) ---------- */
+.ps-page .prose{max-width:42em}
+.ps-page .prose p{margin-top:1.05em}
+.ps-page .prose p:first-child{margin-top:0}
+.ps-page .prose h3{
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 100,'wght' 750;
+  font-size:1.2rem;letter-spacing:-.01em;margin-top:2.2em;margin-bottom:.7em;color:var(--ink);
+}
+.ps-page .prose ul{margin-top:1.05em;padding-left:1.3em}
+.ps-page .prose li{margin-top:.5em}
+.ps-page .prose li::marker{color:var(--cedar)}
+.ps-page .prose strong{font-weight:650;color:var(--ink)}
+.ps-page .prose a{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px}
+.ps-page .prose a:hover{text-decoration-color:var(--cedar);color:var(--cedar)}
+
 /* ---------- forms ---------- */
 .ps-page .field{margin-bottom:20px}
 .ps-page .field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
