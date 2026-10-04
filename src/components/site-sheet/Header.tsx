@@ -11,6 +11,7 @@ export default function SiteSheetHeader() {
           <a href="/#quote">The quote</a>
           <a href="/#story">The story</a>
           <Link to="/pricing">Pricing</Link>
+          <Link to="/blog">The Site Office</Link>
         </nav>
         <a className="btn small" href="https://app.pricem8.uk/signup">Start free trial</a>
       </div>
