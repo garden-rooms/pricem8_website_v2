@@ -1,21 +1,46 @@
-import { useEffect } from 'react'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO, useJsonLd } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Pricing – PriceM8'
 const SEO_DESCRIPTION =
   'One Landscaping subscription at £25/month with a 14-day free trial, plus an optional £99 one-off Garden Rooms add-on. No packs, no bundles, no pre-season discount tricks.'
 
+const FAQ_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do I need a card to start the free trial?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Stripe needs it to start checkout, but nothing is charged until the 14-day trial ends — cancel any time before then and you pay nothing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I buy the Garden Rooms pack on its own, without a Landscaping subscription?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "No. Garden Rooms is a one-off add-on for subscribers, not sold separately. You can try it first with the 2 free quotes that come with your Landscaping subscription.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a contract or minimum term?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. You can cancel any time, with no minimum term.',
+      },
+    },
+  ],
+}
+
 export default function Pricing() {
-  useEffect(() => {
-    document.title = SEO_TITLE
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', SEO_DESCRIPTION)
-    }
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/pricing' })
+  useJsonLd('faq-jsonld', FAQ_JSON_LD)
 
   return (
     <div className="ps-page">

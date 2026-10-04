@@ -1,20 +1,13 @@
-import { useEffect } from 'react'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Privacy Policy – PriceM8'
 const SEO_DESCRIPTION = 'How PriceM8 collects, uses and protects your data, in plain English.'
 
 export default function PrivacyPolicy() {
-    useEffect(() => {
-        document.title = SEO_TITLE
-        const metaDescription = document.querySelector('meta[name="description"]')
-        if (metaDescription) {
-            metaDescription.setAttribute('content', SEO_DESCRIPTION)
-        }
-        window.scrollTo(0, 0)
-    }, [])
+    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/privacy-policy' })
 
     return (
         <div className="ps-page">

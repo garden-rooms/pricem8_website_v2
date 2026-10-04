@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
 import founderPhoto from '../founder.jpeg'
 import SiteSheetLandingHeader from '../components/site-sheet/LandingHeader'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Start free trial – PriceM8'
@@ -13,14 +13,10 @@ const SEO_DESCRIPTION =
 // focused page, one CTA, same voice and numbers as the real site — see /offer, /offer-retro and
 // /lp/quote-in-minutes, which now redirect here.
 export default function GetStartedPage() {
-  useEffect(() => {
-    document.title = SEO_TITLE
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', SEO_DESCRIPTION)
-    }
-    window.scrollTo(0, 0)
-  }, [])
+  // noindex: this page's content substantially duplicates Home.tsx (same hero/maths copy) by
+  // design, reused rather than rewritten. It's meant for paid-traffic clicks, not organic
+  // discovery — indexing it would just compete with Home for the same queries.
+  useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/get-started', index: false })
 
   return (
     <div className="ps-page">

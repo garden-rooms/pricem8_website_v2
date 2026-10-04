@@ -1,19 +1,14 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Calculator, Flame, BookOpen, Smartphone } from 'lucide-react'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'PriceM8'
 const SEO_DESCRIPTION = 'Quoting software for UK landscapers and garden room builders.'
 
 export default function LinkInBio() {
-    useEffect(() => {
-        document.title = SEO_TITLE
-        const metaDescription = document.querySelector('meta[name="description"]')
-        if (metaDescription) {
-            metaDescription.setAttribute('content', SEO_DESCRIPTION)
-        }
-    }, [])
+    // noindex: a thin social-bio link list, not content worth competing with Home in search.
+    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/links', index: false })
 
     const links = [
         {

@@ -1,22 +1,15 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import blogPosts from '../data/blogPosts.json'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'The Site Office – PriceM8'
 const SEO_DESCRIPTION = 'Pricing advice and real numbers for UK landscapers and garden room builders — written by someone who prices real jobs, not a content team.'
 
 export default function BlogIndex() {
-    useEffect(() => {
-        document.title = SEO_TITLE
-        const metaDescription = document.querySelector('meta[name="description"]')
-        if (metaDescription) {
-            metaDescription.setAttribute('content', SEO_DESCRIPTION)
-        }
-        window.scrollTo(0, 0)
-    }, [])
+    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/blog' })
 
     const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 

@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
 import founderPhoto from '../founder.jpeg'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'PriceM8 – Quoting software for landscapers and garden room builders'
@@ -9,14 +9,7 @@ const SEO_DESCRIPTION =
   "Built by a landscaper with 20 years on the tools. PriceM8 prices materials, labour, waste and VAT for landscaping and garden room jobs, then puts it on a quote your customer takes seriously."
 
 export default function Home() {
-  useEffect(() => {
-    document.title = SEO_TITLE
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', SEO_DESCRIPTION)
-    }
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/' })
 
   return (
     <div className="ps-page">

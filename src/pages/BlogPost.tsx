@@ -5,6 +5,7 @@ import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
 import BlogChart from '../components/BlogChart'
 import MarkupMarginCalculator from '../components/MarkupMarginCalculator'
+import { useSEO, useJsonLd } from '../hooks/useSEO'
 import { ArrowLeft, Twitter, Linkedin, Facebook, Copy, Check } from 'lucide-react'
 import '../styles/site-sheet.css'
 
@@ -45,33 +46,26 @@ export default function BlogPost() {
     useEffect(() => {
         if (!post) {
             navigate('/blog', { replace: true })
-            return
         }
-
-        document.title = post.seo.title
-
-        const metaDescription = document.querySelector('meta[name="description"]')
-        if (metaDescription) {
-            metaDescription.setAttribute('content', post.seo.description)
-        }
-
-        const updateMeta = (property: string, content: string) => {
-            let element = document.querySelector(`meta[property="${property}"]`)
-            if (!element) {
-                element = document.createElement('meta')
-                element.setAttribute('property', property)
-                document.head.appendChild(element)
-            }
-            element.setAttribute('content', content)
-        }
-
-        updateMeta('og:title', post.seo.title)
-        updateMeta('og:description', post.seo.description)
-        updateMeta('og:url', window.location.href)
-        updateMeta('og:site_name', 'PriceM8')
-
-        window.scrollTo(0, 0)
     }, [post, navigate])
+
+    useSEO({
+        title: post?.seo.title ?? 'The Site Office – PriceM8',
+        description: post?.seo.description ?? '',
+        path: `/blog/${slug ?? ''}`,
+    })
+
+    // Article schema with a named, real author (Michal) — an E-E-A-T/AEO signal that this is
+    // written by a working tradesperson, not an anonymous content team or an AI.
+    useJsonLd('article-jsonld', post ? {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.date,
+        author: { '@type': 'Person', name: 'Michal', jobTitle: 'Founder, PriceM8' },
+        publisher: { '@type': 'Organization', name: 'PriceM8' },
+    } : {})
 
     if (!post) return null
 

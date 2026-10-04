@@ -1,20 +1,13 @@
-import { useEffect } from 'react'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Construction Estimating Software for Landscapers & Garden Room Builders | PriceM8'
 const SEO_DESCRIPTION = 'Estimating software for UK landscaping and garden room construction. Task-based takeoffs, editable material prices and automatic margins — not a blank spreadsheet.'
 
 export default function ConstructionEstimatingSoftware() {
-  useEffect(() => {
-    document.title = SEO_TITLE
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', SEO_DESCRIPTION)
-    }
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/construction-estimating-software' })
 
   return (
     <div className="ps-page">

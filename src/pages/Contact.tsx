@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { CheckCircle2 } from 'lucide-react'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Contact – PriceM8'
@@ -33,14 +34,7 @@ export default function Contact() {
 
     const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'
 
-    useEffect(() => {
-        document.title = SEO_TITLE
-        const metaDescription = document.querySelector('meta[name="description"]')
-        if (metaDescription) {
-            metaDescription.setAttribute('content', SEO_DESCRIPTION)
-        }
-        window.scrollTo(0, 0)
-    }, [])
+    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/contact' })
 
     useEffect(() => {
         if (turnstileRef.current && window.turnstile && !turnstileWidgetId) {

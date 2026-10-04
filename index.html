@@ -3,38 +3,13 @@
 
 <head>
 
+  <!--
+    No analytics/tracking scripts here by design (2026-10-04): this file used to carry
+    the LIVE v1 site's Google Analytics tag, Meta Pixel and Mouseflow IDs, which would have
+    sent this fork's test traffic into app.pricem8.uk's real customer/ad data. Add v2-specific
+    tracking IDs here when that's actually set up, not before.
+  -->
   <meta name="google-site-verification" content="Z97sCwcOUOaax3nSTf35UT-JLi-KKfC0JBhqnLl179w" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYH1QNWCY6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-WYH1QNWCY6');
-  </script>
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '903165502492501');
-  fbq('track', 'PageView');
-  </script>
-  <!-- End Meta Pixel Code -->
-  <script type="text/javascript">
-    window._mfq = window._mfq || [];
-    (function () {
-      var mf = document.createElement("script");
-      mf.type = "text/javascript"; mf.defer = true;
-      mf.src = "//cdn.mouseflow.com/projects/750f513f-3e89-41c2-a898-472c571a9d10.js";
-      document.getElementsByTagName("head")[0].appendChild(mf);
-    })();
-  </script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -55,27 +30,36 @@
   <!-- Cloudflare Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <meta name="description"
-    content="PriceM8 helps UK trades price jobs accurately with real-time supplier prices, trade packs, instant quotes and auto-generated PDFs. Stop guessing, start profiting." />
+    content="Built by a landscaper with 20 years on the tools. PriceM8 prices materials, labour, waste and VAT for landscaping and garden room jobs, then puts it on a quote your customer takes seriously." />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PriceM8" />
   <meta property="og:url" content="https://pricem8.uk/" />
-  <meta property="og:title" content="PriceM8 – Smart pricing & estimating software for UK trades" />
+  <meta property="og:title" content="PriceM8 – Quoting software for landscapers and garden room builders" />
   <meta property="og:description"
-    content="PriceM8 helps UK trades price jobs accurately with real-time supplier prices, trade packs, instant quotes and auto-generated PDFs. Stop guessing, start profiting." />
-  <meta property="og:image" content="https://pricem8.uk/images/laptop-mockup.png" />
+    content="Built by a landscaper with 20 years on the tools. PriceM8 prices materials, labour, waste and VAT for landscaping and garden room jobs, then puts it on a quote your customer takes seriously." />
+  <meta property="og:image" content="https://pricem8.uk/images/founder-og.jpg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://pricem8.uk/" />
-  <meta property="twitter:title" content="PriceM8 – Smart pricing & estimating software for UK trades" />
+  <meta property="twitter:title" content="PriceM8 – Quoting software for landscapers and garden room builders" />
   <meta property="twitter:description"
-    content="PriceM8 helps UK trades price jobs accurately with real-time supplier prices, trade packs, instant quotes and auto-generated PDFs. Stop guessing, start profiting." />
-  <meta property="twitter:image" content="https://pricem8.uk/images/laptop-mockup.png" />
+    content="Built by a landscaper with 20 years on the tools. PriceM8 prices materials, labour, waste and VAT for landscaping and garden room jobs, then puts it on a quote your customer takes seriously." />
+  <meta property="twitter:image" content="https://pricem8.uk/images/founder-og.jpg" />
 
   <link rel="canonical" href="https://pricem8.uk/" />
 
+  <!--
+    Structured data (2026-10-04): rewritten to match reality. The previous version claimed
+    a fake support phone number (+44-20-7123-4567, a placeholder that was never real) and
+    referenced a logo.png that doesn't exist in public/ — both dropped rather than left
+    broken. Person schema added for the founder (Michal) as a genuine E-E-A-T signal: this
+    is software built and written about by a named, real tradesperson, not an anonymous
+    "Organization". sameAs social links were unverified claims, also dropped — add back only
+    once those accounts are confirmed real and active.
+  -->
   <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -93,17 +77,28 @@
         "name": "PriceM8",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "GBP"
-        },
-        "description": "Smart pricing & estimating software for UK trades. Create professional quotes in minutes.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Landscaping",
+            "price": "25",
+            "priceCurrency": "GBP",
+            "description": "Monthly subscription, 14-day free trial, card required to start."
+          },
+          {
+            "@type": "Offer",
+            "name": "Garden Rooms",
+            "price": "99",
+            "priceCurrency": "GBP",
+            "description": "One-off add-on purchase, available once subscribed to Landscaping."
+          }
+        ],
+        "description": "Quoting and estimating software for UK landscapers and garden room builders. Automatic material and labour takeoffs, editable prices, and branded PDF quotes and invoices.",
         "author": {
-          "@type": "Organization",
-          "name": "PriceM8",
-          "url": "https://pricem8.uk",
-          "logo": "https://pricem8.uk/logo.png"
+          "@type": "Person",
+          "name": "Michal",
+          "jobTitle": "Founder",
+          "description": "Landscaper and garden room builder with 20 years on the tools, building real jobs since 2005."
         }
       }
     </script>
@@ -113,18 +108,9 @@
         "@type": "Organization",
         "name": "PriceM8",
         "url": "https://pricem8.uk",
-        "logo": "https://pricem8.uk/logo.png",
-        "sameAs": [
-          "https://twitter.com/pricem8",
-          "https://facebook.com/pricem8",
-          "https://instagram.com/pricem8"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+44-20-7123-4567",
-          "contactType": "customer service",
-          "areaServed": "GB",
-          "availableLanguage": "English"
+        "founder": {
+          "@type": "Person",
+          "name": "Michal"
         }
       }
     </script>
@@ -132,9 +118,6 @@
 
 <body>
   <div id="root"></div>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=903165502492501&ev=PageView&noscript=1"
-  /></noscript>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

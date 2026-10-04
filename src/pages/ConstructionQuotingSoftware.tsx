@@ -1,20 +1,13 @@
-import { useEffect } from 'react'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Construction Quoting Software for Landscapers & Garden Room Builders | PriceM8'
 const SEO_DESCRIPTION = 'Quoting software that turns a landscaping or garden room estimate straight into a branded PDF quote — and into an invoice once the job is accepted.'
 
 export default function ConstructionQuotingSoftware() {
-  useEffect(() => {
-    document.title = SEO_TITLE
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', SEO_DESCRIPTION)
-    }
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/construction-quoting-software' })
 
   return (
     <div className="ps-page">

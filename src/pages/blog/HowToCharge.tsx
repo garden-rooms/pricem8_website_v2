@@ -1,21 +1,22 @@
-import { useEffect } from 'react'
 import SiteSheetHeader from '../../components/site-sheet/Header'
 import SiteSheetFooter from '../../components/site-sheet/Footer'
 import OverheadsCalculator from '../../components/OverheadsCalculator'
+import { useSEO, useJsonLd } from '../../hooks/useSEO'
 import '../../styles/site-sheet.css'
 
 const SEO_TITLE = 'How much should I charge? – PriceM8'
 const SEO_DESCRIPTION = "Why most tradespeople are working for less than minimum wage without realising it, and how to fix your pricing today using the free calculator."
 
 export default function HowToCharge() {
-    useEffect(() => {
-        document.title = SEO_TITLE
-        const metaDescription = document.querySelector('meta[name="description"]')
-        if (metaDescription) {
-            metaDescription.setAttribute('content', SEO_DESCRIPTION)
-        }
-        window.scrollTo(0, 0)
-    }, [])
+    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/blog/how-much-to-charge' })
+    useJsonLd('article-jsonld', {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'How much should I charge?',
+        description: SEO_DESCRIPTION,
+        author: { '@type': 'Person', name: 'Michal', jobTitle: 'Founder, PriceM8' },
+        publisher: { '@type': 'Organization', name: 'PriceM8' },
+    })
 
     return (
         <div className="ps-page">

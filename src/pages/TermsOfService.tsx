@@ -1,20 +1,13 @@
-import { useEffect } from 'react'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Terms of Service – PriceM8'
 const SEO_DESCRIPTION = 'The terms that apply when you use PriceM8.'
 
 export default function TermsOfService() {
-    useEffect(() => {
-        document.title = SEO_TITLE
-        const metaDescription = document.querySelector('meta[name="description"]')
-        if (metaDescription) {
-            metaDescription.setAttribute('content', SEO_DESCRIPTION)
-        }
-        window.scrollTo(0, 0)
-    }, [])
+    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/terms-of-service' })
 
     return (
         <div className="ps-page">

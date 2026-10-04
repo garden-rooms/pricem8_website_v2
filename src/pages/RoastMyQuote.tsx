@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Upload, AlertCircle, CheckCircle2 } from 'lucide-react'
 import { useMutation, useAction } from 'convex/react'
 import { api } from '../../convex/_generated/api'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Roast My Quote – PriceM8'
@@ -22,14 +23,7 @@ export default function RoastMyQuote() {
   const generateUploadUrl = useMutation(api.roast.generateUploadUrl)
   const submitRoast = useAction(api.roast.submit)
 
-  useEffect(() => {
-    document.title = SEO_TITLE
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', SEO_DESCRIPTION)
-    }
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/roast-my-quote' })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
