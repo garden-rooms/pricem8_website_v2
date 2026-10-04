@@ -179,7 +179,7 @@ export default function Contact() {
                                     setIsSubmitting(false);
                                 }
                             }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 20 }}>
                                     <div className="field" style={{ marginBottom: 0 }}>
                                         <label htmlFor="name">Name</label>
                                         <input type="text" name="name" id="name" required disabled={isSubmitting} placeholder="John Smith" />

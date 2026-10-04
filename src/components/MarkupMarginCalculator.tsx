@@ -89,7 +89,7 @@ export default function MarkupMarginCalculator() {
             </div>
             <p className="mono" style={{ marginBottom: 24 }}>See the real cost of getting this maths wrong</p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 28 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: 16, marginBottom: 28 }}>
                 <div className="field" style={{ marginBottom: 0 }}>
                     <label>Average job cost (£)</label>
                     <input type="number" value={cost} onChange={handleCostChange} placeholder="5000" min="0" step="100" />
@@ -104,7 +104,7 @@ export default function MarkupMarginCalculator() {
                 </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: annualJobs && annualJobs > 0 ? 20 : 0 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 16, marginBottom: annualJobs && annualJobs > 0 ? 20 : 0 }}>
                 <div style={{ border: '1px solid var(--rule)', background: 'var(--paper)', padding: 20 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
                         <AlertTriangle className="w-4 h-4" style={{ color: 'var(--ink-2)' }} />

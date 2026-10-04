@@ -386,7 +386,7 @@ export default function OverheadsCalculator() {
                 </p>
             </div>
 
-            <div className="overheads-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <div className="overheads-grid">
                 {/* Inputs Column */}
                 <div style={{ padding: 28, borderRight: '1px solid var(--rule)', display: 'flex', flexDirection: 'column', gap: 32 }}>
 
@@ -464,7 +464,7 @@ export default function OverheadsCalculator() {
                     {/* Section 2: Monthly Overheads */}
                     <section>
                         <div className="calc-head"><span className="mono n">02</span><h4>Monthly Overheads</h4></div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 16, marginBottom: 16 }}>
                             {[
                                 { label: 'Van (lease, fuel, ins)', val: vanCost, set: setVanCost },
                                 { label: 'Tools & equipment', val: toolsCost, set: setToolsCost },
@@ -519,7 +519,7 @@ export default function OverheadsCalculator() {
                     {/* Section 3: Lost Time */}
                     <section>
                         <div className="calc-head"><span className="mono n">03</span><h4>Lost Time (Per Person)</h4></div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 16 }}>
                             {[
                                 { label: 'Holidays', val: holidays, set: setHolidays },
                                 { label: 'Sick / unforeseen', val: sickDays, set: setSickDays },
@@ -659,7 +659,7 @@ export default function OverheadsCalculator() {
                                         <span style={{ fontWeight: 650 }}>{rate.name}</span>
                                         <span className="mono" style={{ color: 'var(--band-cedar)' }}>{formatCurrency(rate.chargePerHour)}/hr</span>
                                     </div>
-                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                                    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 10 }}>
                                         <div>
                                             <span className="mono" style={{ display: 'block', marginBottom: 2 }}>Break even (cost)</span>
                                             <span>{formatCurrency(rate.costPerHour)}/hr</span>

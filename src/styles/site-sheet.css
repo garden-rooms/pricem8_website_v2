@@ -322,6 +322,7 @@
 .ps-page .offer-note{margin-top:14px;color:var(--ink-2);font-size:.9rem}
 
 /* ---------- calculator widgets ---------- */
+.ps-page .overheads-grid{display:grid;grid-template-columns:1fr 1fr}
 .ps-page .calc-head{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
 .ps-page .calc-head .n{color:var(--cedar)}
 .ps-page .calc-head h4{
