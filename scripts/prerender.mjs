@@ -21,8 +21,15 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
-import puppeteer from 'puppeteer';
 import blogPosts from '../src/data/blogPosts.json' with { type: 'json' };
+
+// Vercel's build image doesn't have the shared libraries puppeteer's bundled Chrome needs
+// (libnspr4.so etc. are missing), so on Vercel we launch a Linux binary built for serverless/CI
+// instead (@sparticuz/chromium) via puppeteer-core. Locally, puppeteer's own bundled Chrome
+// works fine and is simpler, so we only pull in the serverless path when actually on Vercel.
+const browserLauncher = process.env.VERCEL
+  ? (await import('puppeteer-core'))
+  : (await import('puppeteer'));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -66,7 +73,16 @@ async function main() {
   app.get('*', (_req, res) => res.sendFile(path.join(DIST_DIR, 'index.html')));
   const server = app.listen(PORT);
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = process.env.VERCEL
+    ? await (async () => {
+        const chromium = (await import('@sparticuz/chromium')).default;
+        return browserLauncher.default.launch({
+          args: chromium.args,
+          executablePath: await chromium.executablePath(),
+          headless: true,
+        });
+      })()
+    : await browserLauncher.default.launch({ headless: true });
   let ok = 0;
   let failed = 0;
 
