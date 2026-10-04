@@ -39,7 +39,7 @@ export default function Home() {
               <div className="plate">
                 <figure>
                   <div className="shot">
-                    <img src={founderPhoto} alt="Michal, founder of PriceM8, standing on a stone patio in a garden he built, wearing a green hoodie and work trousers." />
+                    <img src={founderPhoto} alt="Michal, founder of PriceM8, sitting on garden steps on site checking his phone, wearing a black hoodie with a toolbox beside him and a garden room he built in the background." />
                   </div>
                   <svg className="dimline" viewBox="0 0 320 30" preserveAspectRatio="none" aria-hidden="true">
                     <g stroke="currentColor" fill="none" strokeWidth={1}>
@@ -50,7 +50,7 @@ export default function Home() {
                     <text x={160} y={28} textAnchor="middle">Built and priced by the same pair of hands</text>
                   </svg>
                   <figcaption>
-                    <span className="mono">Plate 01 — Michal, on his own patio</span>
+                    <span className="mono">Plate 01 — Michal, pricing a job on site</span>
                     <span className="mono">Est. 2005 on site</span>
                   </figcaption>
                 </figure>
