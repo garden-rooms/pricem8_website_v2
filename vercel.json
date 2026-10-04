@@ -1,4 +1,16 @@
 {
+    "cleanUrls": true,
+    "redirects": [
+        { "source": "/about", "destination": "/#story", "permanent": false },
+        { "source": "/features", "destination": "/#landscaping", "permanent": false },
+        { "source": "/trades", "destination": "/#landscaping", "permanent": false },
+        { "source": "/trades/:tradeId", "destination": "/", "permanent": false },
+        { "source": "/testimonials", "destination": "/#quote", "permanent": false },
+        { "source": "/real-data", "destination": "/#story", "permanent": false },
+        { "source": "/offer", "destination": "/get-started", "permanent": false },
+        { "source": "/offer-retro", "destination": "/get-started", "permanent": false },
+        { "source": "/lp/quote-in-minutes", "destination": "/get-started", "permanent": false }
+    ],
     "rewrites": [
         {
             "source": "/((?!api).*)",
