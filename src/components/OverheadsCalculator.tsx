@@ -378,395 +378,307 @@ export default function OverheadsCalculator() {
     }
 
     return (
-        <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-xl border border-gray-100 dark:border-slate-700 overflow-hidden">
-            <div className="bg-gray-900 p-6 sm:p-8 text-white">
-                <h3 className="text-2xl font-bold mb-2">Your True Cost Calculator</h3>
-                <p className="text-gray-400 text-sm">
-                    Now with 2024/25 Tax Estimates. Find out exactly what you need to charge to hit your take-home goal.
+        <div className="form-card" style={{ padding: 0, overflow: 'hidden' }}>
+            <div style={{ background: 'var(--ink)', color: 'var(--paper)', padding: '22px 28px' }}>
+                <h3 className="disp" style={{ fontSize: '1.3rem', color: 'var(--paper)' }}>Your True Cost Calculator</h3>
+                <p className="mono" style={{ color: 'var(--band-ink-2)', marginTop: 8 }}>
+                    2024/25 tax estimates — find out exactly what to charge to hit your take-home goal.
                 </p>
             </div>
 
-            <div className="grid lg:grid-cols-2">
+            <div className="overheads-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
                 {/* Inputs Column */}
-                <div className="p-6 sm:p-8 space-y-8 border-r border-gray-100 dark:border-slate-700">
+                <div style={{ padding: 28, borderRight: '1px solid var(--rule)', display: 'flex', flexDirection: 'column', gap: 32 }}>
 
                     {/* Section 1: You & Your Structure */}
                     <section>
-                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span className="w-6 h-6 rounded-full bg-teal-100 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xs mr-2">1</span>
-                            You & Your Team
-                        </h4>
-                        <div className="space-y-4">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">How do you operate?</label>
-                                <div className="flex rounded-lg bg-gray-100 dark:bg-slate-700 p-1">
-                                    <button
-                                        onClick={() => setEmploymentType('sole_trader')}
-                                        className={`flex-1 py-2 text-sm font-medium rounded-md transition-all ${employmentType === 'sole_trader' ? 'bg-white dark:bg-slate-800 text-gray-900 dark:text-white shadow-sm' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
-                                            }`}
-                                    >
-                                        Sole Trader
-                                    </button>
-                                    <button
-                                        onClick={() => setEmploymentType('limited_company')}
-                                        className={`flex-1 py-2 text-sm font-medium rounded-md transition-all ${employmentType === 'limited_company' ? 'bg-white dark:bg-slate-800 text-gray-900 dark:text-white shadow-sm' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
-                                            }`}
-                                    >
-                                        Limited Co.
-                                    </button>
-                                </div>
+                        <div className="calc-head"><span className="mono n">01</span><h4>You &amp; Your Team</h4></div>
+                        <div className="field">
+                            <label>How do you operate?</label>
+                            <div className="seg">
+                                <button
+                                    type="button"
+                                    onClick={() => setEmploymentType('sole_trader')}
+                                    className={employmentType === 'sole_trader' ? 'active' : ''}
+                                >
+                                    Sole Trader
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setEmploymentType('limited_company')}
+                                    className={employmentType === 'limited_company' ? 'active' : ''}
+                                >
+                                    Limited Co.
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="field">
+                            <label>Target take-home pay (£)</label>
+                            <input
+                                type="number"
+                                value={targetTakeHome}
+                                onChange={(e) => setTargetTakeHome(e.target.value === '' ? '' : Number(e.target.value))}
+                            />
+                            <p className="mono" style={{ marginTop: 6 }}>The actual money you want in your personal bank account (net)</p>
+                        </div>
+
+                        {/* Employees List */}
+                        <div className="field" style={{ marginBottom: 0 }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+                                <label style={{ marginBottom: 0 }}>Employees</label>
+                                <button type="button" onClick={addEmployee} className="add-row">
+                                    <Plus className="w-3 h-3" /> Add employee
+                                </button>
                             </div>
 
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                    Target <span className="text-teal-600 dark:text-teal-400 font-bold">Take Home</span> Pay
-                                </label>
-                                <div className="relative">
-                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400">£</span>
-                                    <input
-                                        type="number"
-                                        value={targetTakeHome}
-                                        onChange={(e) => setTargetTakeHome(e.target.value === '' ? '' : Number(e.target.value))}
-                                        className="w-full pl-8 pr-4 py-2 rounded-lg border border-gray-200 dark:border-slate-600 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-teal-900 outline-none transition-all bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
-                                    />
-                                </div>
-                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                    The actual money you want in your personal bank account (Net).
-                                </p>
-                            </div>
+                            {employees.length === 0 && (
+                                <p className="mono" style={{ textAlign: 'center', padding: '12px 0' }}>No employees added — just you!</p>
+                            )}
 
-                            {/* Employees List */}
-                            <div className="pt-2">
-                                <div className="flex justify-between items-center mb-2">
-                                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Employees</label>
-                                    <button
-                                        onClick={addEmployee}
-                                        className="text-xs flex items-center text-teal-600 hover:text-teal-700 font-medium"
-                                    >
-                                        <Plus className="w-3 h-3 mr-1" />
-                                        Add Employee
-                                    </button>
-                                </div>
-
-                                {employees.length === 0 && (
-                                    <div className="text-xs text-gray-400 dark:text-gray-400 italic bg-gray-50 dark:bg-slate-900/50 p-3 rounded-lg border border-dashed border-gray-200 dark:border-slate-600 text-center">
-                                        No employees added. Just you!
-                                    </div>
-                                )}
-
-                                <div className="space-y-2">
-                                    {employees.map((emp, index) => (
-                                        <div key={emp.id} className="flex items-center gap-2 bg-gray-50 dark:bg-slate-900/50 p-2 rounded-lg border border-gray-100 dark:border-slate-700">
-                                            <div className="w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center flex-shrink-0">
-                                                <Users className="w-4 h-4" />
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                                {employees.map((emp, index) => (
+                                    <div key={emp.id} className="row-card">
+                                        <div className="idx"><Users className="w-3.5 h-3.5" /></div>
+                                        <div style={{ flexGrow: 1 }}>
+                                            <span className="mono" style={{ display: 'block', marginBottom: 2 }}>Employee {index + 1} salary (gross)</span>
+                                            <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+                                                <span style={{ color: 'var(--ink-2)' }}>£</span>
+                                                <input
+                                                    type="number"
+                                                    value={emp.salary}
+                                                    onChange={(e) => updateEmployeeSalary(emp.id, e.target.value === '' ? '' : Number(e.target.value))}
+                                                    style={{ border: 0, background: 'transparent', padding: 0, fontWeight: 600 }}
+                                                />
                                             </div>
-                                            <div className="flex-grow">
-                                                <label className="text-xs text-gray-500 dark:text-gray-400 block">Employee {index + 1} Salary (Gross)</label>
-                                                <div className="relative">
-                                                    <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs">£</span>
-                                                    <input
-                                                        type="number"
-                                                        value={emp.salary}
-                                                        onChange={(e) => updateEmployeeSalary(emp.id, e.target.value === '' ? '' : Number(e.target.value))}
-                                                        className="w-full pl-5 pr-2 py-1 text-sm bg-transparent border-none focus:ring-0 p-0 font-medium text-gray-900 dark:text-white"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <button
-                                                onClick={() => removeEmployee(emp.id)}
-                                                className="p-2 text-gray-400 hover:text-red-500 transition-colors"
-                                            >
-                                                <Trash2 className="w-4 h-4" />
-                                            </button>
                                         </div>
-                                    ))}
-                                </div>
+                                        <button type="button" onClick={() => removeEmployee(emp.id)} className="del">
+                                            <Trash2 className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                ))}
                             </div>
-
                         </div>
                     </section>
 
                     {/* Section 2: Monthly Overheads */}
                     <section>
-                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span className="w-6 h-6 rounded-full bg-teal-100 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xs mr-2">2</span>
-                            Monthly Overheads
-                        </h4>
-                        <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                        <div className="calc-head"><span className="mono n">02</span><h4>Monthly Overheads</h4></div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
                             {[
-                                { label: 'Van (Lease, Fuel, Ins)', val: vanCost, set: setVanCost },
-                                { label: 'Tools & Equipment', val: toolsCost, set: setToolsCost },
-                                { label: 'Business Insurance', val: insuranceCost, set: setInsuranceCost },
-                                { label: 'Marketing & Phone', val: marketingCost, set: setMarketingCost },
-                                { label: 'Accountant & Prof. Fees', val: accountantCost, set: setAccountantCost },
-                                { label: 'Other (Uniforms, Subs)', val: otherOverheads, set: setOtherOverheads },
+                                { label: 'Van (lease, fuel, ins)', val: vanCost, set: setVanCost },
+                                { label: 'Tools & equipment', val: toolsCost, set: setToolsCost },
+                                { label: 'Business insurance', val: insuranceCost, set: setInsuranceCost },
+                                { label: 'Marketing & phone', val: marketingCost, set: setMarketingCost },
+                                { label: 'Accountant & prof. fees', val: accountantCost, set: setAccountantCost },
+                                { label: 'Other (uniforms, subs)', val: otherOverheads, set: setOtherOverheads },
                             ].map((item, i) => (
-                                <div key={i}>
-                                    <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">{item.label}</label>
-                                    <div className="relative">
-                                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs">£</span>
-                                        <input
-                                            type="number"
-                                            value={item.val}
-                                            onChange={(e) => item.set(e.target.value === '' ? '' : Number(e.target.value))}
-                                            className="w-full pl-6 pr-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-slate-600 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-teal-900 outline-none transition-all bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
-                                        />
-                                    </div>
+                                <div key={i} className="field" style={{ marginBottom: 0 }}>
+                                    <label>{item.label}</label>
+                                    <input
+                                        type="number"
+                                        value={item.val}
+                                        onChange={(e) => item.set(e.target.value === '' ? '' : Number(e.target.value))}
+                                    />
                                 </div>
                             ))}
                         </div>
 
                         {/* Custom Overheads */}
-                        <div className="space-y-3">
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                             {customOverheads.map((overhead) => (
-                                <div key={overhead.id} className="flex gap-2 items-center">
-                                    <div className="flex-grow">
-                                        <input
-                                            type="text"
-                                            value={overhead.label}
-                                            onChange={(e) => updateCustomOverhead(overhead.id, 'label', e.target.value)}
-                                            className="w-full px-3 py-2 text-xs rounded-lg border border-gray-200 dark:border-slate-600 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-teal-900 outline-none transition-all bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
-                                            placeholder="Expense Name"
-                                        />
-                                    </div>
-                                    <div className="relative w-32">
-                                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs">£</span>
+                                <div key={overhead.id} className="row-card">
+                                    <input
+                                        type="text"
+                                        value={overhead.label}
+                                        onChange={(e) => updateCustomOverhead(overhead.id, 'label', e.target.value)}
+                                        placeholder="Expense name"
+                                        style={{ border: 0, background: 'transparent', padding: 0, flexGrow: 1 }}
+                                    />
+                                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 4, flexShrink: 0 }}>
+                                        <span style={{ color: 'var(--ink-2)' }}>£</span>
                                         <input
                                             type="number"
                                             value={overhead.value}
                                             onChange={(e) => updateCustomOverhead(overhead.id, 'value', e.target.value === '' ? '' : Number(e.target.value))}
-                                            className="w-full pl-6 pr-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-slate-600 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-teal-900 outline-none transition-all bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+                                            style={{ border: 0, background: 'transparent', padding: 0, width: 80 }}
                                         />
                                     </div>
-                                    <button
-                                        onClick={() => removeCustomOverhead(overhead.id)}
-                                        className="p-2 text-gray-400 hover:text-red-500 transition-colors"
-                                    >
+                                    <button type="button" onClick={() => removeCustomOverhead(overhead.id)} className="del">
                                         <Trash2 className="w-4 h-4" />
                                     </button>
                                 </div>
                             ))}
 
-                            <button
-                                onClick={addCustomOverhead}
-                                className="text-xs flex items-center text-teal-600 hover:text-teal-700 font-medium"
-                            >
-                                <Plus className="w-3 h-3 mr-1" />
-                                Add Custom Expense
+                            <button type="button" onClick={addCustomOverhead} className="add-row" style={{ marginTop: customOverheads.length ? 4 : 0 }}>
+                                <Plus className="w-3 h-3" /> Add custom expense
                             </button>
                         </div>
                     </section>
 
                     {/* Section 3: Lost Time */}
                     <section>
-                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span className="w-6 h-6 rounded-full bg-teal-100 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xs mr-2">3</span>
-                            Lost Time (Per Person)
-                        </h4>
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div className="calc-head"><span className="mono n">03</span><h4>Lost Time (Per Person)</h4></div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                             {[
                                 { label: 'Holidays', val: holidays, set: setHolidays },
-                                { label: 'Sick / Unforeseen', val: sickDays, set: setSickDays },
-                                { label: 'Bad Weather / Quiet', val: weatherDays, set: setWeatherDays },
+                                { label: 'Sick / unforeseen', val: sickDays, set: setSickDays },
+                                { label: 'Bad weather / quiet', val: weatherDays, set: setWeatherDays },
                             ].map((item, i) => (
-                                <div key={i} className="flex flex-col">
-                                    <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">{item.label}</label>
+                                <div key={i} className="field" style={{ marginBottom: 0 }}>
+                                    <label>{item.label}</label>
                                     <input
                                         type="number"
                                         value={item.val}
                                         onChange={(e) => item.set(e.target.value === '' ? '' : Number(e.target.value))}
-                                        className="w-full px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-slate-600 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-teal-900 outline-none transition-all bg-white dark:bg-slate-800 text-gray-900 dark:text-white mt-auto"
                                     />
                                 </div>
                             ))}
 
-                            {/* Admin Days - Owner Only */}
-                            <div className="flex flex-col">
-                                <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Admin / Quoting (Owner Only)</label>
+                            <div className="field" style={{ marginBottom: 0 }}>
+                                <label>Admin / quoting (owner only)</label>
                                 <input
                                     type="number"
                                     value={adminDays}
                                     onChange={(e) => setAdminDays(e.target.value === '' ? '' : Number(e.target.value))}
-                                    className="w-full px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-slate-600 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-teal-900 outline-none transition-all bg-white dark:bg-slate-800 text-gray-900 dark:text-white mt-auto"
                                 />
                             </div>
                         </div>
 
-                        <div className="mt-4">
-                            <label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Billable Hours per Day</label>
+                        <div className="field" style={{ marginTop: 16, marginBottom: 0 }}>
+                            <label>Billable hours per day</label>
                             <input
                                 type="number"
                                 value={billableHoursPerDay}
                                 onChange={(e) => setBillableHoursPerDay(e.target.value === '' ? '' : Number(e.target.value))}
-                                className="w-24 px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-slate-600 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-teal-900 outline-none transition-all bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+                                style={{ maxWidth: 120 }}
                             />
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Used to calculate hourly rates.</p>
+                            <p className="mono" style={{ marginTop: 6 }}>Used to calculate hourly rates</p>
                         </div>
                     </section>
 
                 </div>
 
                 {/* Results Column */}
-                <div className="bg-gray-50 dark:bg-slate-900/50 p-6 sm:p-8 flex flex-col justify-center">
-                    <div className="space-y-6">
+                <div style={{ padding: 28, background: 'var(--paper-2)', display: 'flex', flexDirection: 'column', gap: 20 }}>
 
-                        {/* Summary Stats */}
-                        <div className="bg-white dark:bg-slate-800/50 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 space-y-4">
-                            <div className="flex justify-between items-center text-sm">
-                                <span className="text-gray-600 dark:text-gray-400">Total Overheads & Staff Costs</span>
-                                <div className="flex items-center gap-2">
-                                    <span className="font-semibold text-gray-900 dark:text-white">{formatCurrency(results.totalOverheads + results.employersCosts)}</span>
-                                    <button
-                                        onClick={() => setShowCostBreakdown(!showCostBreakdown)}
-                                        className="text-teal-600 hover:text-teal-700"
-                                    >
-                                        {showCostBreakdown ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                                    </button>
-                                </div>
-                            </div>
-
-                            {showCostBreakdown && (
-                                <div className="bg-gray-50 dark:bg-slate-900/30 rounded-lg p-3 text-xs space-y-2 border border-gray-100 dark:border-slate-700">
-                                    <div className="flex justify-between text-gray-600 dark:text-gray-300">
-                                        <span className="text-gray-600 dark:text-gray-400">Business Overheads</span>
-                                        <span>{formatCurrency(results.totalOverheads)}</span>
-                                    </div>
-                                    {results.totalSalaries > 0 && (
-                                        <div className="flex justify-between text-gray-600 dark:text-gray-300">
-                                            <span>Staff Salaries (Gross)</span>
-                                            <span>{formatCurrency(results.totalSalaries)}</span>
-                                        </div>
-                                    )}
-                                    {results.totalNiPension > 0 && (
-                                        <div className="flex justify-between text-gray-600 dark:text-gray-300">
-                                            <span>Employer Costs (NI & Pension)</span>
-                                            <span>{formatCurrency(results.totalNiPension)}</span>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-
-                            <div className="pt-4 border-t border-gray-100 dark:border-slate-700">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-gray-900 dark:text-white font-medium">Gross Revenue Required</span>
-                                    <span className="text-xl font-bold text-gray-900 dark:text-white">{formatCurrency(results.grossRevenueRequired)}</span>
-                                </div>
-                                <p className="text-xs text-gray-500 dark:text-gray-400 text-right">
-                                    To achieve {formatCurrency(Number(targetTakeHome))} Net Take Home
-                                </p>
-                            </div>
-
-                            {/* Tax Breakdown Toggle */}
-                            <div className="bg-gray-50 dark:bg-slate-900/30 rounded-xl p-4 border border-gray-200 dark:border-slate-700">
-                                <button
-                                    onClick={() => setShowTaxBreakdown(!showTaxBreakdown)}
-                                    className="flex items-center justify-between w-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-                                >
-                                    <span className="flex items-center">
-                                        <Info className="w-4 h-4 mr-2" />
-                                        See Tax Breakdown
-                                    </span>
-                                    {showTaxBreakdown ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    {/* Summary Stats */}
+                    <div style={{ background: 'var(--paper)', border: '1px solid var(--rule)', padding: 20 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span style={{ color: 'var(--ink-2)', fontSize: '.92rem' }}>Total overheads &amp; staff costs</span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                                <span style={{ fontWeight: 700 }}>{formatCurrency(results.totalOverheads + results.employersCosts)}</span>
+                                <button type="button" onClick={() => setShowCostBreakdown(!showCostBreakdown)} style={{ background: 'none', border: 0, color: 'var(--cedar)', cursor: 'pointer', padding: 2 }}>
+                                    {showCostBreakdown ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                                 </button>
+                            </div>
+                        </div>
 
-                                {showTaxBreakdown && (
-                                    <div className="mt-4 space-y-2 text-sm border-t border-gray-200 dark:border-slate-700 pt-3">
-                                        {employmentType === 'sole_trader' ? (
-                                            <>
-                                                <div className="flex justify-between text-gray-600 dark:text-gray-300">
-                                                    <span>Income Tax</span>
-                                                    <span>{formatCurrency(results.taxBreakdown.incomeTax)}</span>
-                                                </div>
-                                                <div className="flex justify-between text-gray-600 dark:text-gray-300">
-                                                    <span>Class 4 NI</span>
-                                                    <span>{formatCurrency(results.taxBreakdown.nationalInsurance)}</span>
-                                                </div>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <div className="flex justify-between text-gray-600 dark:text-gray-300">
-                                                    <span>Corporation Tax</span>
-                                                    <span>{formatCurrency(results.taxBreakdown.corporationTax)}</span>
-                                                </div>
-                                                <div className="flex justify-between text-gray-600 dark:text-gray-300">
-                                                    <span>Dividend Tax</span>
-                                                    <span>{formatCurrency(results.taxBreakdown.dividendTax)}</span>
-                                                </div>
-                                            </>
-                                        )}
-                                        <div className="flex justify-between font-medium text-red-500 dark:text-red-400 pt-2 border-t border-gray-200 dark:border-slate-700 border-dashed">
-                                            <span>Total Tax Bill</span>
-                                            <span>{formatCurrency(results.taxBreakdown.totalTax)}</span>
-                                        </div>
+                        {showCostBreakdown && (
+                            <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid var(--rule-soft)', display: 'flex', flexDirection: 'column', gap: 6, fontSize: '.86rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--ink-2)' }}>
+                                    <span>Business overheads</span><span>{formatCurrency(results.totalOverheads)}</span>
+                                </div>
+                                {results.totalSalaries > 0 && (
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--ink-2)' }}>
+                                        <span>Staff salaries (gross)</span><span>{formatCurrency(results.totalSalaries)}</span>
+                                    </div>
+                                )}
+                                {results.totalNiPension > 0 && (
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--ink-2)' }}>
+                                        <span>Employer costs (NI &amp; pension)</span><span>{formatCurrency(results.totalNiPension)}</span>
                                     </div>
                                 )}
                             </div>
+                        )}
+
+                        <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--rule)' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                                <span style={{ fontWeight: 650 }}>Gross revenue required</span>
+                                <span className="price-fig" style={{ fontSize: '1.5rem' }}>{formatCurrency(results.grossRevenueRequired)}</span>
+                            </div>
+                            <p className="mono" style={{ textAlign: 'right', marginTop: 4 }}>To hit {formatCurrency(Number(targetTakeHome))} net take-home</p>
                         </div>
 
-                        {/* PriceM8 Cheat Sheet */}
-                        <div className="bg-teal-900 rounded-2xl p-6 shadow-lg text-white">
-                            <div className="flex items-center gap-2 mb-4">
-                                <div className="p-2 bg-teal-800 rounded-lg">
-                                    <Smartphone className="w-5 h-5 text-teal-400" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg">PriceM8 Cheat Sheet</h4>
-                                    <p className="text-xs text-teal-300">Use these figures in your app settings</p>
-                                </div>
-                            </div>
+                        {/* Tax Breakdown Toggle */}
+                        <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--rule-soft)' }}>
+                            <button type="button" onClick={() => setShowTaxBreakdown(!showTaxBreakdown)} className="disclosure">
+                                <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Info className="w-4 h-4" /> See tax breakdown</span>
+                                {showTaxBreakdown ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                            </button>
 
-                            <div className="bg-teal-800/50 rounded-xl p-4 mb-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-sm text-teal-200">Target Profit Margin</span>
-                                    <span className="text-sm font-bold text-teal-400">{profitMargin}%</span>
+                            {showTaxBreakdown && (
+                                <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid var(--rule-soft)', display: 'flex', flexDirection: 'column', gap: 6, fontSize: '.9rem' }}>
+                                    {employmentType === 'sole_trader' ? (
+                                        <>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--ink-2)' }}><span>Income tax</span><span>{formatCurrency(results.taxBreakdown.incomeTax)}</span></div>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--ink-2)' }}><span>Class 4 NI</span><span>{formatCurrency(results.taxBreakdown.nationalInsurance)}</span></div>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--ink-2)' }}><span>Corporation tax</span><span>{formatCurrency(results.taxBreakdown.corporationTax)}</span></div>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--ink-2)' }}><span>Dividend tax</span><span>{formatCurrency(results.taxBreakdown.dividendTax)}</span></div>
+                                        </>
+                                    )}
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 650, color: '#8B4A3C', paddingTop: 8, marginTop: 2, borderTop: '1px dashed var(--rule-soft)' }}>
+                                        <span>Total tax bill</span><span>{formatCurrency(results.taxBreakdown.totalTax)}</span>
+                                    </div>
                                 </div>
-                                <input
-                                    type="range"
-                                    min="0"
-                                    max="50"
-                                    value={profitMargin}
-                                    onChange={(e) => setProfitMargin(Number(e.target.value))}
-                                    className="w-full h-2 bg-teal-950 rounded-lg appearance-none cursor-pointer accent-teal-400"
-                                />
-                            </div>
+                            )}
+                        </div>
+                    </div>
 
-                            <div className="space-y-3">
-                                {results.individualRates.map((rate, i) => (
-                                    <div key={i} className="bg-teal-950/50 rounded-lg p-3 border border-teal-800 dark:border-teal-900">
-                                        <div className="flex justify-between items-center mb-2">
-                                            <span className="font-medium text-teal-100">{rate.name}</span>
-                                            <span className="text-xs text-teal-400 bg-teal-900 px-2 py-1 rounded">
-                                                {formatCurrency(rate.chargePerHour)}/hr
-                                            </span>
+                    {/* PriceM8 Cheat Sheet */}
+                    <div className="cheat-sheet">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                            <Smartphone className="w-5 h-5" style={{ color: 'var(--band-cedar)' }} />
+                            <div>
+                                <h4 style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 700, fontSize: '1.05rem' }}>PriceM8 Cheat Sheet</h4>
+                                <p className="mono" style={{ marginTop: 2 }}>Use these figures in your app settings</p>
+                            </div>
+                        </div>
+
+                        <div style={{ marginBottom: 16 }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
+                                <span className="mono">Target profit margin</span>
+                                <span className="mono" style={{ color: 'var(--band-cedar)' }}>{profitMargin}%</span>
+                            </div>
+                            <input
+                                type="range"
+                                min="0"
+                                max="50"
+                                value={profitMargin}
+                                onChange={(e) => setProfitMargin(Number(e.target.value))}
+                            />
+                        </div>
+
+                        <div>
+                            {results.individualRates.map((rate, i) => (
+                                <div key={i} className="rate-card">
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+                                        <span style={{ fontWeight: 650 }}>{rate.name}</span>
+                                        <span className="mono" style={{ color: 'var(--band-cedar)' }}>{formatCurrency(rate.chargePerHour)}/hr</span>
+                                    </div>
+                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                                        <div>
+                                            <span className="mono" style={{ display: 'block', marginBottom: 2 }}>Break even (cost)</span>
+                                            <span>{formatCurrency(rate.costPerHour)}/hr</span>
                                         </div>
-                                        <div className="grid grid-cols-2 gap-2 text-xs">
-                                            <div>
-                                                <span className="block text-teal-500 mb-0.5">Break Even (Cost)</span>
-                                                <span className="text-white">{formatCurrency(rate.costPerHour)}/hr</span>
-                                            </div>
-                                            <div className="text-right">
-                                                <span className="block text-teal-500 mb-0.5">Charge Rate (+{profitMargin}%)</span>
-                                                <span className="text-white font-bold">{formatCurrency(rate.chargePerHour)}/hr</span>
-                                            </div>
+                                        <div style={{ textAlign: 'right' }}>
+                                            <span className="mono" style={{ display: 'block', marginBottom: 2 }}>Charge rate (+{profitMargin}%)</span>
+                                            <span style={{ fontWeight: 700 }}>{formatCurrency(rate.chargePerHour)}/hr</span>
                                         </div>
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
-
-                        <div className="text-center">
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                                Ready to lock these rates in?
-                            </p>
-                            <a
-                                href="#waitlist"
-                                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-teal-600 hover:bg-teal-700 transition-colors shadow-lg shadow-teal-500/30"
-                            >
-                                Start Free Trial
-                            </a>
-                        </div>
-
                     </div>
+
+                    <div style={{ textAlign: 'center' }}>
+                        <p className="mono" style={{ marginBottom: 14 }}>Ready to lock these rates in?</p>
+                        <a href="https://app.pricem8.uk/signup" className="btn">Start free trial <span className="arw">→</span></a>
+                    </div>
+
                 </div>
             </div>
         </div>

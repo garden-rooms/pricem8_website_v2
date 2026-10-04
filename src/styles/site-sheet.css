@@ -304,6 +304,34 @@
 .ps-page .offer .btn{margin-top:22px}
 .ps-page .offer-note{margin-top:14px;color:var(--ink-2);font-size:.9rem}
 
+/* ---------- calculator widgets ---------- */
+.ps-page .calc-head{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
+.ps-page .calc-head .n{color:var(--cedar)}
+.ps-page .calc-head h4{
+  font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 100,'wght' 720;
+  font-size:1.02rem;letter-spacing:-.005em;margin:0;
+}
+.ps-page .seg{display:flex;border:1px solid var(--rule);background:var(--paper)}
+.ps-page .seg button{
+  flex:1;padding:10px 12px;font-family:'Archivo',sans-serif;font-weight:650;font-size:.88rem;
+  background:transparent;border:0;color:var(--ink-2);cursor:pointer;transition:background-color .16s linear,color .16s linear;
+}
+.ps-page .seg button.active{background:var(--ink);color:var(--paper)}
+.ps-page .seg button:not(.active):hover{color:var(--ink)}
+.ps-page .row-card{display:flex;align-items:center;gap:10px;border:1px solid var(--rule-soft);background:var(--paper);padding:10px 12px}
+.ps-page .row-card .idx{width:28px;height:28px;flex-shrink:0;border:1px solid var(--cedar-soft);color:var(--cedar);display:flex;align-items:center;justify-content:center}
+.ps-page .row-card .del{color:var(--ink-2);background:none;border:0;cursor:pointer;padding:6px;flex-shrink:0}
+.ps-page .row-card .del:hover{color:#8B4A3C}
+.ps-page .add-row{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cedar);background:none;border:0;cursor:pointer;padding:0}
+.ps-page .add-row:hover{text-decoration:underline}
+.ps-page .disclosure{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:0;cursor:pointer;padding:0;font-family:'Archivo',sans-serif;font-weight:650;font-size:.92rem;color:var(--ink)}
+.ps-page .disclosure:hover{color:var(--cedar)}
+.ps-page .cheat-sheet{background:var(--band-bg);color:var(--band-ink);padding:24px}
+.ps-page .cheat-sheet .mono{color:var(--band-ink-2)}
+.ps-page .cheat-sheet input[type="range"]{width:100%;accent-color:var(--band-cedar);margin-top:8px}
+.ps-page .rate-card{border:1px solid var(--band-rule);padding:12px 14px;margin-top:10px}
+.ps-page .rate-card + .rate-card{margin-top:10px}
+
 /* ---------- compare table ---------- */
 .ps-page table.compare{width:100%;border-collapse:collapse;margin-top:8px}
 .ps-page table.compare th{
@@ -412,10 +440,11 @@
 
 /* ---------- narrow ---------- */
 @media (max-width:880px){
-  .ps-page .hero-grid,.ps-page .sec-head,.ps-page .doc-wrap,.ps-page .story,.ps-page .offer-grid{grid-template-columns:minmax(0,1fr)}
+  .ps-page .hero-grid,.ps-page .sec-head,.ps-page .doc-wrap,.ps-page .story,.ps-page .offer-grid,.ps-page .overheads-grid{grid-template-columns:minmax(0,1fr)}
   .ps-page .hero-grid{align-items:start}
   .ps-page .specstrip li{border-left:0;padding-left:0;flex-basis:45%}
   .ps-page nav.main{display:none}
+  .ps-page .overheads-grid > div:first-child{border-right:0!important;border-bottom:1px solid var(--rule)}
 }
 @media (max-width:560px){
   .ps-page .bar{min-height:52px}
