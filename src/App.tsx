@@ -9,7 +9,6 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 import RoastMyQuote from './pages/RoastMyQuote'
 import LinkInBio from './pages/LinkInBio'
-import RealDataPage from './pages/RealDataPage'
 import ConstructionEstimatingSoftware from './pages/ConstructionEstimatingSoftware'
 import ConstructionQuotingSoftware from './pages/ConstructionQuotingSoftware'
 import GetStartedPage from './pages/GetStartedPage'
@@ -22,7 +21,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/real-data" element={<RealDataPage />} />
+          {/* Home's own story/maths sections now make this page's case */}
+          <Route path="/real-data" element={<Navigate to="/#story" replace />} />
           {/* About, Features, Trades and Testimonials are now sections on the homepage */}
           <Route path="/about" element={<Navigate to="/#story" replace />} />
           <Route path="/features" element={<Navigate to="/#landscaping" replace />} />
