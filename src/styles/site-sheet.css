@@ -304,6 +304,32 @@
 .ps-page .offer .btn{margin-top:22px}
 .ps-page .offer-note{margin-top:14px;color:var(--ink-2);font-size:.9rem}
 
+/* ---------- compare table ---------- */
+.ps-page table.compare{width:100%;border-collapse:collapse;margin-top:8px}
+.ps-page table.compare th{
+  text-align:left;padding:12px 16px;border-bottom:1.5px solid var(--ink);
+  font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:500;color:var(--ink-2);
+}
+.ps-page table.compare td{padding:14px 16px;border-bottom:1px solid var(--rule-soft)}
+.ps-page table.compare tr.lead td{background:var(--plate);font-weight:650;color:var(--cedar)}
+.ps-page table.compare tr.lead td:first-child{color:var(--ink)}
+
+/* ---------- link-in-bio ---------- */
+.ps-page .bio-page{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:56px 20px;background:var(--band-bg);color:var(--band-ink)}
+.ps-page .bio-links{width:100%;max-width:420px;display:flex;flex-direction:column;gap:14px;margin-top:12px}
+.ps-page .bio-link{
+  display:flex;align-items:center;gap:14px;padding:16px 18px;
+  border:1px solid var(--band-rule);background:transparent;text-decoration:none;color:var(--band-ink);
+  transition:border-color .16s linear,background-color .16s linear;
+}
+.ps-page .bio-link:hover{border-color:var(--band-cedar);background:rgba(255,255,255,.03)}
+.ps-page .bio-link.primary{border-color:var(--band-cedar)}
+.ps-page .bio-link .ic{color:var(--band-cedar);flex-shrink:0}
+.ps-page .bio-link .t{font-weight:650}
+.ps-page .bio-link .s{color:var(--band-ink-2);font-size:.86rem;margin-top:2px}
+.ps-page .bio-link .arw{margin-left:auto;color:var(--band-ink-2)}
+
 /* ---------- post list (blog index) ---------- */
 .ps-page .post-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
 .ps-page .post-list li{border-bottom:1px solid var(--rule)}
