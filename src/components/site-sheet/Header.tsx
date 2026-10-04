@@ -25,6 +25,7 @@ export default function SiteSheetHeader() {
       <div className="wrap bar">
         <a className="mark" href="/#top">PriceM8<i></i></a>
         <nav className="main">{links}</nav>
+        <a className="login-link" href="https://app.pricem8.uk/login">Log in</a>
         <button
           type="button"
           className="nav-toggle"
@@ -38,7 +39,10 @@ export default function SiteSheetHeader() {
       </div>
       {open && (
         <div className="wrap">
-          <nav className="main-mobile mono">{links}</nav>
+          <nav className="main-mobile mono">
+            {links}
+            <a href="https://app.pricem8.uk/login" onClick={() => setOpen(false)}>Log in</a>
+          </nav>
         </div>
       )}
     </header>

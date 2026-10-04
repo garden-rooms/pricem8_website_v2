@@ -14,6 +14,7 @@ export default function SiteSheetFooter() {
           <Link className="mono" to="/blog">The Site Office</Link>
           <Link className="mono" to="/roast-my-quote">Roast My Quote</Link>
           <Link className="mono" to="/contact">Contact</Link>
+          <a className="mono" href="https://app.pricem8.uk/login">Log in</a>
         </nav>
         <span className="mono">Quoting software for UK landscapers and garden room builders</span>
       </div>
