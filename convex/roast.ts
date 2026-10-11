@@ -66,7 +66,7 @@ export const submit = action({
         <p><b>Time:</b> ${new Date().toLocaleString()}</p>
       `;
 
-            await fetch("https://api.resend.com/emails", {
+            const response = await fetch("https://api.resend.com/emails", {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${apiKey}`,
@@ -75,10 +75,17 @@ export const submit = action({
                 body: JSON.stringify({
                     from: "PriceM8 Roasts <no-reply@pricem8.uk>",
                     to: [notifyEmail],
+                    // Replying to the notification goes straight to the person who submitted.
+                    reply_to: args.email,
                     subject: `Roast Request from ${args.email}`,
                     html: emailBody,
                 }),
             });
+            // A refused email used to vanish silently (fetch only throws on network errors, not on a
+            // 4xx from Resend), so a failing key or sender domain looked like "no one submitted".
+            if (!response.ok) {
+                console.error(`[roast] Resend refused the notification (${response.status}): ${(await response.text()).slice(0, 300)}`);
+            }
         } catch (error) {
             console.error("Failed to send email:", error);
         }
