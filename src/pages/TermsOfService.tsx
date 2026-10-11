@@ -1,5 +1,6 @@
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import BusinessAddress from '../components/BusinessAddress'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
@@ -7,7 +8,7 @@ const SEO_TITLE = 'Terms of Service – PriceM8'
 const SEO_DESCRIPTION = 'The terms that apply when you use PriceM8.'
 
 export default function TermsOfService() {
-    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/terms-of-service' })
+    useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/terms-of-service', index: false })
 
     return (
         <div className="ps-page">
@@ -21,7 +22,7 @@ export default function TermsOfService() {
 
                         <div className="prose">
                             <p className="mono" style={{ marginBottom: 24 }}>
-                                Last updated: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                Last updated: 4 October 2026
                             </p>
 
                             <p>
@@ -31,6 +32,9 @@ export default function TermsOfService() {
                             <h3>1. Acceptance of Terms</h3>
                             <p>
                                 By accessing or using PriceM8, you confirm that you have read, understood, and agree to be bound by these Terms of Service. If you are using the service on behalf of a business, you represent that you have the authority to bind that business to these terms.
+                            </p>
+                            <p>
+                                PriceM8 is a business tool. By using it you confirm that you are doing so for the purposes of your trade or business, not as a consumer.
                             </p>
 
                             <h3>2. Description of Service</h3>
@@ -53,7 +57,9 @@ export default function TermsOfService() {
 
                             <h3>4. Subscriptions and Payments</h3>
                             <ul>
-                                <li><strong>Fees:</strong> the Landscaping subscription is billed monthly at £25/month, after a 14-day free trial. Garden Rooms is a separate £99 one-off purchase, available once subscribed.</li>
+                                <li><strong>Fees:</strong> the Landscaping subscription is billed monthly at £25/month, after a 14-day free trial. Garden Rooms is a separate £99 one-off purchase, available once subscribed. While you are subscribed (including during the free trial) you can create 2 garden room quotes free; the one-off purchase removes that limit.</li>
+                                <li><strong>Free trial:</strong> a card is required to start the trial. Your card is charged £25 automatically when the 14 days end, and then monthly, unless you cancel before the trial ends.</li>
+                                <li><strong>Failed payments:</strong> if a payment fails we will retry it. If it still cannot be collected, your subscription will end and access to the application will stop.</li>
                                 <li><strong>Cancellations:</strong> you can cancel your subscription at any time through your account settings. Access continues until the end of the current billing period.</li>
                                 <li><strong>Refunds:</strong> unless required by law, fees already paid are non-refundable.</li>
                             </ul>
@@ -81,10 +87,24 @@ export default function TermsOfService() {
                                 These terms are governed by and construed in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
                             </p>
 
-                            <h3>9. Contact</h3>
+                            <h3>9. Your Customers' Data</h3>
                             <p>
-                                For any questions regarding these terms: <a href="mailto:support@pricem8.uk">support@pricem8.uk</a>.
+                                The names, addresses and contact details of your own customers that you enter into PriceM8 remain yours. You are responsible for having a lawful basis to hold and use them; PriceM8 stores and processes them only on your behalf, to provide the service to you.
                             </p>
+
+                            <h3>10. Changes</h3>
+                            <p>
+                                PriceM8 may update these terms or the service from time to time. If a change to these terms is material, or the subscription price changes, you will be told by email before it takes effect, and you can cancel before then.
+                            </p>
+
+                            <h3>11. Who you are contracting with, and contact</h3>
+                            <p>
+                                PriceM8 is a trading name of Michal Gruszczynski, a sole trader. For any questions regarding these terms: <a href="mailto:support@pricem8.uk">support@pricem8.uk</a>.
+                            </p>
+                            <p>
+                                Postal address:
+                            </p>
+                            <BusinessAddress />
                         </div>
                     </div>
                 </section>

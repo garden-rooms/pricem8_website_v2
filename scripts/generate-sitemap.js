@@ -26,8 +26,6 @@ const STATIC_ROUTES = [
     { path: '/construction-quoting-software', changefreq: 'monthly', priority: '0.7' },
     { path: '/roast-my-quote', changefreq: 'monthly', priority: '0.6' },
     { path: '/contact', changefreq: 'monthly', priority: '0.5' },
-    { path: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
-    { path: '/terms-of-service', changefreq: 'yearly', priority: '0.3' },
 ];
 
 const urlEntry = ({ path: p, changefreq, priority, lastmod }) => `  <url>
