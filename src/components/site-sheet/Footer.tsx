@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { requestCookieSettings } from '../../lib/consent'
 
 export default function SiteSheetFooter() {
   return (
@@ -23,6 +24,14 @@ export default function SiteSheetFooter() {
         <nav>
           <Link className="mono" to="/privacy-policy">Privacy Policy</Link>
           <Link className="mono" to="/terms-of-service">Terms of Service</Link>
+          <button
+            type="button"
+            className="mono"
+            onClick={requestCookieSettings}
+            style={{ background: 'none', border: 0, padding: 0, cursor: 'pointer', color: 'inherit' }}
+          >
+            Cookie settings
+          </button>
         </nav>
       </div>
     </footer>

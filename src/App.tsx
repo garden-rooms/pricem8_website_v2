@@ -12,6 +12,7 @@ import LinkInBio from './pages/LinkInBio'
 import ConstructionEstimatingSoftware from './pages/ConstructionEstimatingSoftware'
 import ConstructionQuotingSoftware from './pages/ConstructionQuotingSoftware'
 import GetStartedPage from './pages/GetStartedPage'
+import CookieConsent from './components/CookieConsent'
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/lp/quote-in-minutes" element={<Navigate to="/get-started" replace />} />
           <Route path="/get-started" element={<GetStartedPage />} />
       </Routes>
+      <CookieConsent />
     </BrowserRouter>
   )
 }

@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
 
                         <div className="prose">
                             <p className="mono" style={{ marginBottom: 24 }}>
-                                Last updated: 4 October 2026
+                                Last updated: 12 October 2026
                             </p>
 
                             <p>
@@ -62,6 +62,7 @@ export default function PrivacyPolicy() {
                                 <li><strong>Cloud infrastructure:</strong> Vercel (website and application hosting) and Convex (database, hosted in the EU).</li>
                                 <li><strong>Sign-in:</strong> Clerk (account creation, login and your email address).</li>
                                 <li><strong>Payment processing:</strong> Stripe (subscription and one-off payments) and, if you choose to connect it, GoCardless (bank payments from your customers on your invoices).</li>
+                                <li><strong>Analytics and advertising (website only, with your consent):</strong> Google (Analytics) and Meta (Pixel).</li>
                                 <li><strong>Email:</strong> Resend, which delivers the quotes and invoices you send and any account emails.</li>
                                 <li><strong>PDF generation:</strong> PDFShift, which receives the content of a quote or invoice (including your customer's name and address) only to turn it into a PDF.</li>
                             </ul>
@@ -76,9 +77,12 @@ export default function PrivacyPolicy() {
                                 When you enter your own customers' details into PriceM8, you decide why and how they are used and PriceM8 handles them only on your behalf to provide the service. They are not used for marketing and are not shared except with the providers listed above.
                             </p>
 
-                            <h3>Cookies</h3>
+                            <h3>Cookies and analytics</h3>
                             <p>
-                                The application uses only the cookies and similar storage needed to keep you signed in and remember simple preferences. It does not use advertising or analytics cookies.
+                                <strong>The application</strong> (app.pricem8.uk) uses the cookies and similar storage needed to keep you signed in and remember simple preferences. It asks the same cookie question as this website (your answer is shared between the two), and only if you say Yes does it tell Google Analytics and Meta that you signed up or started a trial, so that I can tell whether advertising is working.
+                            </p>
+                            <p>
+                                <strong>This website</strong> (pricem8.uk) asks before it sets any cookies that are not strictly necessary. If you choose Yes, it uses Google Analytics (to see which pages are read and how people find the site) and the Meta Pixel (to measure whether adverts on Facebook and Instagram lead to visits and sign-ups). Google and Meta can set their own cookies and receive information about your visit under their own privacy policies. If you choose No, or do not answer, neither is loaded. You can change your choice at any time with Cookie settings in the footer of every page.
                             </p>
 
                             <h3>5. Data Security</h3>

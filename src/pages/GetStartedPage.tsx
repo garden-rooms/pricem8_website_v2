@@ -1,6 +1,7 @@
 import founderPhoto from '../founder.jpeg'
 import SiteSheetLandingHeader from '../components/site-sheet/LandingHeader'
 import { useSEO } from '../hooks/useSEO'
+import { requestCookieSettings } from '../lib/consent'
 import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'Start free trial – PriceM8'
@@ -206,6 +207,21 @@ export default function GetStartedPage() {
         <div className="wrap row">
           <a className="mark" href="#top">PriceM8<i></i></a>
           <span className="mono">Quoting software for UK landscapers and garden room builders</span>
+        </div>
+        <div className="wrap row" style={{ marginTop: 18, paddingTop: 18, borderTop: '1px solid var(--band-rule)' }}>
+          <span className="mono">© {new Date().getFullYear()} PriceM8</span>
+          <nav>
+            <a className="mono" href="/privacy-policy">Privacy Policy</a>
+            <a className="mono" href="/terms-of-service">Terms of Service</a>
+            <button
+              type="button"
+              className="mono"
+              onClick={requestCookieSettings}
+              style={{ background: 'none', border: 0, padding: 0, cursor: 'pointer', color: 'inherit' }}
+            >
+              Cookie settings
+            </button>
+          </nav>
         </div>
       </footer>
     </div>
