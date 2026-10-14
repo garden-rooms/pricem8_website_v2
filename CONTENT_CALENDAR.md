@@ -23,7 +23,7 @@ relevant software page — don't let them sit as orphans.
 
 ## The six posts
 
-### 1. Garden Room Cost UK 2026: What Builders Actually Quote (Pillar B)
+### 1. Garden Room Cost UK 2026: What Builders Actually Quote (Pillar B) — ✅ shipped 2026-10-14
 - **Target query**: "garden room cost uk" / "how much does a garden room cost"
 - **Why**: huge homeowner search volume, currently owned by generic cost-guide
   sites (MyJobQuote, Checkatrade, etc.) with no software angle at all.
