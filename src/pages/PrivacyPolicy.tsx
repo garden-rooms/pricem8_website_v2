@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
 
                         <div className="prose">
                             <p className="mono" style={{ marginBottom: 24 }}>
-                                Last updated: 12 October 2026
+                                Last updated: 22 October 2026
                             </p>
 
                             <p>
@@ -65,6 +65,8 @@ export default function PrivacyPolicy() {
                                 <li><strong>Analytics and advertising (website only, with your consent):</strong> Google (Analytics) and Meta (Pixel).</li>
                                 <li><strong>Email:</strong> Resend, which delivers the quotes and invoices you send and any account emails.</li>
                                 <li><strong>PDF generation:</strong> PDFShift, which receives the content of a quote or invoice (including your customer's name and address) only to turn it into a PDF.</li>
+                                <li><strong>Maps and addresses (the application, only when you use these features):</strong> Google (Google Maps Platform). When you show a customer's address on a map, start typing an address and pick a suggestion, measure an area on the satellite map, or work out a travel distance, the address or place you typed, the area of the map you are viewing and your IP address are sent to Google so it can return the map, suggestions or route. Nothing is sent to Google unless you use one of these features, and Google's code is not loaded until you do.</li>
+                                <li><strong>Spam protection (contact form on this website):</strong> Cloudflare Turnstile, which checks that a form is being filled in by a person. Cloudflare receives your IP address and some browser information for that check.</li>
                             </ul>
 
                             <h3>4. Your Rights</h3>
@@ -74,12 +76,12 @@ export default function PrivacyPolicy() {
 
                             <h3>Your customers' data</h3>
                             <p>
-                                When you enter your own customers' details into PriceM8, you decide why and how they are used and PriceM8 handles them only on your behalf to provide the service. They are not used for marketing and are not shared except with the providers listed above.
+                                When you enter your own customers' details into PriceM8, you decide why and how they are used and PriceM8 handles them only on your behalf to provide the service. They are not used for marketing and are not shared except with the providers listed above. If you use the map, address lookup, measuring or travel distance features on a customer's address, that address (not their name or other details) is sent to Google for that purpose, as described above.
                             </p>
 
                             <h3>Cookies and analytics</h3>
                             <p>
-                                <strong>The application</strong> (app.pricem8.uk) uses the cookies and similar storage needed to keep you signed in and remember simple preferences. It asks the same cookie question as this website (your answer is shared between the two), and only if you say Yes does it tell Google Analytics and Meta that you signed up or started a trial, so that I can tell whether advertising is working.
+                                <strong>The application</strong> (app.pricem8.uk) uses the cookies and similar storage needed to keep you signed in and remember simple preferences. It asks the same cookie question as this website (your answer is shared between the two), and only if you say Yes does it tell Google Analytics and Meta that you signed up or started a trial, so that I can tell whether advertising is working. When you use a map feature in the application, Google's map code is loaded at that moment and Google may set its own cookies or similar storage as part of providing the map, under its own privacy policy.
                             </p>
                             <p>
                                 <strong>This website</strong> (pricem8.uk) asks before it sets any cookies that are not strictly necessary. If you choose Yes, it uses Google Analytics (to see which pages are read and how people find the site) and the Meta Pixel (to measure whether adverts on Facebook and Instagram lead to visits and sign-ups). Google and Meta can set their own cookies and receive information about your visit under their own privacy policies. If you choose No, or do not answer, neither is loaded. You can change your choice at any time with Cookie settings in the footer of every page.
