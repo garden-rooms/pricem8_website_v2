@@ -5,7 +5,7 @@
     <link>https://pricem8.uk</link>
     <description>Tips, guides, and news for UK tradespeople.</description>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 14 Oct 2026 18:28:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 21:03:45 GMT</lastBuildDate>
     <atom:link href="https://pricem8.uk/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -132,6 +132,15 @@
       <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Every cost-guide site gives homeowners a vague £15k-£50k range. Here's the component breakdown a real quote is actually built from - foundation, frame, cladding, roof, electrics and fit-out.]]></description>
       <content:encoded><![CDATA[Every cost-guide site gives homeowners a vague £15k-£50k range. Here's the component breakdown a real quote is actually built from - foundation, frame, cladding, roof, electrics and fit-out.]]></content:encoded>
+    </item>
+  
+    <item>
+      <title><![CDATA[Should You Charge for Quotes? The Debate's Missing the Real Number]]></title>
+      <link>https://pricem8.uk/blog/should-you-charge-for-quotes</link>
+      <guid>https://pricem8.uk/blog/should-you-charge-for-quotes</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Every few weeks this goes round again on the trade pages. One side says charge for quotes to filter out time-wasters. The other says free quotes are just the cost of doing business. Both are arguing about the wrong number.]]></description>
+      <content:encoded><![CDATA[Every few weeks this goes round again on the trade pages. One side says charge for quotes to filter out time-wasters. The other says free quotes are just the cost of doing business. Both are arguing about the wrong number.]]></content:encoded>
     </item>
   
   </channel>

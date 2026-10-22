@@ -1488,5 +1488,85 @@
                 "text": "It's a one-off £99 add-on on top of a Landscaping subscription, and your subscription includes 2 free Garden Room quotes to try it before you buy. See the full <a href=\"/construction-estimating-software\">garden room estimating breakdown</a> or check <a href=\"/pricing\">pricing</a>."
             }
         ]
+    },
+    {
+        "id": "should-you-charge-for-quotes",
+        "slug": "should-you-charge-for-quotes",
+        "title": "Should You Charge for Quotes? The Debate's Missing the Real Number",
+        "excerpt": "Every few weeks this goes round again on the trade pages. One side says charge for quotes to filter out time-wasters. The other says free quotes are just the cost of doing business. Both are arguing about the wrong number.",
+        "date": "2026-10-22",
+        "readTime": "6 min read",
+        "image": "free-quotes-debate",
+        "category": "Pricing Strategy",
+        "seo": {
+            "title": "Should You Charge for Quotes? The Real Answer - PriceM8",
+            "description": "The free-quotes-vs-paid-quotes debate misses the actual number: how long a quote takes you to produce. Here's the maths that actually decides it."
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Every few weeks this does the rounds again on the trade pages. One camp says charge for quotes - it filters out the time-wasters, and your time's worth something. The other says free quotes are just the cost of doing business, and anyone who charges is going to lose the job to the next bloke who doesn't. Both sides argue it like it's a matter of principle. It isn't. It's a maths problem, and almost nobody in the argument is doing the sum."
+            },
+            {
+                "type": "heading",
+                "text": "Both Sides Are Arguing the Wrong Thing"
+            },
+            {
+                "type": "paragraph",
+                "text": "The \"charge for it\" camp is right that your time has value. The \"keep it free\" camp is right that charging upfront loses you jobs to competitors who don't. Neither side is wrong about their half of the argument. They're just both assuming the cost of producing a quote is fixed - that it always costs roughly the same amount of your time, so the only question is who pays for it. That assumption is the whole debate, and it's the part that's actually changed."
+            },
+            {
+                "type": "heading",
+                "text": "The Number Nobody's Counting"
+            },
+            {
+                "type": "paragraph",
+                "text": "A quote isn't free to make. It costs you time - the site visit, then the pricing: pacing it out, working out the MOT and the waste, checking what the merchant's charging this week, writing it up. If that process takes you the best part of an evening, every quote you send has a real cost whether the customer ever says yes or not. <strong>The decision to charge for quotes isn't really about customers. It's about how expensive your own quote is to produce.</strong>"
+            },
+            {
+                "type": "chart",
+                "title": "Monthly Cost of Quoting Time: Slow vs Fast",
+                "chartType": "bar",
+                "subtitle": "20 quotes a month, valued at a mid-range £37.50/hr day-rate equivalent - a worked example, not a universal number",
+                "data": [
+                    {
+                        "label": "Old way (1.5hrs/quote)",
+                        "value": 1125,
+                        "color": "bg-red-400",
+                        "suffix": "£"
+                    },
+                    {
+                        "label": "Fast way (15min/quote)",
+                        "value": 188,
+                        "color": "bg-teal-600",
+                        "suffix": "£"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "That's not a precise figure for your business - your day rate and your quoting speed are your own. But the shape of it holds for everyone: if a quote costs an hour and a half of your time between the visit and the paperwork, twenty of those a month is a real, serious cost, win or lose. If it costs fifteen minutes, it barely registers. Same 20 quotes. Same conversion rate. Wildly different answer to \"should I charge for this?\" - because the question was never really about the customer. It was about the bill you were quietly paying yourself."
+            },
+            {
+                "type": "heading",
+                "text": "So Should You Charge?"
+            },
+            {
+                "type": "paragraph",
+                "text": "Here's the actual answer, not a dodge: <strong>charge for quotes (or at least pre-qualify hard before you visit) when they're genuinely expensive to produce. Keep them free when they're genuinely cheap.</strong> If you're still pricing off a pad and a spreadsheet and a Sunday evening, you're in the expensive camp, and the \"charge for it\" argument is doing you a favour - at minimum, screen harder on the phone before you drive out. If a quote takes you fifteen minutes on site, free quotes aren't costing you anything close to what the debate assumes, and charging just adds friction that loses you jobs for no real saving."
+            },
+            {
+                "type": "paragraph",
+                "text": "There's a middle option too, and plenty of trades already use it without calling it that: don't charge money, charge time instead. A quick phone screen before you commit to a site visit - size, budget range, timeline - filters out most of the genuine time-wasters without ever putting a price on the quote itself. It's worth doing regardless of how fast your actual pricing is."
+            },
+            {
+                "type": "paragraph",
+                "text": "This is exactly why PriceM8 exists. It doesn't settle the argument for you - that's still your call, and it depends on your trade, your area, your customers. But it does change which side of that £1,125-versus-£188 line you're standing on, because the pricing itself - materials, labour, waste, VAT - is worked out automatically from the job, not re-built from scratch on a pad every time. The quote that used to cost you an evening costs you the time it takes to walk the job and tap it in."
+            },
+            {
+                "type": "paragraph",
+                "text": "See how the maths works on your own jobs in <a href=\"/blog/how-much-to-charge\">How Much Should I Charge?</a>, or check <a href=\"/pricing\">pricing</a>."
+            }
+        ]
     }
 ]

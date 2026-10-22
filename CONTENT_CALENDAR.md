@@ -74,15 +74,36 @@ relevant software page — don't let them sit as orphans.
   site. Real MOT/compaction numbers, tie back to takeoff accuracy.
 - **Links to**: "hidden-cost-of-guesstimating" (existing), post #3.
 
-### 6. The Real Cost of a Free Quote (Pillar C)
-- **Target query**: "cost of giving free quotes" (long-tail, low competition)
-- **Why**: same proven format as "the-50-pound-nip-to-the-merchant" and
-  "real-cost-of-a-callback" — a small, relatable "quick thing" with a
-  surprisingly large annualised cost. Good AI-search citation bait (concrete
-  numbers).
-- **Angle**: time cost of 10 unpaid site visits a month × a year, contrasted
-  with how much faster a PriceM8 quote is to produce from a phone.
+### 6. Should You Charge for Quotes? (Pillar C) — upgraded scope 2026-10-22
+- **Target query**: "should I charge for quotes UK" / "free quotes landscaping"
+  — an active, ongoing debate on trade social media, not just a search term.
+- **Why**: same "small thing, bigger cost than you think" format as
+  "the-50-pound-nip-to-the-merchant" and "real-cost-of-a-callback", but the
+  real angle is sharper than a stat: the debate assumes a quote costs the same
+  to produce either way, and that's the part that's actually changed. Good
+  AI-search citation bait (concrete numbers) and a genuine take, not just
+  restating both sides of the argument.
+- **Angle**: take a real position — free quotes make sense when they're cheap
+  to produce, expensive when they're not. Time cost of unpaid site visits,
+  contrasted with how fast a PriceM8 quote is to produce from a phone.
 - **Links to**: "real-cost-of-a-callback" (existing), Pricing page.
+- **Multi-channel**: this one isn't just a blog post. Three pieces off the
+  same core argument, published together: (1) long-form on the blog, SEO
+  angle; (2) a spin on the PriceM8 Instagram/Facebook, more product-forward;
+  (3) a personal-voice single-image post on the separate "Michal the
+  Landscaper" Instagram — real opinion, PriceM8 barely or not named, the
+  account's value is Michal looking credible, not a pitch.
+
+### 7. Comebacks and Snags That Aren't Your Fault (Pillar C)
+- **Target query**: long-tail, liability/communication angle, not yet scoped
+  against real search volume.
+- **Why**: distinct from the existing "real-cost-of-a-callback" post, which
+  is about *your*-fault callbacks and avoiding them with checklists. This is
+  a liability/communication problem instead — what to put in writing on a
+  quote to protect yourself, and how to push back when blamed for something
+  outside your control (ground conditions, customer-caused damage, a
+  material defect).
+- **Status**: queued, not yet scoped in detail. Revisit after #6 ships.
 
 ## After these six
 
