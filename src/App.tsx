@@ -12,6 +12,7 @@ import LinkInBio from './pages/LinkInBio'
 import ConstructionEstimatingSoftware from './pages/ConstructionEstimatingSoftware'
 import ConstructionQuotingSoftware from './pages/ConstructionQuotingSoftware'
 import GetStartedPage from './pages/GetStartedPage'
+import GetPaidByBankGuide from './pages/GetPaidByBankGuide'
 import CookieConsent from './components/CookieConsent'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/how-much-to-charge" element={<HowToCharge />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/help/get-paid-by-bank-payment" element={<GetPaidByBankGuide />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/contact" element={<Contact />} />

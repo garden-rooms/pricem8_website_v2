@@ -44,6 +44,7 @@ const STATIC_ROUTES = [
   '/construction-quoting-software',
   '/roast-my-quote',
   '/contact',
+  '/help/get-paid-by-bank-payment',
   '/privacy-policy',
   '/terms-of-service',
   '/get-started',
