@@ -83,7 +83,7 @@ export default function Walkthrough(props: WalkthroughProps) {
       <main id="top">
         <section>
           <div className="wrap">
-            <p className="mono hero-eyebrow">{eyebrow}</p>
+            <p className="mono hero-eyebrow"><Link to="/walkthroughs" style={{ textDecoration: 'none' }}>All walkthroughs</Link> · {eyebrow}</p>
             <h1 className="disp" style={{ fontSize: 'var(--fs-h2)', maxWidth: '16em' }}>{heading}</h1>
             <p className="lede" style={{ marginTop: 22 }}>{lede}</p>
           </div>

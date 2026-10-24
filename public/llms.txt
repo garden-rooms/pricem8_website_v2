@@ -13,6 +13,7 @@ PriceM8 works out materials, labour, waste and VAT for landscaping and garden ro
 
 - [Homepage](https://pricem8.uk/): the founder's story, what PriceM8 prices, and an example quote.
 - [Pricing](https://pricem8.uk/pricing): full pricing breakdown and FAQs.
+- [Walkthroughs](https://pricem8.uk/walkthroughs): short screen recordings of the real app, each with numbered stills.
 - [Walkthrough: measure a garden on the map](https://pricem8.uk/walkthroughs/measure-a-garden-on-the-map): a real screen recording of measuring a block paving area on the satellite map, and sketching an awkward shape.
 - [Walkthrough: quote to invoice](https://pricem8.uk/walkthroughs/quote-to-invoice): a real screen recording of the breakdown behind a price, the client quote, and converting it to an invoice.
 - [Walkthrough: get paid by bank payment](https://pricem8.uk/walkthroughs/get-paid-by-bank-payment): a real screen recording of a part-paid invoice, asking for the balance through GoCardless, and the payment page the customer sees (recorded in GoCardless test mode).

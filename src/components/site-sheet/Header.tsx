@@ -14,6 +14,7 @@ export default function SiteSheetHeader() {
       <a href="/#landscaping" onClick={() => setOpen(false)}>Landscaping</a>
       <a href="/#garden-rooms" onClick={() => setOpen(false)}>Garden rooms</a>
       <a href="/#quote" onClick={() => setOpen(false)}>The quote</a>
+      <Link to="/walkthroughs" onClick={() => setOpen(false)}>Walkthroughs</Link>
       <a href="/#story" onClick={() => setOpen(false)}>The story</a>
       <Link to="/pricing" onClick={() => setOpen(false)}>Pricing</Link>
       <Link to="/blog" onClick={() => setOpen(false)}>The Site Office</Link>

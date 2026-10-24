@@ -10,6 +10,7 @@ export default function SiteSheetFooter() {
           <a className="mono" href="/#landscaping">Landscaping</a>
           <a className="mono" href="/#garden-rooms">Garden rooms</a>
           <a className="mono" href="/#quote">The quote</a>
+          <Link className="mono" to="/walkthroughs">Walkthroughs</Link>
           <a className="mono" href="/#story">The story</a>
           <Link className="mono" to="/pricing">Pricing</Link>
           <Link className="mono" to="/blog">The Site Office</Link>
