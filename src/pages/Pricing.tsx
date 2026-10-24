@@ -83,11 +83,14 @@ export default function Pricing() {
               <div>
                 <ul className="ledger">
                   <li><span className="mono k">Quotes</span><span className="v">Unlimited quotes and invoices, branded as your business, sent as a PDF the same day.</span></li>
-                  <li><span className="mono k">Takeoff</span><span className="v">Materials and labour worked out automatically — paving, sub-base, fencing, turf, muck away.</span></li>
-                  <li><span className="mono k">Clients</span><span className="v">A proper client list attached to every quote — no separate spreadsheet of names and numbers.</span></li>
+                  <li><span className="mono k">Takeoff</span><span className="v">Materials and labour worked out automatically — paving, sub-base, panel and featheredge fencing, turf, muck away.</span></li>
+                  <li><span className="mono k">On site</span><span className="v">Address lookup, measuring on the satellite map, a sketch pad for awkward shapes, drive distance to site, and private notes on any quote or task.</span></li>
+                  <li><span className="mono k">Clients</span><span className="v">A page for every client with their quotes, invoices and address on a map — no separate spreadsheet of names and numbers.</span></li>
+                  <li><span className="mono k">Getting paid</span><span className="v">Quote to invoice in one click, deposits and part payments, and optional "Pay now" bank payments that mark the invoice paid for you.</span></li>
+                  <li><span className="mono k">Numbering</span><span className="v">Start your quote and invoice numbers wherever your old system left off. Saved PDFs carry the number in the file name.</span></li>
                   <li><span className="mono k">Materials</span><span className="v">Sensible starting prices you can edit yourself, down to what your actual merchant charges you.</span></li>
                   <li><span className="mono k">Branding</span><span className="v">Your logo on every quote and invoice. PriceM8 isn't on it anywhere.</span></li>
-                  <li><span className="mono k">Access</span><span className="v">Works on your phone in the van, your tablet on site, your laptop at home.</span></li>
+                  <li><span className="mono k">Access</span><span className="v">Works on your phone in the van, your tablet on site, your laptop at home. Add it to your home screen and it opens like an app.</span></li>
                 </ul>
               </div>
             </div>

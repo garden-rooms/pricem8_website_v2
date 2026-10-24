@@ -6,7 +6,7 @@ import '../styles/site-sheet.css'
 
 const SEO_TITLE = 'PriceM8 – Quoting software for landscapers and garden room builders'
 const SEO_DESCRIPTION =
-  "Built by a landscaper with 20 years on the tools. PriceM8 prices materials, labour, waste and VAT for landscaping and garden room jobs, then puts it on a quote your customer takes seriously."
+  "Built by a landscaper with 20 years on the tools. PriceM8 prices materials, labour, waste and VAT for landscaping and garden room jobs, measures on the map, and takes you from quote to paid invoice."
 
 export default function Home() {
   useSEO({ title: SEO_TITLE, description: SEO_DESCRIPTION, path: '/' })
@@ -167,7 +167,7 @@ export default function Home() {
                   <li><span>Sub-base at your compacted depth</span><span>tonnes</span></li>
                   <li><span>Edgings, kerbs, haunching</span><span>lin m</span></li>
                   <li><span>Turf, topsoil, membrane</span><span>m²</span></li>
-                  <li><span>Fencing, decking, sleeper walls</span><span>lin m</span></li>
+                  <li><span>Panel and featheredge fencing, decking, sleeper walls</span><span>lin m</span></li>
                   <li><span>Muck away — skip or grab</span><span>loads</span></li>
                 </ul>
               </div>
@@ -232,10 +232,75 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ============ EITHER SIDE OF THE QUOTE ============ */}
+        <section id="on-site">
+          <div className="wrap">
+            <div className="sheet-rule"><span className="mono lbl">C — Either side of the quote</span><span className="ticks"></span></div>
+            <div className="sec-head">
+              <h2 className="disp">The quote is the middle of the job, not all of it.</h2>
+              <p className="lede">Before it, you're standing in a garden with a tape measure and a
+                customer who wants a number. After it, you're chasing a deposit. PriceM8 covers both
+                ends, so it isn't one more app to juggle.</p>
+            </div>
+
+            <div className="lines">
+
+              <div className="line-block">
+                <div className="line-title">
+                  <h3 className="sub">On site</h3>
+                  <span className="mono n">Before you price it</span>
+                </div>
+                <p>Most of the time lost on a quote is getting the measurements in. These take the
+                  tape measure out of it, or at least stop you copying figures from the back of
+                  an envelope.</p>
+                <ul className="takeoff">
+                  <li><span>Type the address or postcode and the client's details fill in</span><span>lookup</span></li>
+                  <li><span>Click round a lawn or patio on the satellite map for the area and the edge</span><span>m² · lin m</span></li>
+                  <li><span>Awkward shape? Note each side and which way you turn, and it works out the area</span><span>sketch</span></li>
+                  <li><span>Drive to site worked out from your yard, priced as miles and time</span><span>miles</span></li>
+                  <li><span>Private notes on the quote or any task, never shown to the customer</span><span>notes</span></li>
+                  <li><span>Put it on your phone's home screen. No app store to go through</span><span>phone</span></li>
+                </ul>
+              </div>
+
+              <div className="line-block">
+                <div className="line-title">
+                  <h3 className="sub">The paperwork</h3>
+                  <span className="mono n">Quotes and clients</span>
+                </div>
+                <p>It should look like it came from a business that keeps its books straight, because
+                  it did. Your numbering, your logo, your client list.</p>
+                <ul className="takeoff">
+                  <li><span>Every client has a page: their quotes, their invoices, their address on a map</span><span>clients</span></li>
+                  <li><span>Quotes numbered Q‑0045, and saved PDFs carry the number in the file name</span><span>numbers</span></li>
+                  <li><span>Coming from other software? Start invoices and quotes from the number you were on</span><span>your series</span></li>
+                  <li><span>Your logo and your terms on every document. PriceM8 isn't on them</span><span>branding</span></li>
+                </ul>
+              </div>
+
+              <div className="line-block">
+                <div className="line-title">
+                  <h3 className="sub">Getting paid</h3>
+                  <span className="mono n">After they say yes</span>
+                </div>
+                <p>The quote becomes the invoice in one click. Taking the deposit and the balance
+                  separately is a normal part of a job, so it handles that.</p>
+                <ul className="takeoff">
+                  <li><span>Quote to invoice in one click, nothing retyped</span><span>invoice</span></li>
+                  <li><span>Record a deposit, then the balance. It shows what's paid and what's left</span><span>part pay</span></li>
+                  <li><span>Optional "Pay now": the customer pays from their banking app and the invoice marks itself paid. <a href="/help/get-paid-by-bank-payment">How that works</a></span><span>bank pay</span></li>
+                  <li><span>A thank-you email once they've paid, with your Google review link if you add one</span><span>reviews</span></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* ============ THE QUOTE ============ */}
         <section id="quote" style={{ background: 'var(--paper-2)' }}>
           <div className="wrap">
-            <div className="sheet-rule"><span className="mono lbl">C — What the customer opens</span><span className="ticks"></span></div>
+            <div className="sheet-rule"><span className="mono lbl">D — What the customer opens</span><span className="ticks"></span></div>
             <div className="sec-head">
               <h2 className="disp">A price they can read is a price they can say yes to.</h2>
               <p className="lede">Most quotes lose on the page, not on the number. A single line saying
@@ -291,7 +356,7 @@ export default function Home() {
         {/* ============ STORY ============ */}
         <section id="story">
           <div className="wrap">
-            <div className="sheet-rule"><span className="mono lbl">D — Who built it</span><span className="ticks"></span></div>
+            <div className="sheet-rule"><span className="mono lbl">E — Who built it</span><span className="ticks"></span></div>
             <div className="story" style={{ marginTop: 36 }}>
               <div>
                 <h2 className="disp">The software was the second job.</h2>
@@ -325,7 +390,7 @@ export default function Home() {
         {/* ============ CLOSE ============ */}
         <section id="trial" className="close">
           <div className="wrap">
-            <div className="sheet-rule"><span className="mono lbl">E — Next one</span><span className="ticks"></span></div>
+            <div className="sheet-rule"><span className="mono lbl">F — Next one</span><span className="ticks"></span></div>
             <div style={{ marginTop: 38 }}>
               <h2 className="disp">Price the next one properly.</h2>
               <p className="lede">Take a job you've already done and put it through. If the number

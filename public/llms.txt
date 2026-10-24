@@ -2,7 +2,7 @@
 
 > Quoting and estimating software for UK landscapers and garden room builders. Built by Michal, a landscaper with 20 years on the tools, building real jobs since 2005.
 
-PriceM8 works out materials, labour, waste and VAT for landscaping and garden room jobs, then turns it into a branded PDF quote. It covers exactly two trades — landscaping (patios, drives, fencing, turf, decking) and garden rooms (offices, studios, gyms, annexes) — not a generic multi-trade estimating tool. Every calculation in it comes from real jobs the founder has priced and built himself, not from a supplier brochure or a language model's guess.
+PriceM8 works out materials, labour, waste and VAT for landscaping and garden room jobs, then turns it into a branded PDF quote. Around the quote it also covers site measuring (address lookup, measuring an area on the satellite map, a sketch pad for irregular shapes, drive distance to site, private notes), a client list with each client's quotes, invoices and map, your own quote and invoice numbering, invoices with deposits and part payments, and optional bank payments through GoCardless that mark the invoice paid. It can be added to a phone's home screen and opens like an app. It covers exactly two trades — landscaping (patios, drives, fencing, turf, decking) and garden rooms (offices, studios, gyms, annexes) — not a generic multi-trade estimating tool. Every calculation in it comes from real jobs the founder has priced and built himself, not from a supplier brochure or a language model's guess.
 
 ## Pricing
 
@@ -13,6 +13,7 @@ PriceM8 works out materials, labour, waste and VAT for landscaping and garden ro
 
 - [Homepage](https://pricem8.uk/): the founder's story, what PriceM8 prices, and an example quote.
 - [Pricing](https://pricem8.uk/pricing): full pricing breakdown and FAQs.
+- [Get paid by bank payment](https://pricem8.uk/help/get-paid-by-bank-payment): how to connect GoCardless and let customers pay invoices from their banking app.
 - [The Site Office](https://pricem8.uk/blog): pricing advice and real numbers for UK trades, written by the founder, including two free calculators — a true-cost/day-rate calculator and a markup-vs-margin calculator.
 - [Roast My Quote](https://pricem8.uk/roast-my-quote): submit a quote for a free, personal review from the founder.
 
