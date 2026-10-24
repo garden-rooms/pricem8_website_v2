@@ -47,6 +47,7 @@ const STATIC_ROUTES = [
   '/help/get-paid-by-bank-payment',
   '/walkthroughs/measure-a-garden-on-the-map',
   '/walkthroughs/quote-to-invoice',
+  '/walkthroughs/get-paid-by-bank-payment',
   '/privacy-policy',
   '/terms-of-service',
   '/get-started',

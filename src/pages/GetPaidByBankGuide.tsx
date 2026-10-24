@@ -28,6 +28,10 @@ export default function GetPaidByBankGuide() {
 
                         <div className="prose">
                             <p>
+                                Prefer to watch? <a href="/walkthroughs/get-paid-by-bank-payment">See a part-paid invoice asked for its balance</a>, in a short screen recording.
+                            </p>
+
+                            <p>
                                 PriceM8 can add a <strong>Pay now</strong> option to your invoices using GoCardless. Your customer pays straight from
                                 their own banking app, the money goes to your bank account, and PriceM8 marks the invoice as paid for you. It is
                                 optional, and you can keep using bank transfer, cash or cheque exactly as before.

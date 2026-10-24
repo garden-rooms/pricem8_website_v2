@@ -47,7 +47,7 @@ export default function QuoteToInvoice() {
       sections={SECTIONS}
       next={[
         { to: '/walkthroughs/measure-a-garden-on-the-map', label: 'Before', text: 'Measure it from the map, then price it' },
-        { to: '/help/get-paid-by-bank-payment', label: 'After', text: 'Get paid by bank payment on your invoices' },
+        { to: '/walkthroughs/get-paid-by-bank-payment', label: 'After', text: 'From a deposit to the balance, paid from their banking app' },
       ]}
       closing={{
         heading: 'Send the next quote the same day.',

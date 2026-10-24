@@ -293,6 +293,7 @@ export default function Home() {
                   <li><span>Optional "Pay now": the customer pays from their banking app and the invoice marks itself paid. <a href="/help/get-paid-by-bank-payment">How that works</a></span><span>bank pay</span></li>
                   <li><span>A thank-you email once they've paid, with your Google review link if you add one</span><span>reviews</span></li>
                 </ul>
+                <p><a href="/walkthroughs/get-paid-by-bank-payment">Watch a deposit, then the balance by bank payment →</a></p>
               </div>
 
             </div>

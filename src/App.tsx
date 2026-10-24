@@ -15,6 +15,7 @@ import GetStartedPage from './pages/GetStartedPage'
 import GetPaidByBankGuide from './pages/GetPaidByBankGuide'
 import MeasureOnTheMap from './pages/walkthroughs/MeasureOnTheMap'
 import QuoteToInvoice from './pages/walkthroughs/QuoteToInvoice'
+import GetPaidByBankPayment from './pages/walkthroughs/GetPaidByBankPayment'
 import CookieConsent from './components/CookieConsent'
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/help/get-paid-by-bank-payment" element={<GetPaidByBankGuide />} />
           <Route path="/walkthroughs/measure-a-garden-on-the-map" element={<MeasureOnTheMap />} />
           <Route path="/walkthroughs/quote-to-invoice" element={<QuoteToInvoice />} />
+          <Route path="/walkthroughs/get-paid-by-bank-payment" element={<GetPaidByBankPayment />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/contact" element={<Contact />} />

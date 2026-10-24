@@ -86,7 +86,7 @@ export default function MeasureOnTheMap() {
       sections={SECTIONS}
       next={[
         { to: '/walkthroughs/quote-to-invoice', label: 'Next', text: 'From the numbers to a quote you can send, and the invoice after it' },
-        { to: '/help/get-paid-by-bank-payment', label: 'Guide', text: 'Get paid by bank payment on your invoices' },
+        { to: '/walkthroughs/get-paid-by-bank-payment', label: 'Later', text: 'Getting paid by bank payment' },
       ]}
       closing={{
         heading: 'Measure the next one this way.',
