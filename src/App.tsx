@@ -13,6 +13,8 @@ import ConstructionEstimatingSoftware from './pages/ConstructionEstimatingSoftwa
 import ConstructionQuotingSoftware from './pages/ConstructionQuotingSoftware'
 import GetStartedPage from './pages/GetStartedPage'
 import GetPaidByBankGuide from './pages/GetPaidByBankGuide'
+import MeasureOnTheMap from './pages/walkthroughs/MeasureOnTheMap'
+import QuoteToInvoice from './pages/walkthroughs/QuoteToInvoice'
 import CookieConsent from './components/CookieConsent'
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
           <Route path="/blog/how-much-to-charge" element={<HowToCharge />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/help/get-paid-by-bank-payment" element={<GetPaidByBankGuide />} />
+          <Route path="/walkthroughs/measure-a-garden-on-the-map" element={<MeasureOnTheMap />} />
+          <Route path="/walkthroughs/quote-to-invoice" element={<QuoteToInvoice />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/contact" element={<Contact />} />

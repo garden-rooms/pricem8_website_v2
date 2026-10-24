@@ -45,6 +45,8 @@ const STATIC_ROUTES = [
   '/roast-my-quote',
   '/contact',
   '/help/get-paid-by-bank-payment',
+  '/walkthroughs/measure-a-garden-on-the-map',
+  '/walkthroughs/quote-to-invoice',
   '/privacy-policy',
   '/terms-of-service',
   '/get-started',

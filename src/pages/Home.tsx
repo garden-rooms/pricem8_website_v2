@@ -261,6 +261,7 @@ export default function Home() {
                   <li><span>Private notes on the quote or any task, never shown to the customer</span><span>notes</span></li>
                   <li><span>Put it on your phone's home screen. No app store to go through</span><span>phone</span></li>
                 </ul>
+                <p><a href="/walkthroughs/measure-a-garden-on-the-map">Watch it measure a real job →</a></p>
               </div>
 
               <div className="line-block">
@@ -276,6 +277,7 @@ export default function Home() {
                   <li><span>Coming from other software? Start invoices and quotes from the number you were on</span><span>your series</span></li>
                   <li><span>Your logo and your terms on every document. PriceM8 isn't on them</span><span>branding</span></li>
                 </ul>
+                <p><a href="/walkthroughs/quote-to-invoice">Watch a quote become an invoice →</a></p>
               </div>
 
               <div className="line-block">

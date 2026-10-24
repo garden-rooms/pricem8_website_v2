@@ -27,6 +27,8 @@ const STATIC_ROUTES = [
     { path: '/roast-my-quote', changefreq: 'monthly', priority: '0.6' },
     { path: '/contact', changefreq: 'monthly', priority: '0.5' },
     { path: '/help/get-paid-by-bank-payment', changefreq: 'monthly', priority: '0.4' },
+    { path: '/walkthroughs/measure-a-garden-on-the-map', changefreq: 'monthly', priority: '0.6' },
+    { path: '/walkthroughs/quote-to-invoice', changefreq: 'monthly', priority: '0.6' },
 ];
 
 const urlEntry = ({ path: p, changefreq, priority, lastmod }) => `  <url>
