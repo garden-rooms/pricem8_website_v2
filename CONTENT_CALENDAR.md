@@ -21,7 +21,7 @@ Three pillars, each pointing traffic at a specific money page:
 Each post should link to at least one other post on this list and to the
 relevant software page — don't let them sit as orphans.
 
-## The six posts
+## The posts
 
 ### 1. Garden Room Cost UK 2026: What Builders Actually Quote (Pillar B) — ✅ shipped 2026-10-14
 - **Target query**: "garden room cost uk" / "how much does a garden room cost"
@@ -105,9 +105,26 @@ relevant software page — don't let them sit as orphans.
   material defect).
 - **Status**: queued, not yet scoped in detail. Revisit after #6 ships.
 
-## After these six
+### 8. Does CIS Apply to Landscaping Jobs? (Pillar A) — added 2026-11-07
+- **Target query**: "does CIS apply to landscaping" / "CIS landscaping UK"
+- **Why**: surfaced during competitor research on PriceUp (a real competitor
+  with CIS-deduction handling built in). The underlying tax question —
+  whether a landscaping job counts as "construction" for CIS — is genuinely
+  confusing, and the sites currently ranking for it are generic tax-guide
+  content, not written for landscapers specifically. PriceM8 doesn't
+  calculate CIS itself; the post can be honest about that and still be the
+  clearest, most specific explainer that exists for this trade.
+- **Angle**: the real dividing line — routine maintenance sits outside CIS,
+  but work tied to a wider construction project (new-build surrounds, site
+  clearance after demolition) is generally caught by it. Worked examples of
+  each case, not just the abstract rule. Doesn't claim PriceM8 handles CIS -
+  says plainly that it doesn't, and explains what a landscaper should track
+  separately if a job is CIS-caught.
+- **Links to**: `/construction-quoting-software`, Pricing page.
 
-Don't let the calendar run dry — once these ship, pull the next six from real
-signal: Search Console queries that are getting impressions but low
+## After these
+
+Don't let the calendar run dry — once these ship, pull the next batch from
+real signal: Search Console queries that are getting impressions but low
 click-through (title/meta needs work, not new content), and anything from the
 directory listings' own on-site search that suggests unmet demand.
