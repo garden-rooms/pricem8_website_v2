@@ -105,7 +105,7 @@ relevant software page — don't let them sit as orphans.
   material defect).
 - **Status**: queued, not yet scoped in detail. Revisit after #6 ships.
 
-### 8. Does CIS Apply to Landscaping Jobs? (Pillar A) — added 2026-11-07
+### 8. Does CIS Apply to Landscaping Jobs? (Pillar A) — ✅ shipped 2026-11-07
 - **Target query**: "does CIS apply to landscaping" / "CIS landscaping UK"
 - **Why**: surfaced during competitor research on PriceUp (a real competitor
   with CIS-deduction handling built in). The underlying tax question —

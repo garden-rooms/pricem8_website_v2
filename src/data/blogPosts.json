@@ -1568,5 +1568,78 @@
                 "text": "See how the maths works on your own jobs in <a href=\"/blog/how-much-to-charge\">How Much Should I Charge?</a>, or check <a href=\"/pricing\">pricing</a>."
             }
         ]
+    },
+    {
+        "id": "does-cis-apply-to-landscaping",
+        "slug": "does-cis-apply-to-landscaping",
+        "title": "Does CIS Apply to Your Landscaping Jobs?",
+        "excerpt": "A contractor mentions a 20% CIS deduction and you've never heard of it. Here's the actual dividing line - who's paying you matters as much as what the job is - and where to check if you're still not sure.",
+        "date": "2026-11-07",
+        "readTime": "6 min read",
+        "image": "cis-landscaping-explainer",
+        "category": "Business Advice",
+        "seo": {
+            "title": "Does CIS Apply to Landscaping? A Real Answer - PriceM8",
+            "description": "Whether CIS applies to a landscaping job depends on who's paying you and what the work actually is. The real dividing line, with worked examples - not the vague version."
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "A contractor you're doing work for mentions they'll be deducting 20% under CIS before they pay you. You've never registered for anything called CIS. Is that even allowed? Should it be happening on this job at all? Most of the guides that come up when you search this are written for builders and labourers, not for someone doing patios and turf - so here's the actual answer for landscaping specifically."
+            },
+            {
+                "type": "heading",
+                "text": "What CIS Actually Is"
+            },
+            {
+                "type": "paragraph",
+                "text": "The Construction Industry Scheme is a deduction a contractor takes off your payment before it reaches you, and sends to HMRC on your behalf. It's not an extra tax - it's an advance payment towards the tax and National Insurance you'll owe anyway, which gets set against your bill when you do your return or accounts. <strong>20% if you're registered for CIS, 30% if you're not.</strong> Getting registered is the easy fix if deductions keep catching you out."
+            },
+            {
+                "type": "heading",
+                "text": "Who's Paying You Matters As Much As What the Job Is"
+            },
+            {
+                "type": "paragraph",
+                "text": "This is the part most explainers skip. CIS only applies to payments from a <strong>contractor</strong> - a business that's itself in construction, or a large non-construction business that spends enough on construction work to be caught as a \"deemed contractor.\" <strong>A private homeowner paying you directly for work on their own house is not a contractor under CIS, full stop</strong> - it doesn't matter whether the job itself would otherwise count as construction. If most of your work is domestic customers paying you directly for a patio or a new fence, a huge share of it sits outside CIS for this reason alone, before you even get to what the job is."
+            },
+            {
+                "type": "paragraph",
+                "text": "Where it actually comes up is when you're the one being paid by someone else in the chain - a main contractor on a new-build, a landscaping firm subbing work out to you, a developer finishing a housing estate."
+            },
+            {
+                "type": "heading",
+                "text": "When the Work Itself Gets Caught"
+            },
+            {
+                "type": "paragraph",
+                "text": "Once you are being paid by a contractor, the next question is whether the work counts as a \"construction operation.\" Routine gardening and maintenance generally sit outside CIS. Landscaping tied to a wider construction project - finishing the grounds of a new house, levelling and clearing a site after demolition, work on a housing estate still under construction - is generally treated as a construction operation and is caught."
+            },
+            {
+                "type": "list",
+                "items": [
+                    "<strong>Mowing, hedge cutting, planting for an existing garden, direct for the homeowner:</strong> not CIS - wrong kind of payer, and routine maintenance besides.",
+                    "<strong>A patio or fence for a homeowner, paid directly by them:</strong> not CIS - the homeowner isn't a contractor, regardless of the work.",
+                    "<strong>Turfing and planting the garden of a new-build house, paid by the developer or main contractor:</strong> generally CIS - you're being paid by a contractor for work that's part of finishing a construction project.",
+                    "<strong>Site clearance after demolition, subbed to you by a builder:</strong> generally CIS - same reasoning."
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "Most jobs landscapers do for private customers never touch CIS at all, for the simple reason that a homeowner paying you isn't a contractor. It's the subcontracted, new-build and site-clearance work where it's worth checking properly before you invoice."
+            },
+            {
+                "type": "heading",
+                "text": "Where to Actually Check"
+            },
+            {
+                "type": "paragraph",
+                "text": "I'm not an accountant, and this isn't tax advice - it's the shape of the rule, not a ruling on your specific job. If you're not sure which side of the line a job falls on, HMRC's own CIS guide (search \"CIS340\") covers construction operations in full, and it's worth five minutes with your accountant before you invoice, not after - a wrongly-applied deduction is a lot more annoying to unpick once the money's already moved."
+            },
+            {
+                "type": "paragraph",
+                "text": "PriceM8 doesn't calculate CIS deductions - it prices the job itself, the materials, labour, waste and VAT, and turns that into the quote. If CIS applies on top, that's a deduction the contractor paying you handles on their end, separate from what you've quoted. See how the pricing side works on the <a href=\"/construction-quoting-software\">quoting software</a> page, or check <a href=\"/pricing\">pricing</a>."
+            }
+        ]
     }
 ]
