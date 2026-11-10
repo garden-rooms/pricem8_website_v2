@@ -258,8 +258,6 @@ export default function Home() {
                   <li><span>Click round a lawn or patio on the satellite map for the area and the edge</span><span>m² · lin m</span></li>
                   <li><span>Awkward shape? Note each side and which way you turn, and it works out the area</span><span>sketch</span></li>
                   <li><span>Drive to site worked out from your yard, priced as miles and time</span><span>miles</span></li>
-                  <li><span>Private notes on the quote or any task, never shown to the customer</span><span>notes</span></li>
-                  <li><span>Put it on your phone's home screen. No app store to go through</span><span>phone</span></li>
                 </ul>
                 <p><a href="/walkthroughs/measure-a-garden-on-the-map">Watch it measure a real job →</a></p>
               </div>
