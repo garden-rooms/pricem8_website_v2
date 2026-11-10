@@ -1641,5 +1641,75 @@
                 "text": "PriceM8 doesn't calculate CIS deductions - it prices the job itself, the materials, labour, waste and VAT, and turns that into the quote. If CIS applies on top, that's a deduction the contractor paying you handles on their end, separate from what you've quoted. See how the pricing side works on the <a href=\"/construction-quoting-software\">quoting software</a> page, or check <a href=\"/pricing\">pricing</a>."
             }
         ]
+    },
+    {
+        "id": "garden-room-estimating-software-vs-3d-design",
+        "slug": "garden-room-estimating-software-vs-3d-design",
+        "title": "Garden Room Estimating Software: What's Missing from 3D Design Tools",
+        "excerpt": "Search \"garden room estimating software\" and nearly everything that comes up lets you drag a 3D model around your garden. A pretty render doesn't tell you if the job makes money.",
+        "date": "2026-11-10",
+        "readTime": "6 min read",
+        "image": "garden-room-estimating-vs-3d",
+        "category": "Pricing Strategy",
+        "seo": {
+            "title": "Garden Room Estimating Software vs 3D Design Tools - PriceM8",
+            "description": "3D garden room design tools show you what it'll look like. They don't tell you what it costs to build. Here's the difference, and what real estimating software actually calculates."
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Search \"garden room estimating software\" and nearly everything that comes up is the same kind of tool: drag a 3D model of a garden room around a photo of your actual garden, swap the cladding colour, see how it sits against the house. It looks great. None of it tells you what the job costs to build."
+            },
+            {
+                "type": "heading",
+                "text": "What a Visualizer Actually Does Well"
+            },
+            {
+                "type": "paragraph",
+                "text": "To be fair to them - a good 3D tool earns its place. A customer who can see the garden room sitting where it'll actually go, in roughly the right cladding, is an easier sign-off than a sketch on the back of an invoice pad. For the sales conversation, a render is genuinely useful."
+            },
+            {
+                "type": "heading",
+                "text": "What It Doesn't Do"
+            },
+            {
+                "type": "list",
+                "items": [
+                    "<strong>It doesn't know what the frame costs.</strong> A render shows you a box the right shape. It doesn't know the stud centres, the timber run, or how much that changes with a 5m span versus a 3m one.",
+                    "<strong>It doesn't know the ground.</strong> Whether the base is a concrete slab or screw piles is invisible in a 3D model and can swing the job by thousands.",
+                    "<strong>It doesn't price cladding, it just colours it in.</strong> Cedar, composite and metal cladding cost genuinely different amounts - a visualizer treats them as a material swatch, not a line on a quote.",
+                    "<strong>It doesn't turn into a number you can send a customer.</strong> At the end of it you still have to go and build the actual quote by hand, somewhere else, from scratch."
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "A pretty render isn't a costed job. It's a picture of one."
+            },
+            {
+                "type": "heading",
+                "text": "They're Not Actually Competing With Each Other"
+            },
+            {
+                "type": "paragraph",
+                "text": "This isn't really a case of one tool being better than the other - they're not doing the same job. A visualizer is a sales aid. Estimating software is the thing that tells you whether the job you're about to sell actually makes money. Plenty of builders could reasonably use both: a render to get the customer excited, then a real breakdown before the number goes on a quote. The problem is that search results for \"garden room estimating software\" are almost entirely the first kind, and almost nobody's built the second kind specifically for this trade."
+            },
+            {
+                "type": "heading",
+                "text": "What Estimating Software Actually Needs to Calculate"
+            },
+            {
+                "type": "list",
+                "items": [
+                    "<strong>Foundation</strong> - concrete slab or screw piles, priced per m² for the size of the room.",
+                    "<strong>Frame</strong> - studs at a fixed 400mm centres, priced with the rest of the timber list automatically, not estimated by eye from a render.",
+                    "<strong>Cladding</strong> - cedar, larch, composite or metal, priced separately for the front and for the sides and back, because that's how it's actually specified and bought, not just picked as a colour.",
+                    "<strong>Roof, electrics and internal finish</strong> - the rest of the build that a 3D model never prices at all."
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "That's the actual breakdown a garden room quote needs, worked through properly in <a href=\"/blog/garden-room-cost-uk-2026\">Garden Room Cost UK 2026</a>. PriceM8's Garden Rooms add-on prices all of it as one task - foundation, frame, cladding, roof, electrics and internal finishes - the same six lines, done automatically every time, not re-estimated from a render. See how it works on the <a href=\"/construction-quoting-software\">quoting software</a> page, or check <a href=\"/pricing\">pricing</a>."
+            }
+        ]
     }
 ]

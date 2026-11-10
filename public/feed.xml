@@ -5,7 +5,7 @@
     <link>https://pricem8.uk</link>
     <description>Tips, guides, and news for UK tradespeople.</description>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 10 Nov 2026 19:01:56 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 19:09:45 GMT</lastBuildDate>
     <atom:link href="https://pricem8.uk/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -150,6 +150,15 @@
       <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[A contractor mentions a 20% CIS deduction and you've never heard of it. Here's the actual dividing line - who's paying you matters as much as what the job is - and where to check if you're still not sure.]]></description>
       <content:encoded><![CDATA[A contractor mentions a 20% CIS deduction and you've never heard of it. Here's the actual dividing line - who's paying you matters as much as what the job is - and where to check if you're still not sure.]]></content:encoded>
+    </item>
+  
+    <item>
+      <title><![CDATA[Garden Room Estimating Software: What's Missing from 3D Design Tools]]></title>
+      <link>https://pricem8.uk/blog/garden-room-estimating-software-vs-3d-design</link>
+      <guid>https://pricem8.uk/blog/garden-room-estimating-software-vs-3d-design</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Search "garden room estimating software" and nearly everything that comes up lets you drag a 3D model around your garden. A pretty render doesn't tell you if the job makes money.]]></description>
+      <content:encoded><![CDATA[Search "garden room estimating software" and nearly everything that comes up lets you drag a 3D model around your garden. A pretty render doesn't tell you if the job makes money.]]></content:encoded>
     </item>
   
   </channel>
