@@ -9,6 +9,15 @@ export default function SiteSheetHeader() {
   // Close the mobile menu whenever the route (or in-page hash) changes.
   useEffect(() => { setOpen(false) }, [location.pathname, location.hash])
 
+  // The open panel sits inside the sticky header, not its own fixed overlay, so without this
+  // a scroll while it's open leaves it pinned over content that scrolls in underneath it.
+  useEffect(() => {
+    if (!open) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = prev }
+  }, [open])
+
   const links = (
     <>
       <a href="/#landscaping" onClick={() => setOpen(false)}>Landscaping</a>

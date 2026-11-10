@@ -401,7 +401,7 @@ export default function Home() {
                 a fair test and it's the one I'd run.</p>
               <div className="row">
                 <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
-                <span className="mono fine">Free to try · cancel whenever · no contract</span>
+                <span className="mono fine">14 days free · card needed to start · not charged till the trial ends</span>
               </div>
             </div>
           </div>
