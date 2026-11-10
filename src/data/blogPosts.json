@@ -1711,5 +1711,109 @@
                 "text": "That's the actual breakdown a garden room quote needs, worked through properly in <a href=\"/blog/garden-room-cost-uk-2026\">Garden Room Cost UK 2026</a>. PriceM8's Garden Rooms add-on prices all of it as one task - foundation, frame, cladding, roof, electrics and internal finishes - the same six lines, done automatically every time, not re-estimated from a render. See how it works on the <a href=\"/construction-quoting-software\">quoting software</a> page, or check <a href=\"/pricing\">pricing</a>."
             }
         ]
+    },
+    {
+        "id": "gocardless-vs-stripe-getting-paid",
+        "slug": "gocardless-vs-stripe-getting-paid",
+        "title": "GoCardless vs Stripe: What Actually Changes When You Get Paid",
+        "excerpt": "Bank payment via GoCardless is live on PriceM8 invoices now. Card payment via Stripe isn't built yet, but it's worth understanding the real difference - cost, convenience, security, chargebacks - before assuming one is just better.",
+        "date": "2026-11-12",
+        "readTime": "7 min read",
+        "image": "gocardless-vs-stripe",
+        "category": "Business Advice",
+        "seo": {
+            "title": "GoCardless vs Stripe for Getting Paid - PriceM8",
+            "description": "Real fee figures, not marketing claims: how GoCardless bank payments and Stripe card payments actually compare on cost, convenience, security and chargebacks for a UK trade business."
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "GoCardless is now fully live on PriceM8 - your customers can pay an invoice straight from their banking app, and it gets marked paid automatically. People naturally ask the next question: what about card payments, like Stripe? We don't have that built for invoices yet. This isn't an argument for why GoCardless is better and card payments aren't worth having - it's the real comparison, so if we do add card payment later, you'll already know what you're choosing between."
+            },
+            {
+                "type": "heading",
+                "text": "What Each One Actually Is"
+            },
+            {
+                "type": "paragraph",
+                "text": "GoCardless, as PriceM8 uses it, is a <strong>one-off bank payment</strong> via Open Banking - your customer picks their bank, logs in, and approves the payment directly, with no card details and no Direct Debit mandate involved. Stripe, in this comparison, means a standard <strong>card payment</strong> - the customer types in a card number (or taps a saved one), the same way they'd pay on almost any online checkout."
+            },
+            {
+                "type": "heading",
+                "text": "Cost"
+            },
+            {
+                "type": "paragraph",
+                "text": "GoCardless's standard UK rate is <strong>1% + 20p per payment, capped at £4</strong>, with no monthly fee. Stripe's standard UK card rate is <strong>1.5% + 20p</strong>, with no cap. On a small job the difference is marginal. On a big one, the cap changes everything."
+            },
+            {
+                "type": "chart",
+                "title": "Fee on a Single Payment: GoCardless vs Stripe",
+                "chartType": "bar",
+                "subtitle": "Standard UK rates - worked examples, confirm current rates on each provider's own pricing page",
+                "data": [
+                    {
+                        "label": "£300 job - GoCardless",
+                        "value": 3.2,
+                        "color": "bg-teal-600",
+                        "suffix": "£"
+                    },
+                    {
+                        "label": "£300 job - Stripe",
+                        "value": 4.7,
+                        "color": "bg-red-400",
+                        "suffix": "£"
+                    },
+                    {
+                        "label": "£3,000 job - GoCardless",
+                        "value": 4,
+                        "color": "bg-teal-600",
+                        "suffix": "£"
+                    },
+                    {
+                        "label": "£3,000 job - Stripe",
+                        "value": 45.2,
+                        "color": "bg-red-400",
+                        "suffix": "£"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "On a £300 maintenance job there's barely a pound between them. On a £3,000 patio, GoCardless's cap means the fee stays at £4 - Stripe's, with no cap, scales straight up with the invoice. For anything approaching garden-room money, that gap keeps widening. Large payments do carry their own rules on both platforms past certain thresholds, so check the current detail on gocardless.com/pricing and stripe.com/gb/pricing before relying on an exact figure for a specific job size."
+            },
+            {
+                "type": "heading",
+                "text": "Convenience"
+            },
+            {
+                "type": "paragraph",
+                "text": "Card payment is the one almost every customer already knows - type a number or tap a saved card, done in seconds. Bank payment asks the customer to log into their own banking app, which is one extra step, though it's now a familiar \"Pay by Bank\" pattern on plenty of UK sites. Neither is objectively more convenient - it depends whether your customer has a card saved somewhere already or not."
+            },
+            {
+                "type": "heading",
+                "text": "Security"
+            },
+            {
+                "type": "paragraph",
+                "text": "Both are properly regulated UK payment methods, and neither is the \"risky\" option. The mechanism is just different: a card payment never touches PriceM8's servers either - full card numbers are handled entirely by the card processor. A bank payment never shares the customer's online banking password with anyone - they authenticate directly on their own bank's page, not PriceM8's or GoCardless's. Different route, same destination: nobody but the bank or card processor ever sees the actual credentials."
+            },
+            {
+                "type": "heading",
+                "text": "Chargebacks"
+            },
+            {
+                "type": "paragraph",
+                "text": "This is the real structural difference, and it matters for a trade business specifically. A card payment runs through the card networks, which means a customer can dispute it with their card issuer after the fact - a chargeback - and the business can lose the money even after the job's done, plus a dispute fee on top (commonly around £20, refunded if the business wins). A one-off bank payment doesn't go through the card networks, so it isn't exposed to that same chargeback mechanism. That doesn't mean a bank payment can never be disputed at all - but the route an aggrieved customer has to go through is different, and structurally harder to use as a quick \"I'll just get my money back\" move after a completed job."
+            },
+            {
+                "type": "paragraph",
+                "text": "For a trade business, where the \"service\" is finished and can't be undone once you've built the patio, that difference is worth knowing - not as a reason to avoid card payments forever, but as a real cost to weigh against the convenience."
+            },
+            {
+                "type": "paragraph",
+                "text": "Right now, GoCardless is what's actually available on PriceM8 invoices - see <a href=\"/help/get-paid-by-bank-payment\">how it works</a>. If card payment gets added later, it'll sit alongside it as another option, not a replacement."
+            }
+        ]
     }
 ]

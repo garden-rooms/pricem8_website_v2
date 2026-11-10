@@ -44,6 +44,7 @@ export default function ConstructionQuotingSoftware() {
               <li><span className="mono k">Built from the estimate</span><span className="v">The quote isn't rebuilt from scratch — it's generated directly from your takeoff, so the item list, pricing and totals always match what you actually calculated.</span></li>
               <li><span className="mono k">Branded PDF</span><span className="v">Your logo, your business name, on every quote and invoice. It goes out as your business — PriceM8 isn't on it anywhere.</span></li>
               <li><span className="mono k">Quote to invoice</span><span className="v">Once a job's agreed, turn the accepted quote straight into an invoice — one line per task, no re-typing the whole job.</span></li>
+              <li><span className="mono k">Get paid</span><span className="v">Add a Pay now button to your invoices with GoCardless — your customer pays straight from their banking app, and PriceM8 marks the invoice paid automatically. <a href="/help/get-paid-by-bank-payment">See how it works</a>.</span></li>
               <li><span className="mono k">Clear VAT</span><span className="v">Subtotal, VAT and total shown separately on every document, not buried in one number.</span></li>
             </ul>
           </div>

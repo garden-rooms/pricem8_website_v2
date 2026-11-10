@@ -5,7 +5,7 @@
     <link>https://pricem8.uk</link>
     <description>Tips, guides, and news for UK tradespeople.</description>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 10 Nov 2026 19:09:45 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 20:39:29 GMT</lastBuildDate>
     <atom:link href="https://pricem8.uk/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -159,6 +159,15 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Search "garden room estimating software" and nearly everything that comes up lets you drag a 3D model around your garden. A pretty render doesn't tell you if the job makes money.]]></description>
       <content:encoded><![CDATA[Search "garden room estimating software" and nearly everything that comes up lets you drag a 3D model around your garden. A pretty render doesn't tell you if the job makes money.]]></content:encoded>
+    </item>
+  
+    <item>
+      <title><![CDATA[GoCardless vs Stripe: What Actually Changes When You Get Paid]]></title>
+      <link>https://pricem8.uk/blog/gocardless-vs-stripe-getting-paid</link>
+      <guid>https://pricem8.uk/blog/gocardless-vs-stripe-getting-paid</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Bank payment via GoCardless is live on PriceM8 invoices now. Card payment via Stripe isn't built yet, but it's worth understanding the real difference - cost, convenience, security, chargebacks - before assuming one is just better.]]></description>
+      <content:encoded><![CDATA[Bank payment via GoCardless is live on PriceM8 invoices now. Card payment via Stripe isn't built yet, but it's worth understanding the real difference - cost, convenience, security, chargebacks - before assuming one is just better.]]></content:encoded>
     </item>
   
   </channel>

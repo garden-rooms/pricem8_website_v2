@@ -122,6 +122,24 @@ relevant software page — don't let them sit as orphans.
   separately if a job is CIS-caught.
 - **Links to**: `/construction-quoting-software`, Pricing page.
 
+### 9. GoCardless vs Stripe for Getting Paid (Pillar C) — added 2026-11-12
+- **Target query**: "GoCardless vs Stripe" / "bank payment vs card payment UK
+  small business"
+- **Why**: GoCardless's partner review just approved, making the bank-payment
+  feature fully live, not just working for the founder's own account. Genuine
+  news (not evergreen filler) and a real decision point for anyone setting up
+  how they get paid.
+- **Angle**: neutral, not a pitch for one over the other — real fee figures
+  (GoCardless ~1% + 20p capped at £4; Stripe ~1.5% + 20p, no cap) and the one
+  genuinely trade-relevant point: the cap makes GoCardless dramatically
+  cheaper on big-ticket invoices (patios, garden rooms), while card payment
+  via Stripe is more universally familiar to customers. Chargebacks are the
+  other real structural difference - card payments carry chargeback risk
+  through the card networks, bank payments don't work the same way. Note
+  plainly that Stripe card payments may be added for users later - this
+  isn't an argument to not build it.
+- **Links to**: `/help/get-paid-by-bank-payment`, `/construction-quoting-software`.
+
 ## After these
 
 Don't let the calendar run dry — once these ship, pull the next batch from
