@@ -382,6 +382,7 @@ export default function Home() {
                   <li><span className="mono k">2005–now</span><span className="v">Still on the tools. Still building gardens and rooms in them.</span></li>
                   <li><span className="mono k">Checked</span><span className="v">Every calculation tested against a job that actually happened, at its real finished cost.</span></li>
                   <li><span className="mono k">UK only</span><span className="v">Pounds, tonnes, metres, 20% VAT, UK merchant ranges. Nothing converted from somewhere else.</span></li>
+                  <li><span className="mono k">Still using it</span><span className="v">Every quote on every real job I price goes through PriceM8 first — patios, fencing, garden rooms, real customers. If the number's wrong, I lose money before you do.</span></li>
                 </ul>
               </div>
             </div>
