@@ -13,7 +13,7 @@ export default function SiteSheetFooter() {
           <Link className="mono" to="/walkthroughs">Walkthroughs</Link>
           <a className="mono" href="/#story">The story</a>
           <Link className="mono" to="/pricing">Pricing</Link>
-          <Link className="mono" to="/blog">The Site Office</Link>
+          <Link className="mono" to="/blog">Blog</Link>
           <Link className="mono" to="/roast-my-quote">Roast My Quote</Link>
           <Link className="mono" to="/contact">Contact</Link>
           <a className="mono" href="https://app.pricem8.uk/login">Log in</a>

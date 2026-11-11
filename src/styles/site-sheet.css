@@ -177,6 +177,7 @@
 .ps-page nav.main-mobile{
   display:flex;flex-direction:column;
   border-top:1px solid var(--rule);background:var(--paper);
+  max-height:calc(100dvh - 73px);overflow-y:auto;
 }
 .ps-page nav.main-mobile a{
   padding:14px 0;color:var(--ink-2);text-decoration:none;

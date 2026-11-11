@@ -11,11 +11,19 @@ export default function SiteSheetHeader() {
 
   // The open panel sits inside the sticky header, not its own fixed overlay, so without this
   // a scroll while it's open leaves it pinned over content that scrolls in underneath it.
+  // <html> (not <body>) is the document's actual scrolling element here, so body alone doesn't
+  // stop it — both need the lock.
   useEffect(() => {
     if (!open) return
-    const prev = document.body.style.overflow
+    const html = document.documentElement
+    const prevHtml = html.style.overflow
+    const prevBody = document.body.style.overflow
+    html.style.overflow = 'hidden'
     document.body.style.overflow = 'hidden'
-    return () => { document.body.style.overflow = prev }
+    return () => {
+      html.style.overflow = prevHtml
+      document.body.style.overflow = prevBody
+    }
   }, [open])
 
   const links = (

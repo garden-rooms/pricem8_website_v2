@@ -170,6 +170,7 @@ export default function Home() {
                   <li><span>Panel and featheredge fencing, decking, sleeper walls</span><span>lin m</span></li>
                   <li><span>Muck away — skip or grab</span><span>loads</span></li>
                 </ul>
+                <p className="mono fine">Every line, not a sample — missing one is how a patio stops being profitable.</p>
               </div>
 
               {/* Garden rooms */}
@@ -226,6 +227,7 @@ export default function Home() {
                   <li><span>EPDM or fibreglass roof, trims, outlet</span><span>m²</span></li>
                   <li><span>First fix, flooring, internal linings</span><span>m² / points</span></li>
                 </ul>
+                <p className="mono fine">All of it, every time — that's the point of not doing this from memory.</p>
               </div>
 
             </div>
