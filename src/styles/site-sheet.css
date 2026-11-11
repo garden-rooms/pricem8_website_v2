@@ -129,7 +129,7 @@
   font-size:var(--fs-h3);
   letter-spacing:-.01em;line-height:1.15;margin:0;
 }
-.ps-page p{margin:0}
+.ps-page p{margin:0;text-wrap:pretty}
 .ps-page .lede{font-size:clamp(1.1rem,1.5vw,1.32rem);line-height:1.55;color:var(--ink-2);max-width:34em}
 
 /* ---------- sheet rules (drawing-sheet dividers) ---------- */
