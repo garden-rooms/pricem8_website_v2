@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Calculator, Flame, BookOpen, Smartphone } from 'lucide-react'
+import AnimatedSection from '../components/AnimatedSection'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
@@ -66,13 +67,17 @@ export default function LinkInBio() {
                             </>
                         )
                         return isExternal ? (
-                            <a key={index} href={link.url} className={`bio-link${link.primary ? ' primary' : ''}`}>
-                                {content}
-                            </a>
+                            <AnimatedSection as="div" key={index} delay={index * 0.07}>
+                                <a href={link.url} className={`bio-link${link.primary ? ' primary' : ''}`}>
+                                    {content}
+                                </a>
+                            </AnimatedSection>
                         ) : (
-                            <Link key={index} to={link.url} className={`bio-link${link.primary ? ' primary' : ''}`}>
-                                {content}
-                            </Link>
+                            <AnimatedSection as="div" key={index} delay={index * 0.07}>
+                                <Link to={link.url} className={`bio-link${link.primary ? ' primary' : ''}`}>
+                                    {content}
+                                </Link>
+                            </AnimatedSection>
                         )
                     })}
                 </div>

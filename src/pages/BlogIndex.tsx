@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import blogPosts from '../data/blogPosts.json'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import AnimatedSection from '../components/AnimatedSection'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
@@ -20,19 +21,21 @@ export default function BlogIndex() {
             <main id="top">
                 <section className="hero" style={{ paddingBottom: 0 }}>
                     <div className="wrap">
-                        <p className="mono hero-eyebrow">The Site Office</p>
-                        <h1 className="disp">Pricing advice from someone who actually prices jobs.</h1>
-                        <p className="lede" style={{ marginTop: 22 }}>
-                            Real numbers, real mistakes, no content-team filler.
-                        </p>
+                        <AnimatedSection>
+                            <p className="mono hero-eyebrow">The Site Office</p>
+                            <h1 className="disp">Pricing advice from someone who actually prices jobs.</h1>
+                            <p className="lede" style={{ marginTop: 22 }}>
+                                Real numbers, real mistakes, no content-team filler.
+                            </p>
+                        </AnimatedSection>
                     </div>
                 </section>
 
                 <section>
                     <div className="wrap">
                         <ul className="post-list">
-                            {sortedPosts.map((post) => (
-                                <li key={post.id}>
+                            {sortedPosts.map((post, i) => (
+                                <AnimatedSection as="li" key={post.id} delay={Math.min(i, 4) * 0.06}>
                                     <Link to={`/blog/${post.slug}`}>
                                         <div className="post-meta mono">
                                             <span>{post.category}</span>
@@ -44,7 +47,7 @@ export default function BlogIndex() {
                                         <h2 className="disp">{post.title}</h2>
                                         <p className="post-excerpt">{post.excerpt}</p>
                                     </Link>
-                                </li>
+                                </AnimatedSection>
                             ))}
                         </ul>
                     </div>

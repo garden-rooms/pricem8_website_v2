@@ -1,5 +1,6 @@
 import SiteSheetHeader from '../../components/site-sheet/Header'
 import SiteSheetFooter from '../../components/site-sheet/Footer'
+import AnimatedSection from '../../components/AnimatedSection'
 import OverheadsCalculator from '../../components/OverheadsCalculator'
 import { useSEO, useJsonLd } from '../../hooks/useSEO'
 import '../../styles/site-sheet.css'
@@ -25,12 +26,14 @@ export default function HowToCharge() {
             <main id="top">
                 <section className="hero" style={{ paddingBottom: 0 }}>
                     <div className="wrap" style={{ maxWidth: 720 }}>
-                        <p className="mono hero-eyebrow">Business Advice</p>
-                        <h1 className="disp">How much should I charge?</h1>
-                        <p className="lede" style={{ marginTop: 18 }}>
-                            Why most tradespeople are working for less than minimum wage without
-                            realising it — and how to fix your pricing today.
-                        </p>
+                        <AnimatedSection>
+                            <p className="mono hero-eyebrow">Business Advice</p>
+                            <h1 className="disp">How much should I charge?</h1>
+                            <p className="lede" style={{ marginTop: 18 }}>
+                                Why most tradespeople are working for less than minimum wage without
+                                realising it — and how to fix your pricing today.
+                            </p>
+                        </AnimatedSection>
                     </div>
                 </section>
 
@@ -123,11 +126,13 @@ export default function HowToCharge() {
 
                 <section id="trial" className="close">
                     <div className="wrap">
-                        <h2 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Ready to sort your pricing out?</h2>
-                        <p className="lede" style={{ marginTop: 18 }}>14 days free. A card's required to start, but you're not charged until the trial ends.</p>
-                        <div className="row" style={{ marginTop: 28 }}>
-                            <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
-                        </div>
+                        <AnimatedSection>
+                            <h2 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Ready to sort your pricing out?</h2>
+                            <p className="lede" style={{ marginTop: 18 }}>14 days free. A card's required to start, but you're not charged until the trial ends.</p>
+                            <div className="row" style={{ marginTop: 28 }}>
+                                <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+                            </div>
+                        </AnimatedSection>
                     </div>
                 </section>
             </main>

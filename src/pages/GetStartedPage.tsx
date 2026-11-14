@@ -1,5 +1,6 @@
 import founderPhoto from '../founder.jpeg'
 import SiteSheetLandingHeader from '../components/site-sheet/LandingHeader'
+import AnimatedSection from '../components/AnimatedSection'
 import { useSEO } from '../hooks/useSEO'
 import { requestCookieSettings } from '../lib/consent'
 import '../styles/site-sheet.css'
@@ -79,38 +80,38 @@ export default function GetStartedPage() {
         <section className="band">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">A — The sums you're doing in your head</span><span className="ticks"></span></div>
-            <div className="sec-head">
+            <AnimatedSection className="sec-head">
               <h2 className="disp">Every job you underprice, you find out four days in.</h2>
               <p className="lede">These are the three that catch people out most. None of them are
                 complicated. All of them are easy to get wrong standing in someone's back
                 garden with a tape measure in one hand.</p>
-            </div>
+            </AnimatedSection>
 
             <div className="maths">
-              <article>
+              <AnimatedSection as="article">
                 <span className="fig">9.6 t</span>
                 <h3 className="sub">Not six tonnes</h3>
                 <p>A 60 m² patio on 150 mm of compacted MOT Type 1 needs about 9.6 tonnes.
                   Guess low and you've eaten the margin before the first slab goes down.</p>
-              </article>
-              <article>
+              </AnimatedSection>
+              <AnimatedSection as="article" delay={0.08}>
                 <span className="fig">20%</span>
                 <h3 className="sub">Soil that won't fit back in the hole</h3>
                 <p>Dig out a cubic metre and it doesn't compact back to a cubic metre — excavated
                   soil bulks by around 20%. Guess the raw volume and you'll under-order the skip.</p>
-              </article>
-              <article>
+              </AnimatedSection>
+              <AnimatedSection as="article" delay={0.16}>
                 <span className="fig">£41/hr</span>
                 <h3 className="sub">What an hour actually costs</h3>
                 <p>Your day rate isn't your cost. Van, fuel, insurance, the hour loading up,
                   the trip to the merchant you didn't plan on. It all lands somewhere.</p>
-              </article>
+              </AnimatedSection>
             </div>
 
-            <div className="band-foot">
+            <AnimatedSection className="band-foot">
               <p className="big">PriceM8 does all three before you've got back in the van —
                 and shows you the working, so you can argue with it.</p>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -118,14 +119,14 @@ export default function GetStartedPage() {
         <section>
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">B — What it prices</span><span className="ticks"></span></div>
-            <div className="sec-head">
+            <AnimatedSection className="sec-head">
               <h2 className="disp">Two trades. Both done properly.</h2>
               <p className="lede">Not a general-purpose quoting app with a landscaping label stuck on it.
                 Two build types, taken off the way you'd take them off yourself.</p>
-            </div>
+            </AnimatedSection>
 
             <div className="lines">
-              <div className="line-block">
+              <AnimatedSection className="line-block">
                 <div className="line-title">
                   <h3 className="sub">Landscaping</h3>
                   <span className="mono n">Patios · drives · fencing · turf</span>
@@ -138,9 +139,9 @@ export default function GetStartedPage() {
                   <li><span>Fencing, decking, sleeper walls</span><span>lin m</span></li>
                   <li><span>Muck away — skip or grab</span><span>loads</span></li>
                 </ul>
-              </div>
+              </AnimatedSection>
 
-              <div className="line-block">
+              <AnimatedSection className="line-block" delay={0.1}>
                 <div className="line-title">
                   <h3 className="sub">Garden rooms</h3>
                   <span className="mono n">Offices · studios · gyms · annexes</span>
@@ -153,7 +154,7 @@ export default function GetStartedPage() {
                   <li><span>EPDM or fibreglass roof, trims, outlet</span><span>m²</span></li>
                   <li><span>First fix, flooring, internal linings</span><span>m² / points</span></li>
                 </ul>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -163,7 +164,7 @@ export default function GetStartedPage() {
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">C — What it costs</span><span className="ticks"></span></div>
             <div className="offer-grid" style={{ marginTop: 28 }}>
-              <div className="offer">
+              <AnimatedSection className="offer" direction="left">
                 <p className="mono offer-eyebrow">Landscaping</p>
                 <div className="price-fig">£25<span className="unit">/ month</span></div>
                 <div className="offer-terms">
@@ -171,15 +172,15 @@ export default function GetStartedPage() {
                   you won't be charged until the trial ends, and you can cancel any time before then.
                 </div>
                 <a className="btn" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
-              </div>
-              <div className="offer">
+              </AnimatedSection>
+              <AnimatedSection className="offer" direction="right" delay={0.1}>
                 <p className="mono offer-eyebrow">Garden rooms</p>
                 <div className="price-fig">£99<span className="unit">one‑off</span></div>
                 <div className="offer-terms">
                   A one-time add-on once you're subscribed — not sold on its own.
                   Your subscription includes <strong>2 free Garden Room quotes</strong> to try it first.
                 </div>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -188,7 +189,7 @@ export default function GetStartedPage() {
         <section id="trial" className="close">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">D — Next one</span><span className="ticks"></span></div>
-            <div style={{ marginTop: 38 }}>
+            <AnimatedSection style={{ marginTop: 38 }}>
               <h2 className="disp">Price the next one properly.</h2>
               <p className="lede">Take a job you've already done and put it through. If the number
                 doesn't land within a few percent of what it actually cost you, walk away — that's
@@ -197,7 +198,7 @@ export default function GetStartedPage() {
                 <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
                 <span className="mono fine">14 days free · card required · cancel before it ends and pay nothing</span>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
 

@@ -6,7 +6,7 @@ interface AnimatedSectionProps {
   delay?: number
   direction?: 'up' | 'down' | 'left' | 'right' | 'none'
   className?: string
-  as?: 'div' | 'article' | 'li' | 'span'
+  as?: 'div' | 'article' | 'li' | 'span' | 'figure'
   style?: CSSProperties
   id?: string
 }
@@ -19,7 +19,8 @@ const TAGS = {
   div: motion.div,
   article: motion.article,
   li: motion.li,
-  span: motion.span
+  span: motion.span,
+  figure: motion.figure
 }
 
 export default function AnimatedSection({

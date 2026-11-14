@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { CheckCircle2 } from 'lucide-react'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import AnimatedSection from '../components/AnimatedSection'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
@@ -68,17 +69,19 @@ export default function Contact() {
             <main id="top">
                 <section className="hero">
                     <div className="wrap" style={{ maxWidth: 640 }}>
-                        <p className="mono hero-eyebrow">Get in touch</p>
-                        <h1 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Got a question?</h1>
-                        <p className="lede" style={{ marginTop: 18 }}>
-                            Send a message and I'll get back to you myself — usually within 24 hours.
-                        </p>
+                        <AnimatedSection>
+                            <p className="mono hero-eyebrow">Get in touch</p>
+                            <h1 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Got a question?</h1>
+                            <p className="lede" style={{ marginTop: 18 }}>
+                                Send a message and I'll get back to you myself — usually within 24 hours.
+                            </p>
+                        </AnimatedSection>
                     </div>
                 </section>
 
                 <section style={{ paddingTop: 0 }}>
                     <div className="wrap" style={{ maxWidth: 640 }}>
-                        <div className="form-card">
+                        <AnimatedSection className="form-card" delay={0.1}>
                             <form className="space-y-6" onSubmit={async (e) => {
                                 e.preventDefault();
                                 const form = e.target as HTMLFormElement;
@@ -246,7 +249,7 @@ export default function Contact() {
                                     Replies within 24 hours · Mon–Fri 8am–6pm, Sat 9am–1pm
                                 </p>
                             </form>
-                        </div>
+                        </AnimatedSection>
                     </div>
                 </section>
             </main>

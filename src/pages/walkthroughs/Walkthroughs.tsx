@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import SiteSheetHeader from '../../components/site-sheet/Header'
 import SiteSheetFooter from '../../components/site-sheet/Footer'
+import AnimatedSection from '../../components/AnimatedSection'
 import { useSEO } from '../../hooks/useSEO'
 import '../../styles/site-sheet.css'
 
@@ -48,16 +49,18 @@ export default function Walkthroughs() {
       <main id="top">
         <section>
           <div className="wrap">
-            <p className="mono hero-eyebrow">Walkthroughs</p>
-            <h1 className="disp" style={{ fontSize: 'var(--fs-h2)', maxWidth: '16em' }}>See it done, in the real app.</h1>
-            <p className="lede" style={{ marginTop: 22 }}>
-              Short screen recordings with a test client, no mock-ups. Each one has the same moments as
-              numbered stills underneath, so you can skim it without pressing play.
-            </p>
+            <AnimatedSection>
+              <p className="mono hero-eyebrow">Walkthroughs</p>
+              <h1 className="disp" style={{ fontSize: 'var(--fs-h2)', maxWidth: '16em' }}>See it done, in the real app.</h1>
+              <p className="lede" style={{ marginTop: 22 }}>
+                Short screen recordings with a test client, no mock-ups. Each one has the same moments as
+                numbered stills underneath, so you can skim it without pressing play.
+              </p>
+            </AnimatedSection>
 
             <div className="lines" style={{ marginTop: 44 }}>
-              {WALKTHROUGHS.map((w) => (
-                <div className="line-block" key={w.to}>
+              {WALKTHROUGHS.map((w, i) => (
+                <AnimatedSection className="line-block" key={w.to} delay={i * 0.08}>
                   <Link to={w.to} className="wt-card-img" aria-label={w.title}>
                     <img src={w.poster} alt="" loading="lazy" width={1280} height={672} />
                   </Link>
@@ -68,7 +71,7 @@ export default function Walkthroughs() {
                   <p>{w.text}</p>
                   <p className="mono" style={{ color: 'var(--ink-2)' }}>{w.length}</p>
                   <p><Link to={w.to}>Watch walkthrough {w.n} →</Link></p>
-                </div>
+                </AnimatedSection>
               ))}
             </div>
           </div>
@@ -77,14 +80,14 @@ export default function Walkthroughs() {
         <section className="close">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">Next</span><span className="ticks"></span></div>
-            <div style={{ marginTop: 38 }}>
+            <AnimatedSection style={{ marginTop: 38 }}>
               <h2 className="disp">Try it on one of your own jobs.</h2>
               <p className="lede">Take a job you've already done and put it through. That's a fair test of any quoting tool.</p>
               <div className="row">
                 <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
                 <span className="mono fine">Free to try · cancel whenever · no contract</span>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
       </main>

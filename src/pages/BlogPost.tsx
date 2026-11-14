@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import blogPosts from '../data/blogPosts.json'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import AnimatedSection from '../components/AnimatedSection'
 import BlogChart from '../components/BlogChart'
 import MarkupMarginCalculator from '../components/MarkupMarginCalculator'
 import { useSEO, useJsonLd } from '../hooks/useSEO'
@@ -80,16 +81,18 @@ export default function BlogPost() {
                             <ArrowLeft className="w-4 h-4" /> Back to The Site Office
                         </Link>
 
-                        <div className="post-meta mono" style={{ marginBottom: 14 }}>
-                            <span>{post.category}</span>
-                            <span>·</span>
-                            <span>{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
-                            <span>·</span>
-                            <span>{post.readTime}</span>
-                        </div>
+                        <AnimatedSection>
+                            <div className="post-meta mono" style={{ marginBottom: 14 }}>
+                                <span>{post.category}</span>
+                                <span>·</span>
+                                <span>{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                                <span>·</span>
+                                <span>{post.readTime}</span>
+                            </div>
 
-                        <h1 className="disp">{post.title}</h1>
-                        {post.excerpt && <p className="lede" style={{ marginTop: 18 }}>{post.excerpt}</p>}
+                            <h1 className="disp">{post.title}</h1>
+                            {post.excerpt && <p className="lede" style={{ marginTop: 18 }}>{post.excerpt}</p>}
+                        </AnimatedSection>
                     </div>
                 </section>
 
@@ -164,11 +167,13 @@ export default function BlogPost() {
 
                 <section id="trial" className="close" style={{ marginTop: 40 }}>
                     <div className="wrap">
-                        <h2 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Price your next job properly.</h2>
-                        <p className="lede" style={{ marginTop: 18 }}>14 days free. A card's required to start, but you're not charged until the trial ends.</p>
-                        <div className="row" style={{ marginTop: 28 }}>
-                            <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
-                        </div>
+                        <AnimatedSection>
+                            <h2 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Price your next job properly.</h2>
+                            <p className="lede" style={{ marginTop: 18 }}>14 days free. A card's required to start, but you're not charged until the trial ends.</p>
+                            <div className="row" style={{ marginTop: 28 }}>
+                                <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
+                            </div>
+                        </AnimatedSection>
                     </div>
                 </section>
             </main>

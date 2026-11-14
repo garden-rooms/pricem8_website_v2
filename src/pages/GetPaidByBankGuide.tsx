@@ -1,5 +1,6 @@
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import AnimatedSection from '../components/AnimatedSection'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
@@ -21,10 +22,12 @@ export default function GetPaidByBankGuide() {
             <main id="top">
                 <section>
                     <div className="wrap">
-                        <p className="mono hero-eyebrow">Guide</p>
-                        <h1 className="disp" style={{ fontSize: 'var(--fs-h2)', marginBottom: 32 }}>
-                            Get paid by bank payment on your invoices
-                        </h1>
+                        <AnimatedSection>
+                            <p className="mono hero-eyebrow">Guide</p>
+                            <h1 className="disp" style={{ fontSize: 'var(--fs-h2)', marginBottom: 32 }}>
+                                Get paid by bank payment on your invoices
+                            </h1>
+                        </AnimatedSection>
 
                         <div className="prose">
                             <p>

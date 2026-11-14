@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import SiteSheetHeader from '../../components/site-sheet/Header'
 import SiteSheetFooter from '../../components/site-sheet/Footer'
+import AnimatedSection from '../../components/AnimatedSection'
 import { useSEO, useJsonLd } from '../../hooks/useSEO'
 import '../../styles/site-sheet.css'
 
@@ -83,9 +84,11 @@ export default function Walkthrough(props: WalkthroughProps) {
       <main id="top">
         <section>
           <div className="wrap">
-            <p className="mono hero-eyebrow"><Link to="/walkthroughs" style={{ textDecoration: 'none' }}>All walkthroughs</Link> · {eyebrow}</p>
-            <h1 className="disp" style={{ fontSize: 'var(--fs-h2)', maxWidth: '16em' }}>{heading}</h1>
-            <p className="lede" style={{ marginTop: 22 }}>{lede}</p>
+            <AnimatedSection>
+              <p className="mono hero-eyebrow"><Link to="/walkthroughs" style={{ textDecoration: 'none' }}>All walkthroughs</Link> · {eyebrow}</p>
+              <h1 className="disp" style={{ fontSize: 'var(--fs-h2)', maxWidth: '16em' }}>{heading}</h1>
+              <p className="lede" style={{ marginTop: 22 }}>{lede}</p>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -93,29 +96,29 @@ export default function Walkthrough(props: WalkthroughProps) {
           <section key={section.id} id={section.id} style={index % 2 === 1 ? { background: 'var(--paper-2)' } : undefined}>
             <div className="wrap">
               <div className="sheet-rule"><span className="mono lbl">{section.label}</span><span className="ticks"></span></div>
-              <div className="sec-head">
+              <AnimatedSection className="sec-head">
                 <h2 className="disp">{section.title}</h2>
                 <p className="lede">{section.lede}</p>
-              </div>
+              </AnimatedSection>
 
-              <figure className="wt-video">
+              <AnimatedSection as="figure" className="wt-video" delay={0.08}>
                 <video controls playsInline muted preload="metadata" poster={`/walkthroughs/${section.video.poster}`} aria-label={section.video.label}>
                   <source src={`/walkthroughs/${section.video.src}`} type="video/mp4" />
                   Your browser can't play this video. The steps below show the same thing as stills.
                 </video>
                 <figcaption className="mono">{section.video.label} · screen recording, no sound</figcaption>
-              </figure>
+              </AnimatedSection>
 
               <ol className="wt-steps">
                 {section.steps.map((step, i) => (
-                  <li key={step.heading} className="wt-step">
+                  <AnimatedSection as="li" key={step.heading} className="wt-step" delay={Math.min(i, 3) * 0.08}>
                     <div>
                       <span className="mono n">Step {i + 1}</span>
                       <h3 className="sub">{step.heading}</h3>
                       <p>{step.body}</p>
                     </div>
                     <img src={`/walkthroughs/${step.image}`} alt={step.alt} loading="lazy" width={1280} height={672} />
-                  </li>
+                  </AnimatedSection>
                 ))}
               </ol>
 
@@ -127,7 +130,7 @@ export default function Walkthrough(props: WalkthroughProps) {
         <section className="close">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">Next</span><span className="ticks"></span></div>
-            <div style={{ marginTop: 38 }}>
+            <AnimatedSection style={{ marginTop: 38 }}>
               <h2 className="disp">{closing.heading}</h2>
               <p className="lede">{closing.text}</p>
               <div className="row">
@@ -141,7 +144,7 @@ export default function Walkthrough(props: WalkthroughProps) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
       </main>

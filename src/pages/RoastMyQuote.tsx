@@ -4,6 +4,7 @@ import { useMutation, useAction } from 'convex/react'
 import { api } from '../../convex/_generated/api'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import AnimatedSection from '../components/AnimatedSection'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
@@ -66,26 +67,28 @@ export default function RoastMyQuote() {
       <main id="top">
         <section className="hero">
           <div className="wrap" style={{ maxWidth: 720 }}>
-            <p className="mono hero-eyebrow">Free quote audit · I read it myself</p>
-            <h1 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Is your quote losing you money?</h1>
-            <p className="lede" style={{ marginTop: 18 }}>
-              Paste one in, or upload it. No AI summary — I look at it myself and tell you
-              where the profit's leaking.
-            </p>
+            <AnimatedSection>
+              <p className="mono hero-eyebrow">Free quote audit · I read it myself</p>
+              <h1 className="disp" style={{ fontSize: 'var(--fs-h2)' }}>Is your quote losing you money?</h1>
+              <p className="lede" style={{ marginTop: 18 }}>
+                Paste one in, or upload it. No AI summary — I look at it myself and tell you
+                where the profit's leaking.
+              </p>
 
-            <div className="specstrip" style={{ marginTop: 32 }}>
-              <ul>
-                <li><b>100%</b><span className="mono">Free audit</span></li>
-                <li><b>24h</b><span className="mono">Typical turnaround</span></li>
-                <li><b>By hand</b><span className="mono">Not an AI summary</span></li>
-              </ul>
-            </div>
+              <div className="specstrip" style={{ marginTop: 32 }}>
+                <ul>
+                  <li><b>100%</b><span className="mono">Free audit</span></li>
+                  <li><b>24h</b><span className="mono">Typical turnaround</span></li>
+                  <li><b>By hand</b><span className="mono">Not an AI summary</span></li>
+                </ul>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
         <section style={{ paddingTop: 0 }}>
           <div className="wrap" style={{ maxWidth: 720 }}>
-            <div className="form-card">
+            <AnimatedSection className="form-card" delay={0.1}>
               {isSuccess ? (
                 <div style={{ textAlign: 'center', padding: '32px 0' }}>
                   <CheckCircle2 className="w-10 h-10" style={{ color: 'var(--cedar)', margin: '0 auto 16px' }} />
@@ -170,7 +173,7 @@ export default function RoastMyQuote() {
                   </button>
                 </form>
               )}
-            </div>
+            </AnimatedSection>
           </div>
         </section>
       </main>
