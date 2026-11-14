@@ -11,18 +11,30 @@ export default function SiteSheetHeader() {
 
   // The open panel sits inside the sticky header, not its own fixed overlay, so without this
   // a scroll while it's open leaves it pinned over content that scrolls in underneath it.
-  // <html> (not <body>) is the document's actual scrolling element here, so body alone doesn't
-  // stop it — both need the lock.
+  // Plain `overflow:hidden` on html/body is enough on desktop, but on iOS Safari it's known to
+  // get stuck — once the menu closes (especially via a route change, which unmounts this
+  // component mid-gesture) the page can be left unscrollable until a manual reload. Pinning the
+  // body with `position:fixed` at its current scroll offset and restoring that offset on close
+  // is the technique that actually resets iOS's scroll state reliably.
   useEffect(() => {
     if (!open) return
     const html = document.documentElement
-    const prevHtml = html.style.overflow
-    const prevBody = document.body.style.overflow
+    const body = document.body
+    const scrollY = window.scrollY
+    const prevHtmlOverflow = html.style.overflow
+    const prevBodyPosition = body.style.position
+    const prevBodyTop = body.style.top
+    const prevBodyWidth = body.style.width
     html.style.overflow = 'hidden'
-    document.body.style.overflow = 'hidden'
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollY}px`
+    body.style.width = '100%'
     return () => {
-      html.style.overflow = prevHtml
-      document.body.style.overflow = prevBody
+      html.style.overflow = prevHtmlOverflow
+      body.style.position = prevBodyPosition
+      body.style.top = prevBodyTop
+      body.style.width = prevBodyWidth
+      window.scrollTo(0, scrollY)
     }
   }, [open])
 
