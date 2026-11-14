@@ -266,6 +266,22 @@
 .ps-page .drawing svg .bold{stroke-width:1.7}
 .ps-page .drawing svg text{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.1em;fill:currentColor}
 .ps-page .line-block:hover .drawing{border-color:var(--cedar-soft)}
+.ps-page .live-shot{
+  position:relative;border:1px solid var(--rule);overflow:hidden;
+  aspect-ratio:16/10;background:var(--paper-2);
+  transition:border-color .16s linear,transform .16s ease;
+}
+.ps-page .live-shot:hover{border-color:var(--cedar-soft);transform:translateY(-2px)}
+.ps-page .live-shot video{width:100%;height:100%;object-fit:cover;object-position:50% 0;cursor:pointer}
+.ps-page .live-shot::after{
+  content:'hover to play';
+  position:absolute;right:10px;bottom:10px;z-index:1;pointer-events:none;
+  font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);padding:4px 8px;
+  opacity:0;transition:opacity .16s linear;
+}
+.ps-page .live-shot:hover::after{opacity:.85}
+@media (hover:none){.ps-page .live-shot::after{content:'tap to play';opacity:.7}}
 .ps-page .line-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .ps-page .line-title .n{color:var(--cedar)}
 .ps-page .takeoff{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule-soft)}

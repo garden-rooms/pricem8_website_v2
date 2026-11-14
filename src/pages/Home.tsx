@@ -4,6 +4,27 @@ import SiteSheetFooter from '../components/site-sheet/Footer'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
+// A real screen recording from the app, poster-framed until hovered (or tapped on touch,
+// since there's no hover there). Not decoration — the same recordings linked from the full
+// walkthrough pages, just played inline so the real UI doesn't require a click-away to see.
+function LiveShot({ src, poster, label }: { src: string; poster: string; label: string }) {
+  const toggle = (el: HTMLVideoElement, play: boolean) => {
+    if (play) { el.currentTime = 0; el.play() } else { el.pause() }
+  }
+  return (
+    <div className="live-shot">
+      <video
+        muted loop playsInline preload="metadata" poster={poster} aria-label={label}
+        onMouseEnter={(e) => toggle(e.currentTarget, true)}
+        onMouseLeave={(e) => toggle(e.currentTarget, false)}
+        onClick={(e) => { const v = e.currentTarget; v.paused ? toggle(v, true) : toggle(v, false) }}
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+    </div>
+  )
+}
+
 const SEO_TITLE = 'PriceM8 – Quoting software for landscapers and garden room builders'
 const SEO_DESCRIPTION =
   "Built by a landscaper with 20 years on the tools. PriceM8 prices materials, labour, waste and VAT for landscaping and garden room jobs, measures on the map, and takes you from quote to paid invoice."
@@ -255,6 +276,11 @@ export default function Home() {
                 <p>Most of the time lost on a quote is getting the measurements in. These take the
                   tape measure out of it, or at least stop you copying figures from the back of
                   an envelope.</p>
+                <LiveShot
+                  src="/walkthroughs/measure-on-map.mp4"
+                  poster="/walkthroughs/measure-on-map-poster.webp"
+                  label="Measuring a garden area on the satellite map in PriceM8"
+                />
                 <ul className="takeoff">
                   <li><span>Type the address or postcode and the client's details fill in</span><span>lookup</span></li>
                   <li><span>Click round a lawn or patio on the satellite map for the area and the edge</span><span>m² · lin m</span></li>
@@ -271,6 +297,11 @@ export default function Home() {
                 </div>
                 <p>It should look like it came from a business that keeps its books straight, because
                   it did. Your numbering, your logo, your client list.</p>
+                <LiveShot
+                  src="/walkthroughs/quote-to-invoice.mp4"
+                  poster="/walkthroughs/quote-to-invoice-poster.webp"
+                  label="A branded PriceM8 quote, itemised with VAT"
+                />
                 <ul className="takeoff">
                   <li><span>Every client has a page: their quotes, their invoices, their address on a map</span><span>clients</span></li>
                   <li><span>Quotes numbered Q‑0045, and saved PDFs carry the number in the file name</span><span>numbers</span></li>
@@ -287,6 +318,11 @@ export default function Home() {
                 </div>
                 <p>The quote becomes the invoice in one click. Taking the deposit and the balance
                   separately is a normal part of a job, so it handles that.</p>
+                <LiveShot
+                  src="/walkthroughs/get-paid-bank-payment.mp4"
+                  poster="/walkthroughs/get-paid-bank-payment-poster.webp"
+                  label="An invoice with a deposit recorded, and a GoCardless bank payment request for the balance"
+                />
                 <ul className="takeoff">
                   <li><span>Quote to invoice in one click, nothing retyped</span><span>invoice</span></li>
                   <li><span>Record a deposit, then the balance. It shows what's paid and what's left</span><span>part pay</span></li>
