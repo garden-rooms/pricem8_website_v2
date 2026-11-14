@@ -1,6 +1,7 @@
 import founderPhoto from '../founder.jpeg'
 import SiteSheetHeader from '../components/site-sheet/Header'
 import SiteSheetFooter from '../components/site-sheet/Footer'
+import AnimatedSection from '../components/AnimatedSection'
 import { useSEO } from '../hooks/useSEO'
 import '../styles/site-sheet.css'
 
@@ -93,38 +94,38 @@ export default function Home() {
         <section className="band">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">A — The sums you're doing in your head</span><span className="ticks"></span></div>
-            <div className="sec-head">
+            <AnimatedSection className="sec-head">
               <h2 className="disp">Every job you underprice, you find out four days in.</h2>
               <p className="lede">These are the three that catch people out most. None of them are
                 complicated. All of them are easy to get wrong standing in someone's back
                 garden with a tape measure in one hand.</p>
-            </div>
+            </AnimatedSection>
 
             <div className="maths">
-              <article>
+              <AnimatedSection as="article">
                 <span className="fig">9.6 t</span>
                 <h3 className="sub">Not six tonnes</h3>
                 <p>A 60 m² patio on 150 mm of compacted MOT Type 1 needs about 9.6 tonnes.
                   Guess low and you've eaten the margin before the first slab goes down.</p>
-              </article>
-              <article>
+              </AnimatedSection>
+              <AnimatedSection as="article" delay={0.08}>
                 <span className="fig">20%</span>
                 <h3 className="sub">Soil that won't fit back in the hole</h3>
                 <p>Dig out a cubic metre and it doesn't compact back to a cubic metre — excavated
                   soil bulks by around 20%. Guess the raw volume and you'll under-order the skip.</p>
-              </article>
-              <article>
+              </AnimatedSection>
+              <AnimatedSection as="article" delay={0.16}>
                 <span className="fig">£41/hr</span>
                 <h3 className="sub">What an hour actually costs</h3>
                 <p>Your day rate isn't your cost. Van, fuel, insurance, the hour loading up,
                   the trip to the merchant you didn't plan on. It all lands somewhere.</p>
-              </article>
+              </AnimatedSection>
             </div>
 
-            <div className="band-foot">
+            <AnimatedSection className="band-foot">
               <p className="big">PriceM8 does all three before you've got back in the van —
                 and shows you the working, so you can argue with it.</p>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -132,17 +133,17 @@ export default function Home() {
         <section id="landscaping">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">B — What it prices</span><span className="ticks"></span></div>
-            <div className="sec-head">
+            <AnimatedSection className="sec-head">
               <h2 className="disp">Two trades. Both done properly.</h2>
               <p className="lede">Not a general-purpose quoting app with a landscaping label stuck on it.
                 Two build types, taken off the way you'd take them off yourself — if you had
                 a quiet hour and nobody ringing you.</p>
-            </div>
+            </AnimatedSection>
 
             <div className="lines">
 
               {/* Landscaping */}
-              <div className="line-block">
+              <AnimatedSection className="line-block">
                 <div className="drawing">
                   <svg viewBox="0 0 400 250" role="img" aria-label="Setting-out plan of a rear patio, 8.4 metres by 5.2 metres, laid in stretcher bond against a house wall.">
                     <g fill="none" stroke="currentColor">
@@ -192,10 +193,10 @@ export default function Home() {
                   <li><span>Muck away — skip or grab</span><span>loads</span></li>
                 </ul>
                 <p className="mono fine">Every line, not a sample — missing one is how a patio stops being profitable.</p>
-              </div>
+              </AnimatedSection>
 
               {/* Garden rooms */}
-              <div className="line-block" id="garden-rooms">
+              <AnimatedSection className="line-block" delay={0.1} id="garden-rooms">
                 <div className="drawing">
                   <svg viewBox="0 0 400 250" role="img" aria-label="Front elevation of a garden room, five metres wide by two point five metres high, with bifold doors, a side window and horizontal cedar cladding.">
                     <g fill="none" stroke="currentColor">
@@ -249,7 +250,7 @@ export default function Home() {
                   <li><span>First fix, flooring, internal linings</span><span>m² / points</span></li>
                 </ul>
                 <p className="mono fine">All of it, every time — that's the point of not doing this from memory.</p>
-              </div>
+              </AnimatedSection>
 
             </div>
           </div>
@@ -259,16 +260,16 @@ export default function Home() {
         <section id="on-site">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">C — Either side of the quote</span><span className="ticks"></span></div>
-            <div className="sec-head">
+            <AnimatedSection className="sec-head">
               <h2 className="disp">The quote is the middle of the job, not all of it.</h2>
               <p className="lede">Before it, you're standing in a garden with a tape measure and a
                 customer who wants a number. After it, you're chasing a deposit. PriceM8 covers both
                 ends, so it isn't one more app to juggle.</p>
-            </div>
+            </AnimatedSection>
 
             <div className="lines">
 
-              <div className="line-block">
+              <AnimatedSection className="line-block">
                 <div className="line-title">
                   <h3 className="sub">On site</h3>
                   <span className="mono n">Before you price it</span>
@@ -288,9 +289,9 @@ export default function Home() {
                   <li><span>Drive to site worked out from your yard, priced as miles and time</span><span>miles</span></li>
                 </ul>
                 <p><a href="/walkthroughs/measure-a-garden-on-the-map">Watch it measure a real job →</a></p>
-              </div>
+              </AnimatedSection>
 
-              <div className="line-block">
+              <AnimatedSection className="line-block" delay={0.08}>
                 <div className="line-title">
                   <h3 className="sub">The paperwork</h3>
                   <span className="mono n">Quotes and clients</span>
@@ -309,9 +310,9 @@ export default function Home() {
                   <li><span>Your logo and your terms on every document. PriceM8 isn't on them</span><span>branding</span></li>
                 </ul>
                 <p><a href="/walkthroughs/quote-to-invoice">Watch a quote become an invoice →</a></p>
-              </div>
+              </AnimatedSection>
 
-              <div className="line-block">
+              <AnimatedSection className="line-block" delay={0.16}>
                 <div className="line-title">
                   <h3 className="sub">Getting paid</h3>
                   <span className="mono n">After they say yes</span>
@@ -330,7 +331,7 @@ export default function Home() {
                   <li><span>A thank-you email once they've paid, with your Google review link if you add one</span><span>reviews</span></li>
                 </ul>
                 <p><a href="/walkthroughs/get-paid-by-bank-payment">Watch a deposit, then the balance by bank payment →</a></p>
-              </div>
+              </AnimatedSection>
 
             </div>
           </div>
@@ -340,14 +341,14 @@ export default function Home() {
         <section id="quote" style={{ background: 'var(--paper-2)' }}>
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">D — What the customer opens</span><span className="ticks"></span></div>
-            <div className="sec-head">
+            <AnimatedSection className="sec-head">
               <h2 className="disp">A price they can read is a price they can say yes to.</h2>
               <p className="lede">Most quotes lose on the page, not on the number. A single line saying
                 "Patio — £9,700" invites a haggle. A broken-down one invites a deposit.</p>
-            </div>
+            </AnimatedSection>
 
             <div className="doc-wrap">
-              <div className="doc">
+              <AnimatedSection className="doc" direction="left">
                 <div className="doc-top">
                   <span className="who">PriceM8 — Quotation</span>
                   <span className="mono">Ref Q‑1042 · 14 Mar</span>
@@ -378,16 +379,16 @@ export default function Home() {
                   <span className="mono">Prices held 30 days · 25% on commencement</span>
                   <span className="mono">Example quote — figures illustrative</span>
                 </div>
-              </div>
+              </AnimatedSection>
 
-              <div>
+              <AnimatedSection direction="right" delay={0.1}>
                 <ul className="ledger">
                   <li><span className="mono k">Line by line</span><span className="v">The customer sees where the money goes, so the conversation is about the build, not the total.</span></li>
                   <li><span className="mono k">Your logo</span><span className="v">It goes out as your business, on your headed paper. PriceM8 isn't on it anywhere.</span></li>
                   <li><span className="mono k">Same day</span><span className="v">Price it in the van, send the PDF before you've pulled off the drive. First quote in usually wins.</span></li>
                   <li><span className="mono k">Your rates</span><span className="v">Material prices start sensible and you overwrite any of them with what your merchant actually charges you.</span></li>
                 </ul>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -397,11 +398,11 @@ export default function Home() {
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">E — Who built it</span><span className="ticks"></span></div>
             <div className="story" style={{ marginTop: 36 }}>
-              <div>
+              <AnimatedSection direction="left">
                 <h2 className="disp">The software was the second job.</h2>
                 <p className="pull">"If it doesn't survive a wet Tuesday in February, it doesn't go in."</p>
-              </div>
-              <div className="col">
+              </AnimatedSection>
+              <AnimatedSection className="col" direction="right" delay={0.1}>
                 <p>I laid my first patio in 2005. For most of the twenty years after that I priced
                   work the way nearly everyone does — a pad in the van, a spreadsheet that got
                   copied and broken, and a gut feeling that had been right often enough to trust and
@@ -422,7 +423,7 @@ export default function Home() {
                   <li><span className="mono k">UK only</span><span className="v">Pounds, tonnes, metres, 20% VAT, UK merchant ranges. Nothing converted from somewhere else.</span></li>
                   <li><span className="mono k">Still using it</span><span className="v">Every quote on every real job I price goes through PriceM8 first — patios, fencing, garden rooms, real customers. If the number's wrong, I lose money before you do.</span></li>
                 </ul>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -431,7 +432,7 @@ export default function Home() {
         <section id="trial" className="close">
           <div className="wrap">
             <div className="sheet-rule"><span className="mono lbl">F — Next one</span><span className="ticks"></span></div>
-            <div style={{ marginTop: 38 }}>
+            <AnimatedSection style={{ marginTop: 38 }}>
               <h2 className="disp">Price the next one properly.</h2>
               <p className="lede">Take a job you've already done and put it through. If the number
                 doesn't land within a few percent of what it actually cost you, walk away — that's
@@ -440,7 +441,7 @@ export default function Home() {
                 <a className="btn chalk" href="https://app.pricem8.uk/signup">Start free trial <span className="arw">→</span></a>
                 <span className="mono fine">14 days free · card needed to start · not charged till the trial ends</span>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
 

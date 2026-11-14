@@ -1,12 +1,25 @@
-import { motion, useInView } from 'framer-motion'
-import { ReactNode, useRef } from 'react'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
+import { CSSProperties, ReactNode, useRef } from 'react'
 
 interface AnimatedSectionProps {
   children: ReactNode
   delay?: number
   direction?: 'up' | 'down' | 'left' | 'right' | 'none'
   className?: string
-  staggerChildren?: number
+  as?: 'div' | 'article' | 'li' | 'span'
+  style?: CSSProperties
+  id?: string
+}
+
+// Same restrained entrance curve as the hero's dimension-line draw-in
+// (site-sheet.css, @keyframes ps-draw) — kept quiet on purpose, not springy.
+const EASE: [number, number, number, number] = [0.2, 0.7, 0.3, 1]
+
+const TAGS = {
+  div: motion.div,
+  article: motion.article,
+  li: motion.li,
+  span: motion.span
 }
 
 export default function AnimatedSection({
@@ -14,47 +27,43 @@ export default function AnimatedSection({
   delay = 0,
   direction = 'up',
   className = '',
-  staggerChildren = 0
+  as = 'div',
+  style,
+  id
 }: AnimatedSectionProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
+  const reduceMotion = useReducedMotion()
 
-  const getInitialPosition = () => {
+  const offset = (() => {
     switch (direction) {
-      case 'up': return { opacity: 0, y: 40 }
-      case 'down': return { opacity: 0, y: -40 }
-      case 'left': return { opacity: 0, x: 40 }
-      case 'right': return { opacity: 0, x: -40 }
-      case 'none': return { opacity: 0 }
-      default: return { opacity: 0, y: 40 }
+      case 'up': return { y: 20 }
+      case 'down': return { y: -20 }
+      case 'left': return { x: 20 }
+      case 'right': return { x: -20 }
+      default: return {}
     }
+  })()
+
+  if (reduceMotion) {
+    const Static = as
+    return <Static className={className} style={style} id={id}>{children}</Static>
   }
 
-  const getAnimatePosition = () => {
-    switch (direction) {
-      case 'up': case 'down': return { opacity: 1, y: 0 }
-      case 'left': case 'right': return { opacity: 1, x: 0 }
-      case 'none': return { opacity: 1 }
-      default: return { opacity: 1, y: 0 }
-    }
-  }
+  const Component = TAGS[as]
 
   return (
-    <motion.div
+    <Component
       ref={ref}
-      initial={getInitialPosition()}
-      animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{
-        duration: 0.8,
-        delay,
-        type: "spring",
-        bounce: 0.2,
-        staggerChildren
-      }}
+      id={id}
+      initial={{ opacity: 0, ...offset }}
+      animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, ...offset }}
+      transition={{ duration: 0.7, delay, ease: EASE }}
       className={className}
+      style={style}
     >
       {children}
-    </motion.div>
+    </Component>
   )
 }
 
