@@ -269,9 +269,9 @@ export default function Home() {
                 ends, so it isn't one more app to juggle.</p>
             </AnimatedSection>
 
-            <div className="lines">
+            <div className="on-site-stories">
 
-              <AnimatedSection className="line-block">
+              <AnimatedSection className="on-site-story">
                 <div className="line-title">
                   <h3 className="sub">On site</h3>
                   <span className="mono n">Before you price it</span>
@@ -279,9 +279,12 @@ export default function Home() {
                 <p>Most of the time lost on a quote is getting the measurements in. These take the
                   tape measure out of it, or at least stop you copying figures from the back of
                   an envelope.</p>
-                <div className="shot-still">
-                  <img src="/walkthroughs/measure-on-map-poster.webp" alt="Measuring a garden area on the satellite map in PriceM8" loading="lazy" width={1280} height={672} />
-                </div>
+                <LiveShot
+                  className="live-shot live-shot-feature"
+                  src="/walkthroughs/measure-on-map.mp4"
+                  poster="/walkthroughs/measure-on-map-poster.webp"
+                  label="Measuring a garden area on the satellite map in PriceM8"
+                />
                 <ul className="takeoff">
                   <li><span>Type the address or postcode and the client's details fill in</span><span>lookup</span></li>
                   <li><span>Click round a lawn or patio on the satellite map for the area and the edge</span><span>m² · lin m</span></li>
@@ -291,16 +294,19 @@ export default function Home() {
                 <p><a href="/walkthroughs/measure-a-garden-on-the-map">Watch it measure a real job →</a></p>
               </AnimatedSection>
 
-              <AnimatedSection className="line-block" delay={0.08}>
+              <AnimatedSection className="on-site-story">
                 <div className="line-title">
                   <h3 className="sub">The paperwork</h3>
                   <span className="mono n">Quotes and clients</span>
                 </div>
                 <p>It should look like it came from a business that keeps its books straight, because
                   it did. Your numbering, your logo, your client list.</p>
-                <div className="shot-still">
-                  <img src="/walkthroughs/quote-to-invoice-poster.webp" alt="A branded PriceM8 quote, itemised with VAT" loading="lazy" width={1280} height={672} />
-                </div>
+                <LiveShot
+                  className="live-shot live-shot-feature"
+                  src="/walkthroughs/quote-to-invoice.mp4"
+                  poster="/walkthroughs/quote-to-invoice-poster.webp"
+                  label="A branded PriceM8 quote, itemised with VAT"
+                />
                 <ul className="takeoff">
                   <li><span>Every client has a page: their quotes, their invoices, their address on a map</span><span>clients</span></li>
                   <li><span>Quotes numbered Q‑0045, and saved PDFs carry the number in the file name</span><span>numbers</span></li>
@@ -310,16 +316,19 @@ export default function Home() {
                 <p><a href="/walkthroughs/quote-to-invoice">Watch a quote become an invoice →</a></p>
               </AnimatedSection>
 
-              <AnimatedSection className="line-block" delay={0.16}>
+              <AnimatedSection className="on-site-story">
                 <div className="line-title">
                   <h3 className="sub">Getting paid</h3>
                   <span className="mono n">After they say yes</span>
                 </div>
                 <p>The quote becomes the invoice in one click. Taking the deposit and the balance
                   separately is a normal part of a job, so it handles that.</p>
-                <div className="shot-still">
-                  <img src="/walkthroughs/get-paid-bank-payment-poster.webp" alt="An invoice with a deposit recorded, and a GoCardless bank payment request for the balance" loading="lazy" width={1280} height={688} />
-                </div>
+                <LiveShot
+                  className="live-shot live-shot-feature"
+                  src="/walkthroughs/get-paid-bank-payment.mp4"
+                  poster="/walkthroughs/get-paid-bank-payment-poster.webp"
+                  label="An invoice with a deposit recorded, and a GoCardless bank payment request for the balance"
+                />
                 <ul className="takeoff">
                   <li><span>Quote to invoice in one click, nothing retyped</span><span>invoice</span></li>
                   <li><span>Record a deposit, then the balance. It shows what's paid and what's left</span><span>part pay</span></li>
@@ -329,47 +338,6 @@ export default function Home() {
                 <p><a href="/walkthroughs/get-paid-by-bank-payment">Watch a deposit, then the balance by bank payment →</a></p>
               </AnimatedSection>
 
-            </div>
-
-            {/* Real screen recordings, full width — not squeezed into the three columns above,
-                where the actual app UI was too small to read on desktop or mobile. */}
-            <div className="watch-it">
-              <div className="sheet-rule" style={{ marginTop: 'clamp(34px,5vw,58px)' }}>
-                <span className="mono lbl">Watch it on a real job</span><span className="ticks"></span>
-              </div>
-
-              <AnimatedSection className="watch-row">
-                <LiveShot
-                  className="live-shot live-shot-feature"
-                  src="/walkthroughs/measure-on-map.mp4"
-                  poster="/walkthroughs/measure-on-map-poster.webp"
-                  label="Measuring a garden area on the satellite map in PriceM8"
-                />
-                <p className="watch-cap mono">On site — measuring a garden on the satellite map ·{' '}
-                  <a href="/walkthroughs/measure-a-garden-on-the-map">watch it on its own page →</a></p>
-              </AnimatedSection>
-
-              <AnimatedSection className="watch-row" delay={0.08}>
-                <LiveShot
-                  className="live-shot live-shot-feature"
-                  src="/walkthroughs/quote-to-invoice.mp4"
-                  poster="/walkthroughs/quote-to-invoice-poster.webp"
-                  label="A branded PriceM8 quote, itemised with VAT"
-                />
-                <p className="watch-cap mono">The paperwork — a quote, itemised with VAT ·{' '}
-                  <a href="/walkthroughs/quote-to-invoice">watch a quote become an invoice →</a></p>
-              </AnimatedSection>
-
-              <AnimatedSection className="watch-row" delay={0.16}>
-                <LiveShot
-                  className="live-shot live-shot-feature"
-                  src="/walkthroughs/get-paid-bank-payment.mp4"
-                  poster="/walkthroughs/get-paid-bank-payment-poster.webp"
-                  label="An invoice with a deposit recorded, and a GoCardless bank payment request for the balance"
-                />
-                <p className="watch-cap mono">Getting paid — a deposit, then the balance by bank payment ·{' '}
-                  <a href="/walkthroughs/get-paid-by-bank-payment">watch it on its own page →</a></p>
-              </AnimatedSection>
             </div>
           </div>
         </section>
