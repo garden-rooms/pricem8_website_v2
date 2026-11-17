@@ -282,6 +282,25 @@
 }
 .ps-page .live-shot:hover::after{opacity:.85}
 @media (hover:none){.ps-page .live-shot::after{content:'tap to play';opacity:.7}}
+
+/* static thumbnail used in the 3-up cards — a still, not a video: at that width there was
+   never room to actually read the hover-video, so it's now just a small illustration and the
+   real demo lives big, below, in .watch-it */
+.ps-page .shot-still{border:1px solid var(--rule);overflow:hidden;aspect-ratio:16/10;background:var(--paper-2);transition:border-color .16s linear}
+.ps-page .shot-still img{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block}
+.ps-page .line-block:hover .shot-still{border-color:var(--cedar-soft)}
+
+/* the same hover-to-play videos, full width and stacked one per row instead of three to a
+   row, so the app UI inside is actually legible */
+.ps-page .watch-it{margin-top:clamp(34px,5vw,58px)}
+.ps-page .watch-row{max-width:900px;margin:clamp(28px,4vw,46px) auto 0}
+.ps-page .watch-row:first-of-type{margin-top:28px}
+.ps-page .live-shot-feature{aspect-ratio:16/8.6;background:var(--plate)}
+.ps-page .live-shot-feature video{object-fit:contain;object-position:50% 50%}
+.ps-page .watch-cap{margin-top:14px;text-align:center;color:var(--ink-2)}
+.ps-page .watch-cap a{color:var(--ink-2)}
+.ps-page .watch-cap a:hover{color:var(--cedar)}
+
 .ps-page .line-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .ps-page .line-title .n{color:var(--cedar)}
 .ps-page .takeoff{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule-soft)}
