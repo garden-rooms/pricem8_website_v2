@@ -288,8 +288,9 @@
    actually be read */
 .ps-page .on-site-stories{display:flex;flex-direction:column;gap:clamp(40px,6vw,64px)}
 .ps-page .on-site-story{display:flex;flex-direction:column;gap:18px}
-.ps-page .live-shot-feature{aspect-ratio:16/8.6;background:var(--plate)}
-.ps-page .live-shot-feature video{object-fit:contain;object-position:50% 50%}
+/* a real phone screen recording, shown at a phone-ish width instead of stretched to the
+   full wrap — matching the source footage's own aspect ratio is what actually makes it legible */
+.ps-page .live-shot-phone{aspect-ratio:720/1402;width:100%;max-width:340px;background:var(--plate)}
 
 .ps-page .line-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .ps-page .line-title .n{color:var(--cedar)}

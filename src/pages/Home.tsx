@@ -280,7 +280,7 @@ export default function Home() {
                   tape measure out of it, or at least stop you copying figures from the back of
                   an envelope.</p>
                 <LiveShot
-                  className="live-shot live-shot-feature"
+                  className="live-shot live-shot-phone"
                   src="/walkthroughs/measure-on-map.mp4"
                   poster="/walkthroughs/measure-on-map-poster.webp"
                   label="Measuring a garden area on the satellite map in PriceM8"
@@ -301,12 +301,6 @@ export default function Home() {
                 </div>
                 <p>It should look like it came from a business that keeps its books straight, because
                   it did. Your numbering, your logo, your client list.</p>
-                <LiveShot
-                  className="live-shot live-shot-feature"
-                  src="/walkthroughs/quote-to-invoice.mp4"
-                  poster="/walkthroughs/quote-to-invoice-poster.webp"
-                  label="A branded PriceM8 quote, itemised with VAT"
-                />
                 <ul className="takeoff">
                   <li><span>Every client has a page: their quotes, their invoices, their address on a map</span><span>clients</span></li>
                   <li><span>Quotes numbered Q‑0045, and saved PDFs carry the number in the file name</span><span>numbers</span></li>
@@ -323,12 +317,6 @@ export default function Home() {
                 </div>
                 <p>The quote becomes the invoice in one click. Taking the deposit and the balance
                   separately is a normal part of a job, so it handles that.</p>
-                <LiveShot
-                  className="live-shot live-shot-feature"
-                  src="/walkthroughs/get-paid-bank-payment.mp4"
-                  poster="/walkthroughs/get-paid-bank-payment-poster.webp"
-                  label="An invoice with a deposit recorded, and a GoCardless bank payment request for the balance"
-                />
                 <ul className="takeoff">
                   <li><span>Quote to invoice in one click, nothing retyped</span><span>invoice</span></li>
                   <li><span>Record a deposit, then the balance. It shows what's paid and what's left</span><span>part pay</span></li>
