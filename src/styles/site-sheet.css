@@ -293,7 +293,7 @@
 .ps-page .live-shot-phone{aspect-ratio:720/1402;width:100%;max-width:340px;background:var(--plate);flex-shrink:0}
 /* same, but for the narrower "two trades" cards — centred, not paired with a details column
    since there's no room for one at that card width */
-.ps-page .live-shot-phone-sm{aspect-ratio:720/1402;width:100%;max-width:220px;background:var(--plate);margin-top:4px}
+.ps-page .live-shot-phone-sm{aspect-ratio:720/1402;width:100%;max-width:220px;background:var(--plate);margin-top:4px;align-self:center}
 
 /* a small, self-contained add-on (video + one caption line), not stretched across the row —
    there's only ever one line of caption, so a wide two-column split would just leave a gap */
