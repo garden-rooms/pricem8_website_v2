@@ -128,6 +128,17 @@ export default function Home() {
               <p className="big">PriceM8 does all three before you've got back in the van —
                 and shows you the working, so you can argue with it.</p>
             </AnimatedSection>
+
+            <AnimatedSection className="rates-demo" style={{ marginTop: 'clamp(28px,4vw,46px)' }}>
+              <LiveShot
+                className="live-shot live-shot-phone-sm"
+                src="/walkthroughs/your-rates.mp4"
+                poster="/walkthroughs/your-rates-poster.webp"
+                label="Setting labour rates, splits and margins in PriceM8"
+              />
+              <p className="mono">Skilled rate, labourer rate, the split, and your own margins —
+                set once in Settings, not guessed per job.</p>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -195,6 +206,12 @@ export default function Home() {
                   <li><span>Muck away — skip or grab</span><span>loads</span></li>
                 </ul>
                 <p className="mono fine">Every line, not a sample — missing one is how a patio stops being profitable.</p>
+                <LiveShot
+                  className="live-shot live-shot-phone-sm"
+                  src="/walkthroughs/landscaping-quote.mp4"
+                  poster="/walkthroughs/landscaping-quote-poster.webp"
+                  label="Starting a landscaping quote in PriceM8"
+                />
               </AnimatedSection>
 
               {/* Garden rooms */}
@@ -252,6 +269,12 @@ export default function Home() {
                   <li><span>First fix, flooring, internal linings</span><span>m² / points</span></li>
                 </ul>
                 <p className="mono fine">All of it, every time — that's the point of not doing this from memory.</p>
+                <LiveShot
+                  className="live-shot live-shot-phone-sm"
+                  src="/walkthroughs/garden-room-quote.mp4"
+                  poster="/walkthroughs/garden-room-quote-poster.webp"
+                  label="Stepping through a garden room quote in PriceM8"
+                />
               </AnimatedSection>
 
             </div>
@@ -279,19 +302,23 @@ export default function Home() {
                 <p>Most of the time lost on a quote is getting the measurements in. These take the
                   tape measure out of it, or at least stop you copying figures from the back of
                   an envelope.</p>
-                <LiveShot
-                  className="live-shot live-shot-phone"
-                  src="/walkthroughs/measure-on-map.mp4"
-                  poster="/walkthroughs/measure-on-map-poster.webp"
-                  label="Measuring a garden area on the satellite map in PriceM8"
-                />
-                <ul className="takeoff">
-                  <li><span>Type the address or postcode and the client's details fill in</span><span>lookup</span></li>
-                  <li><span>Click round a lawn or patio on the satellite map for the area and the edge</span><span>m² · lin m</span></li>
-                  <li><span>Awkward shape? Note each side and which way you turn, and it works out the area</span><span>sketch</span></li>
-                  <li><span>Drive to site worked out from your yard, priced as miles and time</span><span>miles</span></li>
-                </ul>
-                <p><a href="/walkthroughs/measure-a-garden-on-the-map">Watch it measure a real job →</a></p>
+                <div className="phone-demo">
+                  <LiveShot
+                    className="live-shot live-shot-phone"
+                    src="/walkthroughs/measure-on-map.mp4"
+                    poster="/walkthroughs/measure-on-map-poster.webp"
+                    label="Measuring a garden area on the satellite map in PriceM8"
+                  />
+                  <div className="phone-demo-info">
+                    <ul className="takeoff">
+                      <li><span>Type the address or postcode and the client's details fill in</span><span>lookup</span></li>
+                      <li><span>Click round a lawn or patio on the satellite map for the area and the edge</span><span>m² · lin m</span></li>
+                      <li><span>Awkward shape? Note each side and which way you turn, and it works out the area</span><span>sketch</span></li>
+                      <li><span>Drive to site worked out from your yard, priced as miles and time</span><span>miles</span></li>
+                    </ul>
+                    <p><a href="/walkthroughs/measure-a-garden-on-the-map">Watch it measure a real job →</a></p>
+                  </div>
+                </div>
               </AnimatedSection>
 
               <AnimatedSection className="on-site-story">

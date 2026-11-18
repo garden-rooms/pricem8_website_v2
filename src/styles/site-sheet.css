@@ -290,7 +290,24 @@
 .ps-page .on-site-story{display:flex;flex-direction:column;gap:18px}
 /* a real phone screen recording, shown at a phone-ish width instead of stretched to the
    full wrap — matching the source footage's own aspect ratio is what actually makes it legible */
-.ps-page .live-shot-phone{aspect-ratio:720/1402;width:100%;max-width:340px;background:var(--plate)}
+.ps-page .live-shot-phone{aspect-ratio:720/1402;width:100%;max-width:340px;background:var(--plate);flex-shrink:0}
+/* same, but for the narrower "two trades" cards — centred, not paired with a details column
+   since there's no room for one at that card width */
+.ps-page .live-shot-phone-sm{aspect-ratio:720/1402;width:100%;max-width:220px;background:var(--plate);margin-top:4px}
+
+/* a small, self-contained add-on (video + one caption line), not stretched across the row —
+   there's only ever one line of caption, so a wide two-column split would just leave a gap */
+.ps-page .rates-demo{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.ps-page .rates-demo p{max-width:30em;color:var(--band-ink-2)}
+
+/* phone video sits beside its details instead of alone on the left with the rest of the row
+   empty — the list fills the width the video doesn't need */
+.ps-page .phone-demo{display:flex;gap:clamp(28px,4vw,52px);align-items:flex-start}
+.ps-page .phone-demo-info{flex:0 1 460px;min-width:0;display:flex;flex-direction:column;gap:18px;padding-top:4px}
+@media (max-width:680px){
+  .ps-page .phone-demo{flex-direction:column}
+  .ps-page .phone-demo .live-shot-phone{margin-inline:auto}
+}
 
 .ps-page .line-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .ps-page .line-title .n{color:var(--cedar)}
